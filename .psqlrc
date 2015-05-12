@@ -1,0 +1,5 @@
+\setenv PAGER 'less -iRSFX'
+
+\pset linestyle unicode
+\pset border 2
+\pset null 'NULL'

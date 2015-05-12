@@ -1,0 +1,13 @@
+[user]  
+        name = rnndxb wxcy
+        email = rnndxb@gmail.com
+[core]  
+        editor = vim
+[color] 
+        diff = auto
+        status = auto
+        branch = auto
+[pager] 
+        status = true
+[include]
+        path = ~/.gitlocal

@@ -1,0 +1,139 @@
+#!/bin/bash
+
+cd $(dirname $(readlink "$0" || echo $0))/..
+basedir=$(pwd -L)
+
+
+declare destination=${HOME}
+declare dryrun=false
+
+_usage() {
+    cat <<EOF
+Usage: $0 [OPTIONS] CMD
+
+Command for managing dotfiles.
+
+OPTIONS:
+  -h	Show this message.
+  -d	Set the destination directory.
+  -n    Dry run.
+
+CMD:
+  link		Links all files that don't exist in the destination [default].
+  existing	List existing files that are not already symlinked.
+EOF
+}
+
+_basedir() {
+    echo ${basedir}
+}
+
+_existing() {
+    while read; do
+        declare dstpath=${destination}/${REPLY}
+        declare srcpath=$(pwd -L)/${REPLY}
+        if [ ! "$dstpath" -ef "$srcpath" ]; then
+            echo $dstpath
+        fi
+    done < <(git ls-files | grep -v .gitignore | grep -v .gitmodules | grep -v "^README")
+}
+
+_unlink_subdirs() {
+    while read; do
+        declare subdir=$(dirname ${REPLY})
+        cd ${subdir}
+        _unlink $(basename ${subdir})
+        cd ${basedir}
+    done < <(find ${basedir} -mindepth 2 -maxdepth 2 -name .git)
+}
+
+_unlink() {
+    declare pfx=$1
+    while read; do
+        declare dstpath=$(echo ${destination}/${pfx}/${REPLY} | sed s#//*#/#g)
+        if [ -e $dstpath ]; then
+            echo -n "Unlinking ${dstpath}... "
+            if ! $dryrun; then
+                unlink "${dstpath}"
+                echo "done."
+            else
+                echo "dryrun."
+            fi
+        fi
+    done < <(git ls-files | grep -v .gitignore | grep -v .gitmodules | grep -v "^README")
+}
+
+_link_subdirs() {
+    while read; do
+        declare subdir=$(dirname ${REPLY})
+        cd ${subdir}
+        _link $(basename ${subdir})
+        cd ${basedir}
+    done < <(find ${basedir} -mindepth 2 -maxdepth 2 -name .git)
+}
+
+_link() {
+    declare pfx=$1
+    while read; do
+        declare dstpath=$(echo ${destination}/${pfx}/${REPLY} | sed s#//*#/#g)
+        declare srcpath=$(pwd -L)/${REPLY}
+        declare dstdir=$(dirname ${dstpath})
+        if [ ! -e $dstdir ]; then
+            echo -n "Creating directory ${dstdir}... "
+            if ! $dryrun; then
+                mkdir -p ${dstdir}
+                echo "done."
+            else
+                echo "dryrun."
+            fi
+        fi
+        if [ ! -e $dstpath ]; then
+            echo -n "Linking ${dstpath} to ${srcpath}... "
+            if ! $dryrun; then
+                ln -s "${srcpath}" "${dstpath}"
+                echo "done."
+            else
+                echo "dryrun."
+            fi
+        elif [ ! -L $dstpath ]; then
+            echo "${dstpath} already exists and is not a link."
+        fi
+    done < <(git ls-files | grep -v .gitignore | grep -v .gitmodules | grep -v "^README")
+}
+
+while getopts "hnd:" OPTION; do
+    case $OPTION in
+        h)
+            _usage
+            exit 1
+            ;;
+        n)
+            dryrun=true
+            ;;
+        d)
+            destination=$OPTARG
+            ;;
+    esac
+done
+
+shift $((OPTIND-1))
+
+cmd=$1
+
+case $cmd in
+    basedir|cd)
+        _basedir
+        ;;
+    existing|e)
+        _existing
+        ;;
+    unlink|u)
+        _unlink
+        _unlink_subdirs
+        ;;
+    link|l|*)
+        _link
+        _link_subdirs
+        cd ${basedir}
+        ;;
+esac
