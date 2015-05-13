@@ -1,0 +1,14 @@
+<svg width="250" height="250" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <filter id="blur">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+  </filter>
+
+  <filter id="blurMore">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+  </filter>
+
+  <circle cx="125" cy="125" r="80" fill="none" stroke="maroon" stroke-width="65" filter="url(#blur)" />
+
+  <circle cx="125" cy="125" r="80" fill="none" stroke="crimson" stroke-width="32" filter="url(#blurMore)" />
+</svg>
