@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- An example Openbox menu configuration.  Copy this file to ./menu.xml
+and customize to taste.  Note this config file uses the XInclude mechanism
+for including separate xml files.
+
+http://blog.thekondor.net/2012/07/splitting-openbox-configuration-to.html
+http://icculus.org/pipermail/openbox/2010-October/006814.html -->
+
+<openbox_menu xmlns="http://openbox.org/3.4/menu"
+              xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<menu id="multiplexer-menu" label="multiplexer" execute="tmux-pipemenu"/>
+
+<menu id="apps-accessories-menu" label="accessories">
+  <item label="emacs -nw">
+    <action name="Execute">
+      <command>tmux-launch emacs -nw</command>
+    </action>
+  </item>
+  <item label="emacs X11">
+    <action name="Execute">
+      <command>emacs</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>emacs</wmclass>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="evince">
+    <action name="Execute">
+      <command>evince</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="firefox">
+    <action name="Execute">
+      <command>firefox</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="firefox alt">
+    <action name="Execute">
+      <command>firefox --new-instance -P alternate-instance</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="libreoffice">
+    <action name="Execute">
+      <command>libreoffice</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="thunar">
+    <action name="Execute">
+      <command>thunar</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
+<menu id="apps-net-menu" label="internet">
+  <item label="chromium">
+    <action name="Execute">
+      <command>chromium</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>chromium</wmclass>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="firefox">
+    <action name="Execute">
+      <command>firefox</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>firefox</wmclass>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
+<menu id="apps-term-menu" label="terminals">
+  <item label="rxvt-unicode">
+    <action name="Execute">
+      <command>urxvt</command>
+    </action>
+  </item>
+  <item label="urxvt-console">
+    <action name="Execute">
+      <command>urxvt -name urxvt-console</command>
+    </action>
+  </item>
+  <item label="urxvt-dark">
+    <action name="Execute">
+      <command>urxvt -name urxvt-dark</command>
+    </action>
+  </item>
+  <item label="xterm">
+    <action name="Execute">
+      <command>xterm</command>
+    </action>
+  </item>
+</menu>
+
+<menu id="system-menu" label="system">
+  <item label="openbox configuration manager">
+    <action name="Execute">
+      <command>obconf</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="manage cups printers">
+    <action name="Execute">
+      <command>xdg-open http://localhost:631/</command>
+      <startupnotify>
+        <enabled>no</enabled>
+        <icon>cups</icon>
+      </startupnotify>
+    </action>
+  </item>
+  <separator />
+  <item label="reconfigure openbox">
+    <action name="Reconfigure" />
+  </item>
+</menu>
+
+<menu id="root-menu" label="openbox 3">
+  <item label="urxvt-init">
+    <action name="Execute">
+      <command>urxvt-init</command>
+    </action>
+  </item>
+  <menu id="multiplexer-menu"/>
+  <separator />
+  <item label="cmus">
+    <action name="Execute">
+      <command>tmux-launch cmus</command>
+    </action>
+  </item>
+  <item label="emacs">
+    <action name="Execute">
+      <command>tmux-launch emacs -nw</command>
+    </action>
+  </item>
+  <item label="firefox">
+    <action name="Execute">
+      <command>firefox</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>firefox</wmclass>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="thunar">
+    <action name="Execute">
+      <command>thunar</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>thunar</wmclass>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="vim">
+    <action name="Execute">
+      <command>tmux-launch vim</command>
+    </action>
+  </item>
+  <menu id="apps-accessories-menu"/>
+  <menu id="apps-net-menu"/>
+  <xi:include href="menu/remote.xml"/>
+  <menu id="apps-term-menu"/>
+  <separator />
+  <menu id="system-menu"/>
+  <separator />
+  <item label="log out">
+    <action name="Exit">
+      <prompt>yes</prompt>
+    </action>
+  </item>
+</menu>
+
+</openbox_menu>
