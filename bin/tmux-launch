@@ -1,0 +1,42 @@
+#!/bin/sh
+
+# Created: 2015-04-30
+#
+# tmux-launch: run a program within a tmux + urxvt session, creating
+# the session if necessary.
+# dependencies: tmux, rxvt-unicode, wmctrl, bash
+
+WINDOW_NAME="urxvt-console"
+TERM_EXIST=$(wmctrl -lx | cut -d' ' -f 4 | grep "^$WINDOW_NAME\..*$")
+SESSION_NAME="0"
+
+if [ -z "$1" ]; then
+    PROG_NAME="bash"
+else
+    PROG_NAME=$1
+    shift
+    PROG_ARGS=$@
+fi
+
+MATCHED_WINDOW=$(tmux list-windows -t $SESSION_NAME -F '#{window_id}:#{window_name}' | grep "^@.*:$PROG_NAME\$" | cut -d':' -f 1 | head -1)
+
+if [ -z "$TERM_EXIST" ]; then # TARGET TERMINAL DOES NOT EXIST
+    if [ -n "$MATCHED_WINDOW" ]; then
+        urxvt -name $WINDOW_NAME -e tmux new-session -A -D -s $SESSION_NAME \; select-window -t $SESSION_NAME:$MATCHED_WINDOW &
+    else
+        SESSION_EXIST=$(tmux list-sessions -F '#{session_name}' | grep "^$SESSION_NAME$")
+        if [ -n "$SESSION_EXIST" ]; then
+            urxvt -name $WINDOW_NAME -e tmux attach-session -d -t $SESSION_NAME \; new-window "$PROG_NAME $PROG_ARGS" &
+        else
+            urxvt -name $WINDOW_NAME -e tmux new-session -A -D -s $SESSION_NAME "$PROG_NAME $PROG_ARGS" &
+        fi
+
+    fi
+else # TARGET TERMINAL EXISTS
+    if [ -n "$MATCHED_WINDOW" ]; then
+        tmux select-window -t "$SESSION_NAME:$MATCHED_WINDOW" &
+    else
+        tmux new-window -t "$SESSION_NAME:" "$PROG_NAME $PROG_ARGS" &
+    fi
+    wmctrl -xa "$WINDOW_NAME"
+fi

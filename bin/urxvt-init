@@ -1,0 +1,32 @@
+#!/bin/sh
+
+WINDOWS=$(wmctrl -lx | cut -d' ' -f 4)
+
+if ! grep -q "^urxvt-console\..*$" <<<"$WINDOWS"; then
+    exec urxvt -name urxvt-console -e tmux new-session -A -D -s 0
+elif ! grep -q "^urxvt-secondary\..*$" <<<"$WINDOWS"; then
+    exec urxvt -name urxvt-secondary -e tmux new-session -A -D -s A
+else
+    exec urxvt
+fi
+
+
+# Alternate implementation 2015-05-10
+#
+# if wmctrl -lx | cut -d' ' -f 4 | grep -q '^urxvt-console\..*$'; then
+#     exec urxvt
+# else
+#     exec $HOME/bin/urxvt-console -e tmux new-session -A -D -s 0
+# fi
+
+# Alternate implementation ca. 2012-2014
+#
+# Is not a robust solution if running multiple X servers as pgrep
+# searches for the urxvt-console process across the entire system.
+# Note that 'urxvt-console' must be a symlink to the urxvt binary.
+#
+# if pgrep urxvt-console >/dev/null; then
+#   exec urxvt
+# else
+#   exec $HOME/bin/urxvt-console -e tmux new-session -A -D -s 0
+# fi

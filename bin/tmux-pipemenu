@@ -1,0 +1,19 @@
+#!/bin/bash
+
+SESSION_NAME="0"
+
+echo "<openbox_pipe_menu>"
+for i in $(tmux list-windows -t $SESSION_NAME -F '#{window_name}'); do
+    echo "  <item label=\"${i}\">"
+    echo "    <action name=\"Execute\">"
+    echo "      <command>tmux-launch ${i}</command>"
+    echo "    </action>"
+    echo "  </item>"
+done
+echo "<separator/>"
+echo "<item label=\"new window\">"
+echo "  <action name=\"Execute\">"
+echo "    <command>tmux-launch</command>"
+echo "  </action>"
+echo "</item>"
+echo "</openbox_pipe_menu>"

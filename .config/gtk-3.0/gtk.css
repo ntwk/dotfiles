@@ -1,0 +1,19 @@
+.window-frame, .window-frame:backdrop {
+  box-shadow: 0 0 0 black;
+  border-style: solid;
+  border-width: 1;
+  border-color: #4e4e4e;
+  margin: 0;
+  border-radius: 0;
+}
+
+.titlebar {
+  border-radius: 0;
+}
+
+/* 2015-04-22 Suggested config found at               */
+/* https://github.com/shimmerproject/Numix/issues/206 */
+/* .window-frame { */
+/*   box-shadow: none; */
+/*   margin: 1; */
+/* } */
