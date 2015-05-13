@@ -16,7 +16,6 @@ alias sudo='sudo '
 
 # Emacs in a tty
 alias em='emacs -nw'
-alias erx='TERM=rxvt-unicode-256color emacs -nw'
 alias ec='emacsclient -t'
 
 # GNU screen
