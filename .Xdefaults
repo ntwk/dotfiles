@@ -144,41 +144,6 @@ urxvt-dark*color14:                  #93a1a1
 urxvt-dark*color7:                   #eee8d5
 urxvt-dark*color15:                  #fdf6e3
 
-! urxvt-secondary ------------------------------------------------------------
-
-! urxvt-secondary*background:               #002b36
-! urxvt-secondary*foreground:               #657b83
-! urxvt-secondary*fading:                   20
-! urxvt-secondary*fadeColor:                #002b36
-! urxvt-secondary*cursorColor:              #93a1a1
-! urxvt-secondary*pointerColorBackground:   #586e75
-! urxvt-secondary*pointerColorForeground:   #93a1a1
-
-! !! black dark/light
-! urxvt-secondary*color0:                   #002b36
-! urxvt-secondary*color8:                   #073642
-! !! red dark/light
-! urxvt-secondary*color1:                   #db322f
-! urxvt-secondary*color9:                   #cb4b16
-! !! green dark/light
-! urxvt-secondary*color2:                   #859900
-! urxvt-secondary*color10:                  #586e75
-! !! yellow dark/light
-! urxvt-secondary*color3:                   #b58900
-! urxvt-secondary*color11:                  #657b83
-! !! blue dark/light
-! urxvt-secondary*color4:                   #268bd2
-! urxvt-secondary*color12:                  #839496
-! !! magenta dark/light
-! urxvt-secondary*color5:                   #d33682
-! urxvt-secondary*color13:                  #6c71c4
-! !! cyan dark/light
-! urxvt-secondary*color6:                   #2aa198
-! urxvt-secondary*color14:                  #93a1a1
-! !! white dark/light
-! urxvt-secondary*color7:                   #eee8d5
-! urxvt-secondary*color15:                  #fdf6e3
-
 ! urxvt-jschx ----------------------------------------------------------------
 
 urxvt-jschx*background:               #1f2f3f
