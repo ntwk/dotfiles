@@ -5,6 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Host-specific overriding of the prompt should go in .bashrc_local
 PS1='\[\e[0;31m\][\[\e[0;33m\]\u\[\e[0;31m\]@\h \W]\$\[\e[0m\] '
 
 alias ls='ls --color=auto'
