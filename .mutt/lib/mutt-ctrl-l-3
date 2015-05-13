@@ -1,0 +1,1 @@
+macro index \CL '<current-bottom>:source ~/.mutt/lib/mutt-ctrl-l-1<enter>'

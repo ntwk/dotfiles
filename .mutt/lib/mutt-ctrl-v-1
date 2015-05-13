@@ -1,0 +1,1 @@
+macro index \CV ':set index_format = "[%Z] %s"<enter>:source ~/.mutt/lib/mutt-ctrl-v-2<enter>'

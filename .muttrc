@@ -1,0 +1,52 @@
+set header_cache     = "~/.mutt/cache/headers"
+set message_cachedir = "~/.mutt/cache/bodies"
+
+set sort              = threads
+set sort_aux          = last-date-received
+#set index_format     = "%{%b %d} %-15.15L [%Z] %s"
+#set index_format     = "%?M?(#%03M)&(%4l)? %-15.15L [%Z] %s"
+#set index_format     = "%?M?(%4M)&%{%b %d}? %-15.15L [%Z] %s"
+set index_format      = "%?M?[%4M]&%{%b %d}? %-15.15L [%Z] %s"
+set help              = no
+set pager_index_lines = 10
+set mark_old          = no
+
+set editor = "emacs -nw"
+
+bind index _ collapse-all
+
+# bind index \Cl current-middle
+# replace above binding with emacs-like behavior (recenter-top-bottom) 
+source ~/.mutt/lib/mutt-ctrl-l-1
+
+# cycle through custom index formats
+source ~/.mutt/lib/mutt-ctrl-v-1
+
+color normal     white default
+color attachment brightyellow default
+color hdrdefault cyan default
+color indicator  brightgreen blue
+color markers    brightred default
+color quoted     green default
+color signature  cyan default
+color status     brightgreen blue
+color tilde      blue default
+color tree       red default
+color body       brightred default [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+
+color body       brightblue default (https?|ftp)://[\-\.\,/%~_:?\#a-zA-Z0-9]+
+
+color quoted1    brightyellow default
+color quoted2    red default
+color hdrdefault cyan default
+color header     brightred default ^Subject:
+color header     brightgreen default ^From:
+color signature  cyan default
+
+color index      green default ~p  # To me
+color index      brightyellow default ~N  # New
+
+color index      blue default ~T # Tagged
+color index      red default ~D # Deleted
+
+# Local configuration
+source ~/.muttrc_local
