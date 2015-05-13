@@ -1,0 +1,34 @@
+"1.2pre
+
+loadplugins '\.(js|penta)$'
+group user
+
+highlight FontFixed font-family: "Profont"; font-size: 9pt;
+highlight -append Hint font-family: "Profont" !important; font-size: 9pt !important;
+
+set guioptions=''
+set showtabline=never
+
+" setTimeout experimentation
+"javascript <<EOF
+"  function foobar() { window.setTimeout(function() {window.resizeTo(200,200); window.moveTo(50,50);},0); }
+"EOF
+
+map <C-A-1> -m main -javascript window.resizeTo(800,window.outerHeight);
+map <C-A-2> -m main -javascript window.resizeTo(1024,window.outerHeight);
+map <C-A-3> -m main -javascript window.moveTo(window.screen.width - window.outerWidth - 10, window.screen.height - window.outerHeight - 10);
+
+nmap <Leader>y :execute "silent !~/bin/youtube-play.sh '" + buffer.URL + "'"<CR>
+nmap <Leader>x :execute "silent !xmessage '" + buffer.URL + "'"<CR>
+
+" enable toggling of the status bar
+map <C-/> -silent :tbt Add-on Bar<CR>
+
+" open urls in mpv
+javascript <<EOF
+  let tags = ["a"];
+  let mpv = function(e) dactyl.execute("!urxvt -e mpv '"+e.href+"'")
+  hints.addMode("m", "Open link in mpv", mpv, null, tags);
+EOF
+
+" vim: set ft=pentadactyl:
