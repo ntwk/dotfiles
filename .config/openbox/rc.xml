@@ -329,7 +329,7 @@
     </keybind>
     <keybind key="W-n">
       <action name="Execute">
-        <command>~/bin/sayit.sh</command>
+        <command>~/bin/sayit</command>
       </action>
     </keybind>
     <!-- Keybindings for cmus control -->

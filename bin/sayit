@@ -1,0 +1,7 @@
+#!/bin/sh
+
+#
+# sayit - read the currently highlighted aloud
+#
+
+xsel | festival --tts
