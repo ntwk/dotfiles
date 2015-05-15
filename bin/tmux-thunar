@@ -1,0 +1,9 @@
+#!/bin/sh
+
+#
+# tmux-thunar - Helper script for allowing Thunar to open a tmux window in
+# the primary tmux session.  This it meant to be invoked via a Thunar custom
+# action.
+#
+
+tmux-launch /bin/bash -c "'cd $1; exec /bin/bash'"
