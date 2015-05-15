@@ -62,7 +62,7 @@ URxvt*color15: #ffffff
 
 ! urxvt-console --------------------------------------------------------------
 
-urxvt-console*iconFile: /home/user/.icons/urxvt/circle_open_blur.svg
+urxvt-console*iconFile: /home/user/.icons/urxvt/circle_open_blur_less.svg
 
 ! urxvt-stop -----------------------------------------------------------------
 
