@@ -302,6 +302,11 @@
         <menu>root-menu</menu>
       </action>
     </keybind>
+    <keybind key="W-n">
+      <action name="ShowMenu">
+        <menu>multiplexer-menu</menu>
+      </action>
+    </keybind>
     <!-- Keybindings for running applications -->
     <keybind key="W-e">
       <action name="Execute">
@@ -327,7 +332,7 @@
         <command>dmenu_run -nb '#304050'</command>
       </action>
     </keybind>
-    <keybind key="W-n">
+    <keybind key="W-b">
       <action name="Execute">
         <command>~/bin/sayit</command>
       </action>
