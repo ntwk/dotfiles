@@ -48,5 +48,12 @@ color index      brightyellow default ~N  # New
 color index      blue default ~T # Tagged
 color index      red default ~D # Deleted
 
-# Local configuration
-source ~/.muttrc_local
+# Local configuration should be placed below this line
+
+# Instead of placing 'source ~/.muttrc_local' here, use process substitution
+# and aliases in ~/.bashrc_local to handle multiple local configurations:
+#
+# alias mutt_profile1='mutt -F <(cat ~/.muttrc ~/.muttrc_local_profile1)'
+# alias mutt_profile2='mutt -F <(cat ~/.muttrc ~/.muttrc_local_profile2)'
+#
+# And so on...
