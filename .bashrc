@@ -30,9 +30,10 @@ alias tmc='clear && tmux clear'
 alias tmk='tmux kill-session'
 alias tm='tmux new-session'
 
-# Use ls through pager with color and columns
-alias lsl='ls -C --color=yes | less -FRX'
-alias lsll='ls -Cl --color=yes | less -FRX'
+# ls shortcuts, paging, etc.
+alias ll='ls -l'
+alias lsl='ls -Cw $COLUMNS --color | less -FRX'
+alias lsll='ls -l --color | less -FRX'
 
 # File renaming
 alias tolower='perl-rename '\''s/(.*)/\L$1/'\'
