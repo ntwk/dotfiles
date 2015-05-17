@@ -42,7 +42,10 @@ alias toupper='perl-rename '\''s/(.*)/\U$1/'\'
 # Open file manager in current directory
 alias ta='exo-open --launch FileManager'
 
-# Always set man width to 80 columns
+# Colorize man pages. See ~/bin/colorman for details
+alias man=colorman
+
+# Man page column is 80 columns by default
 export MANWIDTH=80
 
 # Ignore duplicate entries in bash history and commands with leading
@@ -63,9 +66,6 @@ function face {
 function emr() {
     emacs "$1" -nw --eval '(setq buffer-read-only t)'
 }
-
-# Colorize man pages. See ~/bin/colorman for details
-alias man=colorman
 
 # Local config
 [[ -s "$HOME/.bashrc_local" ]] && source "$HOME/.bashrc_local"
