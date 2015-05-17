@@ -38,6 +38,9 @@ alias lsll='ls -Cl --color=yes | less -FRX'
 alias tolower='perl-rename '\''s/(.*)/\L$1/'\'
 alias toupper='perl-rename '\''s/(.*)/\U$1/'\'
 
+# Open file manager in current directory
+alias ta='exo-open --launch FileManager'
+
 # Always set man width to 80 columns
 export MANWIDTH=80
 
