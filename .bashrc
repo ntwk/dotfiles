@@ -10,6 +10,15 @@ PS1='\[\e[0;31m\][\[\e[0;33m\]\u\[\e[0;31m\]@\h \W]\$\[\e[0m\] '
 
 alias lpr='lpr -o fit-to-page'
 
+# More verbose copy and delete
+alias cp='cp -v'
+alias rm='rm -v'
+
+# Stack-based directory navigation
+alias d='dirs'
+alias p='pushd'
+alias o='popd'
+
 # Make bash aliases work with sudo
 # http://askubuntu.com/questions/22037/aliases-not-available-when-using-sudo
 alias sudo='sudo '
