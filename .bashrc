@@ -8,7 +8,6 @@
 # Host-specific overriding of the prompt should go in .bashrc_local
 PS1='\[\e[0;31m\][\[\e[0;33m\]\u\[\e[0;31m\]@\h \W]\$\[\e[0m\] '
 
-alias ls='ls --color=auto'
 alias lpr='lpr -o fit-to-page'
 
 # Make bash aliases work with sudo
@@ -31,6 +30,7 @@ alias tmk='tmux kill-session'
 alias tm='tmux new-session'
 
 # ls shortcuts, paging, etc.
+alias ls='ls --color=auto'
 alias ll='ls -l'
 alias lsl='ls -Cw $COLUMNS --color | less -FRX'
 alias lsll='ls -l --color | less -FRX'
