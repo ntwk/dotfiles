@@ -10,8 +10,9 @@ PS1='\[\e[0;31m\][\[\e[0;33m\]\u\[\e[0;31m\]@\h \W]\$\[\e[0m\] '
 
 alias lpr='lpr -o fit-to-page'
 
-# More verbose copy and delete
-alias cp='cp -v'
+# More verbose move, copy and delete
+alias mv='mv -vi'
+alias cp='cp -vi'
 alias rm='rm -v'
 
 # Stack-based directory navigation
