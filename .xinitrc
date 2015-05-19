@@ -10,6 +10,8 @@ xset b off &
 # Change keyboard repeat rate
 xset r rate 250 30 &
 
+test -f ~/.Xresources && xrdb ~/.Xresources &
+
 # exec ion
 # exec jwm
 # exec wmaker
