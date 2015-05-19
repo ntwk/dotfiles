@@ -4,12 +4,16 @@
 ! Strings delimited by double underscores are m4 macros defined within this
 ! file, one of its included files, or ~/.xinitrc.
 
+! define(__FNRM__,-misc-fixed-medium-r-semicondensed--13-*-*-*-c-60-iso8859-1)
+! define(__FBLD__,-misc-fixed-bold-r-semicondensed--13-*-*-*-c-60-iso8859-1)
+! define(__FITL__,-misc-fixed-medium-o-semicondensed-*-13-*-*-*-c-60-iso8859-1)
+
 ! rxvt-unicode (global) ------------------------------------------------------
 
-URxvt*font:           -misc-fixed-medium-r-semicondensed--13-*-*-*-c-60-iso8859-1
-URxvt*boldFont:       -misc-fixed-bold-r-semicondensed--13-*-*-*-c-60-iso8859-1
-URxvt*italicFont:     -misc-fixed-medium-o-semicondensed-*-13-*-*-*-c-60-iso8859-1
-URxvt*boldItalicFont: -misc-fixed-medium-o-semicondensed-*-13-*-*-*-c-60-iso8859-1
+URxvt*font:           __FNRM__
+URxvt*boldFont:       __FBLD__
+URxvt*italicFont:     __FITL__
+URxvt*boldItalicFont: __FITL__
 URxvt*cursorBlink:    false
 
 URxvt*geometry:       80x50
@@ -35,7 +39,7 @@ URxvt*keysym.M-C-minus: perl:opacity:down
 URxvt*keysym.M-C-equal: perl:opacity:up
 URxvt*keysym.M-C-5:     command:\033]708;#002b36\007\033]10;#657b83\007\033]11;#002b36\007
 
-URxvt*keysym.F9:  command:\033]713;-misc-fixed-bold-o-semicondensed--13-*-*-*-c-60-iso8859-1\007\033]712;-misc-fixed-medium-o-semicondensed--13-*-*-*-c-60-iso8859-1\007\033]711;-misc-fixed-bold-r-semicondensed--13-*-*-*-c-60-iso8859-1\007\033]50;-misc-fixed-medium-r-semicondensed--13-*-*-*-c-60-iso8859-1\007
+URxvt*keysym.F9:  command:\033]713;__FITL__\007\033]712;__FITL__\007\033]711;__FBLD__\007\033]50;__FNRM__\007
 URxvt*keysym.F10: command:\033]713;xft:Fixedsys\007\033]712;xft:Fixedsys\007\033]711;xft:Fixedsys\007\033]50;xft:Fixedsys\007
 URxvt*keysym.F11: perl:fullscreen:switch
 
