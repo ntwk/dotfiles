@@ -1,3 +1,9 @@
+! This file is intended to be preprocessed using m4 instead of cpp like so:
+! xrdb -cpp m4 .Xresources
+!
+! Strings delimited by double underscores are m4 macros defined within this
+! file, one of its included files, or ~/.xinitrc.
+
 ! rxvt-unicode (global) ------------------------------------------------------
 
 URxvt*font:           -misc-fixed-medium-r-semicondensed--13-*-*-*-c-60-iso8859-1
@@ -13,7 +19,7 @@ URxvt*pastableTabs:   false
 URxvt*pointerBlank:   true
 URxvt*fading:         20
 URxvt*fadeColor:      #111111
-URxvt*iconFile:       /home/user/.icons/urxvt/144651-apple.svg
+URxvt*iconFile:       __HOME__/.icons/urxvt/144651-apple.svg
 URxvt*print-pipe:     cat > $HOME/urxvt.$(date +%Y%m%d_%H%M%S)
 
 URxvt*perl-ext-common:      default,fullscreen,url-select,keyboard-select,opacity
@@ -62,7 +68,7 @@ URxvt*color15: #ffffff
 
 ! urxvt-console --------------------------------------------------------------
 
-urxvt-console*iconFile: /home/user/.icons/urxvt/circle_open_blur_less.svg
+urxvt-console*iconFile: __HOME__/.icons/urxvt/circle_open_blur_less.svg
 
 ! urxvt-stop -----------------------------------------------------------------
 

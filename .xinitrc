@@ -10,7 +10,7 @@ xset b off &
 # Change keyboard repeat rate
 xset r rate 250 30 &
 
-test -f ~/.Xresources && xrdb ~/.Xresources &
+test -f ~/.Xresources && xrdb -cpp m4 -D__HOME__="$HOME" ~/.Xresources &
 
 # exec ion
 # exec jwm
