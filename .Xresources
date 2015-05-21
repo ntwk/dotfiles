@@ -178,7 +178,7 @@ urxvt-jschx*color15:    #cfdfef
 
 ! emacs ----------------------------------------------------------------------
 
-emacs.font:                     -misc-fixed-medium-r-semicondensed--13-*-*-*-c-60-iso8859-1
+emacs.font:                     __FNRM__
 emacs.geometry:                 80x50
 emacs.menuBar:                  off
 emacs.toolBar:                  0
