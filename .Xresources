@@ -78,7 +78,6 @@ urxvt-console*iconFile: __HOME__/.icons/urxvt/circle_open_blur_less.svg
 
 urxvt-stop*background:               #282626
 urxvt-stop*foreground:               #696969
-urxvt-stop*fading:                   20
 urxvt-stop*fadeColor:                #282626
 
 !! black dark/light
@@ -110,14 +109,12 @@ urxvt-stop*color15:                  #E6E6E6
 
 urxvt-blue*background:               #000082
 urxvt-blue*foreground:               #f4f9ff
-urxvt-blue*fading:                   20
 urxvt-blue*fadeColor:                #000082
 
 ! urxvt-dark -----------------------------------------------------------------
 
 urxvt-dark*background:               #002b36
 urxvt-dark*foreground:               #657b83
-urxvt-dark*fading:                   20
 urxvt-dark*fadeColor:                #002b36
 
 !! black dark/light
@@ -149,7 +146,6 @@ urxvt-dark*color15:                  #fdf6e3
 
 urxvt-jschx*background:               #1f2f3f
 urxvt-jschx*foreground:               #9fafbf
-urxvt-jschx*fading:                   20
 urxvt-jschx*fadeColor:                #1f2f3f
 
 ! black
