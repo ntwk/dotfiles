@@ -87,7 +87,7 @@ urxvt-stop*color8:                   #424242
 urxvt-stop*color1:                   #C37561
 urxvt-stop*color9:                   #D19485
 !! green dark/light
-urxvt-stop*color2:                   #A0A57#
+urxvt-stop*color2:                   #A0A57E
 urxvt-stop*color10:                  #B6B99D
 !! yellow dark/light
 urxvt-stop*color3:                   #D1A375
@@ -128,7 +128,7 @@ urxvt-dark*color2:                   #859900
 urxvt-dark*color10:                  #586e75
 !! yellow dark/light
 urxvt-dark*color3:                   #b58900
-rxvt-dark*color11:                  #657b83
+urxvt-dark*color11:                  #657b83
 !! blue dark/light
 urxvt-dark*color4:                   #268bd2
 urxvt-dark*color12:                  #839496
