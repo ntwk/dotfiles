@@ -10,65 +10,68 @@
 
 ! rxvt-unicode (global) ------------------------------------------------------
 
-URxvt*font:           __FNRM__
-URxvt*boldFont:       __FBLD__
-URxvt*italicFont:     __FITL__
-URxvt*boldItalicFont: __FITL__
-URxvt*cursorBlink:    false
+URxvt*font:             __FNRM__
+URxvt*boldFont:         __FBLD__
+URxvt*italicFont:       __FITL__
+URxvt*boldItalicFont:   __FITL__
+URxvt*cursorBlink:      false
 
-URxvt*geometry:       80x50
-URxvt*scrollBar:      false
-URxvt*visualBell:     false
-URxvt*pastableTabs:   false
-URxvt*pointerBlank:   true
-URxvt*fading:         20
-URxvt*fadeColor:      #111111
-URxvt*iconFile:       __HOME__/.icons/urxvt/144651-apple.svg
-URxvt*print-pipe:     cat > $HOME/urxvt.$(date +%Y%m%d_%H%M%S)
+URxvt*geometry:         80x50
+URxvt*scrollBar:        false
+URxvt*visualBell:       false
+URxvt*pastableTabs:     false
+URxvt*pointerBlank:     true
+URxvt*iconFile:         __HOME__/.icons/urxvt/144651-apple.svg
+URxvt*print-pipe:       cat > $HOME/urxvt.$(date +%Y%m%d_%H%M%S)
 
-URxvt*perl-ext-common:      default,fullscreen,url-select,keyboard-select,opacity
-URxvt*keysym.M-C-7:         perl:keyboard-select:activate
+URxvt*perl-ext-common:  default,fullscreen,url-select,keyboard-select,opacity
+
 URxvt*url-select.launcher:  firefox
 URxvt*url-select.underline: false
 
-URxvt*keysym.M-u:       perl:url-select:select_next
+urxvt*keysym.M-u:       perl:url-select:select_next
 URxvt*keysym.M-C-1:     command:\033[8;50;80t
 URxvt*keysym.M-C-2:     command:\033[8;50;132t
 URxvt*keysym.M-C-3:     perl:fullscreen:switch
+URxvt*keysym.M-C-5:     command:\033]708;#002b36\007\033]10;#657b83\007\033]11;#002b36\007
+URxvt*keysym.M-C-7:     perl:keyboard-select:activate
 URxvt*keysym.M-C-minus: perl:opacity:down
 URxvt*keysym.M-C-equal: perl:opacity:up
-URxvt*keysym.M-C-5:     command:\033]708;#002b36\007\033]10;#657b83\007\033]11;#002b36\007
 
-URxvt*keysym.F9:  command:\033]713;__FITL__\007\033]712;__FITL__\007\033]711;__FBLD__\007\033]50;__FNRM__\007
-URxvt*keysym.F10: command:\033]713;xft:Fixedsys\007\033]712;xft:Fixedsys\007\033]711;xft:Fixedsys\007\033]50;xft:Fixedsys\007
-URxvt*keysym.F11: perl:fullscreen:switch
+URxvt*keysym.F9:        command:\033]713;__FITL__\007\033]712;__FITL__\007\033]711;__FBLD__\007\033]50;__FNRM__\007
+URxvt*keysym.F10:       command:\033]713;xft:Fixedsys\007\033]712;xft:Fixedsys\007\033]711;xft:Fixedsys\007\033]50;xft:Fixedsys\007
+URxvt*keysym.F11:       perl:fullscreen:switch
 
-URxvt*background: #111111
-URxvt*foreground: #babdb6
-! Black (not tango) + DarkGrey
-URxvt*color0:  #000000
-URxvt*color8:  #555753
-! DarkRed + Red
-URxvt*color1:  #ff6565
-URxvt*color9:  #ff8d8d
-! DarkGreen + Green
-URxvt*color2:  #93d44f
-URxvt*color10: #c8e7a8
-! DarkYellow + Yellow
-URxvt*color3:  #eab93d
-URxvt*color11: #ffc123
-! DarkBlue + Blue
-URxvt*color4:  #204a87
-URxvt*color12: #3465a4
-! DarkMangenta + Mangenta
-URxvt*color5:  #ce5c00
-URxvt*color13: #f57900
-!DarkCyan + Cyan (both not tango)
-URxvt*color6:  #89b6e2
-URxvt*color14: #46a4ff
-! LightGrey + White
-URxvt*color7:  #cccccc
-URxvt*color15: #ffffff
+URxvt*fading:           20
+URxvt*fadeColor:        #111111
+
+URxvt*background:       #111111
+URxvt*foreground:       #babdb6
+
+! black (dark not tango)
+URxvt*color0:           #000000
+URxvt*color8:           #555753
+! red
+URxvt*color1:           #ff6565
+URxvt*color9:           #ff8d8d
+! green
+URxvt*color2:           #93d44f
+URxvt*color10:          #c8e7a8
+! yellow
+URxvt*color3:           #eab93d
+URxvt*color11:          #ffc123
+! blue
+URxvt*color4:           #204a87
+URxvt*color12:          #3465a4
+! magenta
+URxvt*color5:           #ce5c00
+URxvt*color13:          #f57900
+! cyan (not tango)
+URxvt*color6:           #89b6e2
+URxvt*color14:          #46a4ff
+! white
+URxvt*color7:           #cccccc
+URxvt*color15:          #ffffff
 
 ! urxvt-console --------------------------------------------------------------
 
@@ -76,109 +79,102 @@ urxvt-console*iconFile: __HOME__/.icons/urxvt/circle_open_blur_less.svg
 
 ! urxvt-stop -----------------------------------------------------------------
 
-urxvt-stop*background:               #282626
-urxvt-stop*foreground:               #696969
-urxvt-stop*fadeColor:                #282626
+urxvt-stop*background:  #282626
+urxvt-stop*foreground:  #696969
+urxvt-stop*fadeColor:   #282626
 
-!! black dark/light
-urxvt-stop*color0:                   #363636
-urxvt-stop*color8:                   #424242
-!! red dark/light
-urxvt-stop*color1:                   #C37561
-urxvt-stop*color9:                   #D19485
-!! green dark/light
-urxvt-stop*color2:                   #A0A57E
-urxvt-stop*color10:                  #B6B99D
-!! yellow dark/light
-urxvt-stop*color3:                   #D1A375
-urxvt-stop*color11:                  #DEBC9C
-!! blue dark/light
-urxvt-stop*color4:                   #7985A3
-urxvt-stop*color12:                  #98A1B9
-!! magenta dark/light
-urxvt-stop*color5:                   #AB716D
-urxvt-stop*color13:                  #BE918E
-!! cyan dark/light
-urxvt-stop*color6:                   #98B9B1
-urxvt-stop*color14:                  #CBE6CB
-!! white dark/light
-urxvt-stop*color7:                   #D0D0D0
-urxvt-stop*color15:                  #E6E6E6
+! black
+urxvt-stop*color0:      #363636
+urxvt-stop*color8:      #424242
+! red
+urxvt-stop*color1:      #c37561
+urxvt-stop*color9:      #d19485
+! green
+urxvt-stop*color2:      #a0a57e
+urxvt-stop*color10:     #b6b99d
+! yellow
+urxvt-stop*color3:      #d1a375
+urxvt-stop*color11:     #debc9c
+! blue
+urxvt-stop*color4:      #7985a3
+urxvt-stop*color12:     #98a1b9
+! magenta
+urxvt-stop*color5:      #ab716d
+urxvt-stop*color13:     #be918e
+! cyan
+urxvt-stop*color6:      #98b9b1
+urxvt-stop*color14:     #cbe6cb
+! white
+urxvt-stop*color7:      #d0d0d0
+urxvt-stop*color15:     #e6e6e6
 
 ! urxvt-blue -----------------------------------------------------------------
 
-urxvt-blue*background:               #000082
-urxvt-blue*foreground:               #f4f9ff
-urxvt-blue*fadeColor:                #000082
+urxvt-blue*background:  #000082
+urxvt-blue*foreground:  #f4f9ff
+urxvt-blue*fadeColor:   #000082
 
 ! urxvt-dark -----------------------------------------------------------------
 
-urxvt-dark*background:               #002b36
-urxvt-dark*foreground:               #657b83
-urxvt-dark*fadeColor:                #002b36
+urxvt-dark*background:  #002b36
+urxvt-dark*foreground:  #657b83
+urxvt-dark*fadeColor:   #002b36
 
-!! black dark/light
-urxvt-dark*color0:                   #002b36
-urxvt-dark*color8:                   #073642
-!! red dark/light
-urxvt-dark*color1:                   #db322f
-urxvt-dark*color9:                   #cb4b16
-!! green dark/light
-urxvt-dark*color2:                   #859900
-urxvt-dark*color10:                  #586e75
-!! yellow dark/light
-urxvt-dark*color3:                   #b58900
-urxvt-dark*color11:                  #657b83
-!! blue dark/light
-urxvt-dark*color4:                   #268bd2
-urxvt-dark*color12:                  #839496
-!! magenta dark/light
-urxvt-dark*color5:                   #d33682
-urxvt-dark*color13:                  #6c71c4
-!! cyan dark/light
-urxvt-dark*color6:                   #2aa198
-urxvt-dark*color14:                  #93a1a1
-!! white dark/light
-urxvt-dark*color7:                   #eee8d5
-urxvt-dark*color15:                  #fdf6e3
+! black
+urxvt-dark*color0:      #002b36
+urxvt-dark*color8:      #073642
+! red
+urxvt-dark*color1:      #db322f
+urxvt-dark*color9:      #cb4b16
+! green
+urxvt-dark*color2:      #859900
+urxvt-dark*color10:     #586e75
+! yellow
+urxvt-dark*color3:      #b58900
+urxvt-dark*color11:     #657b83
+! blue
+urxvt-dark*color4:      #268bd2
+urxvt-dark*color12:     #839496
+! magenta
+urxvt-dark*color5:      #d33682
+urxvt-dark*color13:     #6c71c4
+! cyan
+urxvt-dark*color6:      #2aa198
+urxvt-dark*color14:     #93a1a1
+! white
+urxvt-dark*color7:      #eee8d5
+urxvt-dark*color15:     #fdf6e3
 
 ! urxvt-jschx ----------------------------------------------------------------
 
-urxvt-jschx*background:               #1f2f3f
-urxvt-jschx*foreground:               #9fafbf
-urxvt-jschx*fadeColor:                #1f2f3f
+urxvt-jschx*background: #1f2f3f
+urxvt-jschx*foreground: #9fafbf
+urxvt-jschx*fadeColor:  #1f2f3f
 
 ! black
-urxvt-jschx*color0:  #0f1f2f
-urxvt-jschx*color8:  #2f3f4f
-
+urxvt-jschx*color0:     #0f1f2f
+urxvt-jschx*color8:     #2f3f4f
 ! red
-urxvt-jschx*color1:  #af3f3f
-urxvt-jschx*color9:  #cf5f5f
-
+urxvt-jschx*color1:     #af3f3f
+urxvt-jschx*color9:     #cf5f5f
 ! green
-urxvt-jschx*color2:  #9fbf6f
-urxvt-jschx*color10: #bfdf8f
-
+urxvt-jschx*color2:     #9fbf6f
+urxvt-jschx*color10:    #bfdf8f
 ! yellow
-urxvt-jschx*color3:  #cf9f3f
-urxvt-jschx*color11: #efbf5f
-
+urxvt-jschx*color3:     #cf9f3f
+urxvt-jschx*color11:    #efbf5f
 ! blue
-urxvt-jschx*color4:  #3f6f9f
-urxvt-jschx*color12: #5f8fbf
-
+urxvt-jschx*color4:     #3f6f9f
+urxvt-jschx*color12:    #5f8fbf
 ! magenta
-urxvt-jschx*color5:  #af6faf
-urxvt-jschx*color13: #cf8fcf
-
+urxvt-jschx*color5:     #af6faf
+urxvt-jschx*color13:    #cf8fcf
 ! cyan
-urxvt-jschx*color6:  #5f9fcf
-urxvt-jschx*color14: #7fbfef
-
+urxvt-jschx*color6:     #5f9fcf
+urxvt-jschx*color14:    #7fbfef
 ! white
-urxvt-jschx*color7:  #afbfcf
-urxvt-jschx*color15: #cfdfef
+urxvt-jschx*color7:     #afbfcf
+urxvt-jschx*color15:    #cfdfef
 
 ! emacs ----------------------------------------------------------------------
 
