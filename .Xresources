@@ -29,7 +29,7 @@ URxvt*perl-ext-common:  default,fullscreen,url-select,keyboard-select,opacity
 URxvt*url-select.launcher:  firefox
 URxvt*url-select.underline: false
 
-urxvt*keysym.M-u:       perl:url-select:select_next
+URxvt*keysym.M-u:       perl:url-select:select_next
 URxvt*keysym.M-C-1:     command:\033[8;50;80t
 URxvt*keysym.M-C-2:     command:\033[8;50;132t
 URxvt*keysym.M-C-3:     perl:fullscreen:switch
