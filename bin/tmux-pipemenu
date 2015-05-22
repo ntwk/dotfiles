@@ -3,10 +3,10 @@
 SESSION_NAME="0"
 
 echo "<openbox_pipe_menu>"
-for i in $(tmux list-windows -t $SESSION_NAME -F '#{window_name}'); do
+tmux list-windows -t $SESSION_NAME -F '#{window_name}' | while read i; do
     echo "  <item label=\"${i}\">"
     echo "    <action name=\"Execute\">"
-    echo "      <command>tmux-launch ${i}</command>"
+    echo "      <command>tmux-launch \"${i}\"</command>"
     echo "    </action>"
     echo "  </item>"
 done
