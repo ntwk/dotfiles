@@ -24,8 +24,7 @@ if [ -z "$TERM_EXIST" ]; then # TARGET TERMINAL DOES NOT EXIST
     if [ -n "$MATCHED_WINDOW" ]; then
         urxvt -name $WINDOW_NAME -e tmux new-session -A -D -s $SESSION_NAME \; select-window -t $SESSION_NAME:$MATCHED_WINDOW &
     else
-        SESSION_EXIST=$(tmux list-sessions -F '#{session_name}' | grep "^$SESSION_NAME$")
-        if [ -n "$SESSION_EXIST" ]; then
+        if tmux list-sessions -F '#{session_name}' | grep -q "^$SESSION_NAME$"; then # SESSION $SESSION_NAME EXISTS
             urxvt -name $WINDOW_NAME -e tmux attach-session -d -t $SESSION_NAME \; new-window "$PROG_NAME $PROG_ARGS" &
         else
             urxvt -name $WINDOW_NAME -e tmux new-session -A -D -s $SESSION_NAME "$PROG_NAME $PROG_ARGS" &
