@@ -18,7 +18,7 @@ else
     PROG_ARGS=$@
 fi
 
-MATCHED_WINDOW=$(tmux list-windows -t $SESSION_NAME -F '#{window_id}:#{window_name}' | grep "^@[^:]*:$PROG_NAME\$" | cut -d':' -f 1 | head -1)
+MATCHED_WINDOW=$(tmux list-windows -t $SESSION_NAME -F '#{window_id}:#{window_name}' | grep -m1 "^@[^:]*:$PROG_NAME\$" | cut -d':' -f 1)
 
 if [ -z "$TERM_EXIST" ]; then # TARGET TERMINAL DOES NOT EXIST
     if [ -n "$MATCHED_WINDOW" ]; then
