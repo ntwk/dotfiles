@@ -4,14 +4,14 @@
 #
 # tmux-launch: run a program within a tmux + urxvt session, creating
 # the session if necessary.
-# dependencies: tmux, rxvt-unicode, wmctrl, bash
+# dependencies: tmux, rxvt-unicode, wmctrl
 
 WINDOW_NAME="urxvt-console"
 TERM_EXIST=$(wmctrl -lx | cut -d' ' -f 4 | grep "^$WINDOW_NAME\..*$")
 SESSION_NAME="0"
 
 if [ -z "$1" ]; then
-    PROG_NAME="bash"
+    PROG_NAME=$(basename "$SHELL")
 else
     PROG_NAME=$1
     shift
