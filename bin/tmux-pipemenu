@@ -1,18 +1,23 @@
 #!/bin/bash
 
 SESSION_NAME="0"
+WINDOWS=$(tmux list-windows -t $SESSION_NAME -F '#{window_id}:#{window_name}')
 
 echo "<openbox_pipe_menu>"
-tmux list-windows -t $SESSION_NAME -F '#{window_id}:#{window_name}' | while read i; do
-    WINDOW_NAME=${i#*:} # BASHISM
-    # WINDOW_NAME=$(echo "$i" | cut -d':' -f 2-) # POSIX SHELL EQUIVALENT OF ABOVE
-    echo "  <item label=\"${WINDOW_NAME}\">"
-    echo "    <action name=\"Execute\">"
-    echo "      <command>tmux-launch \"${i}\"</command>"
-    echo "    </action>"
-    echo "  </item>"
-done
-echo "<separator/>"
+
+if [ -n "$WINDOWS" ]; then
+    while read i; do
+        WINDOW_NAME=${i#*:} # BASHISM
+        # WINDOW_NAME=$(echo "$i" | cut -d':' -f 2-) # POSIX FORM OF ABOVE
+        echo "  <item label=\"${WINDOW_NAME}\">"
+        echo "    <action name=\"Execute\">"
+        echo "      <command>tmux-launch \"${i}\"</command>"
+        echo "    </action>"
+        echo "  </item>"
+    done <<< "$WINDOWS"
+    echo "<separator/>"
+fi
+
 echo "<item label=\"new window\">"
 echo "  <action name=\"Execute\">"
 echo "    <command>tmux-launch</command>"
