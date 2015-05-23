@@ -3,8 +3,10 @@
 SESSION_NAME="0"
 
 echo "<openbox_pipe_menu>"
-tmux list-windows -t $SESSION_NAME -F '#{window_name}' | while read i; do
-    echo "  <item label=\"${i}\">"
+tmux list-windows -t $SESSION_NAME -F '#{window_id}:#{window_name}' | while read i; do
+    WINDOW_NAME=${i#*:} # BASHISM
+    # WINDOW_NAME=$(echo "$i" | cut -d':' -f 2-) # POSIX SHELL EQUIVALENT OF ABOVE
+    echo "  <item label=\"${WINDOW_NAME}\">"
     echo "    <action name=\"Execute\">"
     echo "      <command>tmux-launch \"${i}\"</command>"
     echo "    </action>"
