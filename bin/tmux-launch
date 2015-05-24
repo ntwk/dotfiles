@@ -21,6 +21,7 @@ fi
 MATCHED_WINDOW=$(tmux list-windows -t $SESSION_NAME -F '#{window_id}:#{window_name}' | grep -m1 "^\(@[^:]*:\)\?$PROG_NAME\$" | cut -d':' -f 1)
 
 if [ -z "$TERM_EXIST" ]; then # TARGET TERMINAL DOES NOT EXIST
+    unset TMUX # in case we are being run from within a tmux session
     if [ -n "$MATCHED_WINDOW" ]; then
         urxvt -name $WINDOW_NAME -e tmux new-session -A -D -s $SESSION_NAME \; select-window -t $SESSION_NAME:$MATCHED_WINDOW &
     else
