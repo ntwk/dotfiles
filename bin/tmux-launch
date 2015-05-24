@@ -32,7 +32,7 @@ if [ -z "$TERM_EXIST" ]; then # TARGET TERMINAL DOES NOT EXIST
 else # TARGET TERMINAL EXISTS
     if [ -n "$MATCHED_WINDOW" ]; then
         tmux select-window -t "$SESSION_NAME:$MATCHED_WINDOW" &
-    else
+    elif [ -n "$PROG_NAME" ]; then
         tmux new-window -t "$SESSION_NAME:" "$PROG_NAME $PROG_ARGS" &
     fi
     wmctrl -xa "$WINDOW_NAME"
