@@ -10,9 +10,7 @@ WINDOW_NAME="urxvt-console"
 TERM_EXIST=$(wmctrl -lx | cut -d' ' -f 4 | grep "^$WINDOW_NAME\..*$")
 SESSION_NAME="0"
 
-if [ -z "$1" ]; then
-    PROG_NAME=$(basename "$SHELL")
-else
+if [ -n "$1" ]; then
     PROG_NAME=$1
     shift
     PROG_ARGS=$@

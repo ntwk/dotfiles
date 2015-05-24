@@ -20,7 +20,7 @@ fi
 
 echo "<item label=\"new window\">"
 echo "  <action name=\"Execute\">"
-echo "    <command>tmux-launch</command>"
+echo "    <command>tmux-launch $SHELL</command>"
 echo "  </action>"
 echo "</item>"
 echo "</openbox_pipe_menu>"
