@@ -484,12 +484,12 @@
       </keybind>
       <keybind key="h">
         <action name="Execute">
-          <command>urxvt-focus</command>
+          <command>tmux-launch</command>
         </action>
       </keybind>
       <keybind key="W-h">
         <action name="Execute">
-          <command>urxvt-focus</command>
+          <command>tmux-launch</command>
         </action>
       </keybind>
     </keybind>
