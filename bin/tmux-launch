@@ -29,7 +29,6 @@ if [ -z "$TERM_EXIST" ]; then # TARGET TERMINAL DOES NOT EXIST
         else
             urxvt -name $WINDOW_NAME -e tmux new-session -A -D -s $SESSION_NAME "$PROG_NAME $PROG_ARGS" &
         fi
-
     fi
 else # TARGET TERMINAL EXISTS
     if [ -n "$MATCHED_WINDOW" ]; then
