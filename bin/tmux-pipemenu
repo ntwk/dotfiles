@@ -15,12 +15,12 @@ if [ -n "$WINDOWS" ]; then
         echo "    </action>"
         echo "  </item>"
     done <<< "$WINDOWS"
-    echo "<separator/>"
+    echo "  <separator/>"
 fi
 
-echo "<item label=\"new window\">"
-echo "  <action name=\"Execute\">"
-echo "    <command>tmux-launch $SHELL</command>"
-echo "  </action>"
-echo "</item>"
+echo "  <item label=\"new window\">"
+echo "    <action name=\"Execute\">"
+echo "      <command>tmux-launch $SHELL</command>"
+echo "    </action>"
+echo "  </item>"
 echo "</openbox_pipe_menu>"
