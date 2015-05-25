@@ -12,9 +12,8 @@ SESSION_NAME="0"
 
 if [ -n "$1" ]; then
     PROG_NAME=$1; shift; PROG_ARGS=$@
+    MATCHED_WINDOW=$(tmux list-windows -t $SESSION_NAME -F '#{window_id}:#{window_name}' 2>/dev/null | grep -m1 "^\(@[^:]*:\)\?$PROG_NAME\$" | cut -d':' -f 1)
 fi
-
-MATCHED_WINDOW=$(tmux list-windows -t $SESSION_NAME -F '#{window_id}:#{window_name}' 2>/dev/null | grep -m1 "^\(@[^:]*:\)\?$PROG_NAME\$" | cut -d':' -f 1)
 
 if [ -z "$TERM_EXIST" ]; then # TARGET TERMINAL DOES NOT EXIST
     unset TMUX # in case we are being run from within a tmux session
