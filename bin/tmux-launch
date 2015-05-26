@@ -1,9 +1,7 @@
 #!/bin/sh
-
-# Created: 2015-04-30
 #
-# tmux-launch: run a program within a tmux + urxvt session, creating
-# the session if necessary.
+# tmux-launch - run a program in the main tmux + urxvt session
+#
 # dependencies: tmux, rxvt-unicode, wmctrl
 
 TERM_NAME="urxvt-console"
