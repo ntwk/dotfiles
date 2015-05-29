@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 WINDOWS=$(wmctrl -lx | cut -d' ' -f 4)
 
