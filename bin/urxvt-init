@@ -1,4 +1,9 @@
 #!/bin/bash
+#
+# urxvt-init - main-terminal-aware rxvt-unicode invocation
+#
+# Open a regular rxvt-unicode terminal or either the main terminal or the
+# secondary terminal neither exists.
 
 WINDOWS=$(wmctrl -lx | cut -d' ' -f 4)
 

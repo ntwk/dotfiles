@@ -1,7 +1,5 @@
 #!/bin/sh
-
 #
 # pomodoro - Set the X root window color to red after $1 amout of time.
-#
 
 sleep $1 && hsetroot -solid "#500000"

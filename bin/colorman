@@ -2,7 +2,8 @@
 #
 # colorman - colorize man pages
 #
-# To act as a drop-in man replacement, alias man to this script:
+# To act as a drop-in man replacement, alias man to colorman like so:
+#
 # alias man=colorman
 
 export LESS_TERMCAP_mb=$'\E[01;31m'

@@ -1,4 +1,6 @@
 #!/bin/bash
+#
+# tmux-pipemenu - generate an Openbox pipemenu for the main tmux session
 
 SESSION_NAME="0"
 WINDOWS=$(tmux list-windows -t $SESSION_NAME -F '#{window_id}:#{window_name}')

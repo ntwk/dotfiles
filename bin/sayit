@@ -1,7 +1,5 @@
 #!/bin/sh
-
 #
 # sayit - read the currently selected text aloud
-#
 
 xsel | festival --tts
