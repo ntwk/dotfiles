@@ -1,9 +1,11 @@
 #!/bin/sh
-
 #
-# tmux-thunar - Helper script for allowing Thunar to open a tmux window in
-# the primary tmux session.  This it meant to be invoked via a Thunar custom
-# action.
+# tmux-thunar - Open a tmux window in the main tmux session
 #
+# USAGE: tmux-thunar [DIRECTORY]
+#
+# tmux-thunar is meant to be invoked via a Thunar custom action.  Open the
+# user's default shell in the directory DIRECTORY if specified or the user's
+# home directory if DIRECTORY is omitted.
 
-tmux-launch /bin/bash -c "'cd $1; exec /bin/bash'"
+tmux-launch /bin/sh -c "'cd $1; exec $SHELL'"
