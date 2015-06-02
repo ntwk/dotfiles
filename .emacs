@@ -91,3 +91,8 @@
 (setq org-enforce-todo-dependencies t)
 (setq org-log-into-drawer t)
 ;; END Org mode settings
+
+;; Load host-specific configuration
+(let ((local-config "~/.emacs_local"))
+  (if (file-exists-p local-config)
+      (load-file local-config)))
