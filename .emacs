@@ -79,3 +79,15 @@
   (interactive)
   (let ((fill-column (point-max)))
     (fill-paragraph nil)))
+
+;; START Org mode settings
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-switchb)
+
+(setq org-completion-use-ido t)
+(setq org-todo-keywords
+  '((sequence "TODO(t)" "WAIT(w)" "|" "DONE(d)" "VOID(v)")))
+(setq org-enforce-todo-dependencies t)
+(setq org-log-into-drawer t)
+;; END Org mode settings
