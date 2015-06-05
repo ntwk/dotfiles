@@ -44,7 +44,8 @@
       ;; I prefer using the "clipboard" selection (the one the
       ;; typically is used by c-c/c-v) before the primary selection
       ;; (that uses mouse-select/middle-button-click)
-      (call-process-region (point-min) (point-max) "xsel" nil 0 nil "--clipboard" "--input")))
+      (call-process-region
+       (point-min) (point-max) "xsel" nil 0 nil "--clipboard" "--input")))
   ;; Callback for when user pastes
   (defun xsel-paste-function()
     ;; Find out what is current selection by xsel. If it is different
@@ -71,7 +72,8 @@
 (when (>= emacs-major-version 24)
   (require 'package)
   (package-initialize)
-  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t))
+  (add-to-list 'package-archives
+               '("melpa" . "http://melpa.milkbox.net/packages/") t))
 
 ;; ledger cli emacs mode http://github.com/jwiegley/ledger
 (require 'ledger)
