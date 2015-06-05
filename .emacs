@@ -12,7 +12,18 @@
 (menu-bar-mode -1)
 (tooltip-mode -1)
 
+;; hideshow (hs-minor-mode) configuration
 (add-hook 'c-mode-common-hook (lambda () (hs-minor-mode t)))
+
+(add-hook 'hs-minor-mode-hook (lambda ()
+                                (define-key hs-minor-mode-map "\C-ch"
+                                  'hs-hide-block)
+                                (define-key hs-minor-mode-map "\C-cs"
+                                  'hs-show-block)
+                                (define-key hs-minor-mode-map "\C-cH"
+                                  'hs-hide-all)
+                                (define-key hs-minor-mode-map "\C-cS"
+                                  'hs-show-all)))
 
 ;; I prefer using the "clipboard" selection (the one the typically is
 ;; used by c-c/c-v) before the primary selection (that uses
