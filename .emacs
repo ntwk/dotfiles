@@ -1,6 +1,6 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
-;; disable splash screen and startup message
+;; Disable splash screen and startup message
 (setq inhibit-startup-message t)
 (setq initial-scratch-message nil)
 
@@ -12,7 +12,7 @@
 (menu-bar-mode -1)
 (tooltip-mode -1)
 
-(add-hook 'c-mode-common-hook (lambda() (hs-minor-mode t)))
+(add-hook 'c-mode-common-hook (lambda () (hs-minor-mode t)))
 
 ;; I prefer using the "clipboard" selection (the one the typically is
 ;; used by c-c/c-v) before the primary selection (that uses
