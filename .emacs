@@ -109,3 +109,11 @@
 (let ((local-config "~/.emacs_local"))
   (if (file-exists-p local-config)
       (load-file local-config)))
+
+;; Thunar file manager integration
+(defun thunar ()
+  "Start an instance of thunar in the present directory."
+  (interactive)
+  (start-process "thunar-process" nil "thunar"))
+
+(global-set-key "\C-ce" 'thunar)
