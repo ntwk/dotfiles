@@ -1,5 +1,20 @@
 #!/bin/sh
 #
-# pomodoro - Set the X root window color to red after $1 amout of time.
+# pomodoro - Set the X root window color to red after an amount of time.
+#
+# USAGE: pomodoro [DURATION]
+#
+# A simple Pomodoro Technique timer.  If DURATION is omitted, set the
+# timer to the traditional 25 minutes.
+#
+# PRINCIPLE
+#
+# 1. Decide on the task to be done
+# 2. Set the pomodoro timer to n minutes (traditionally 25)
+# 3. Work on the task until the timer rings; record with an x
+# 4. Take a short break (3–5 minutes)
+# 5. After four pomodori, take a longer break (15–30 minutes)
 
-sleep $1 && hsetroot -solid "#500000"
+DURATION=${1:-25m}
+
+sleep $DURATION && hsetroot -solid "#500000"
