@@ -47,14 +47,14 @@
       (call-process-region
        (point-min) (point-max) "xsel" nil 0 nil "--clipboard" "--input")))
   ;; Callback for when user pastes
-  (defun xsel-paste-function()
+  (defun xsel-paste-function ()
     ;; Find out what is current selection by xsel. If it is different
     ;; from the top of the kill-ring (car kill-ring), then return
     ;; it. Else, nil is returned, so whatever is in the top of the
     ;; kill-ring will be used.
     (let ((xsel-output (shell-command-to-string "xsel --clipboard --output")))
       (unless (string= (car kill-ring) xsel-output)
-	xsel-output )))
+	xsel-output)))
   ;; Attach callbacks to hooks
   (setq interprogram-cut-function 'xsel-cut-function)
   (setq interprogram-paste-function 'xsel-paste-function))
