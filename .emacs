@@ -25,28 +25,26 @@
                                 (define-key hs-minor-mode-map "\C-cS"
                                   'hs-show-all)))
 
-;; I prefer using the "clipboard" selection (the one the typically is
-;; used by c-c/c-v) before the primary selection (that uses
-;; mouse-select/middle-button-click)
+;; Use the X CLIPBOARD selection (c-c/c-v) before the PRIMARY
+;; selection (mouse-select/middle-click)
 ;; http://hugoheden.wordpress.com/2009/03/08/copypaste-with-emacs-in-terminal/
 (setq x-select-enable-clipboard t)
 
-;; If emacs is run in a terminal, the clipboard- functions have no
-;; effect; use xsel instead.
+;; If Emacs is run in a terminal, the clipboard- functions have no
+;; effect so use xsel instead.
 ;; http://shreevatsa.wordpress.com/2006/10/22/emacs-copypaste-and-x
 ;; http://www.mail-archive.com/help-gnu-emacs@gnu.org/msg03577.html
 (unless window-system
-  ;; Callback for when user cuts
+  ;; Callback for cutting text
   (defun xsel-cut-function (text &optional push)
-    ;; Insert text to temp-buffer, and "send" content to xsel stdin
+    ;; Insert text to temp-buffer, and pipe content to xsel stdin
     (with-temp-buffer
       (insert text)
-      ;; I prefer using the "clipboard" selection (the one the
-      ;; typically is used by c-c/c-v) before the primary selection
-      ;; (that uses mouse-select/middle-button-click)
+      ;; Use the xsel --clipboard switch to operate on the X CLIPBOARD
+      ;; selection rather than the PRIMARY selection.
       (call-process-region
        (point-min) (point-max) "xsel" nil 0 nil "--clipboard" "--input")))
-  ;; Callback for when user pastes
+  ;; Callback for pasting text
   (defun xsel-paste-function ()
     ;; Find out what is current selection by xsel. If it is different
     ;; from the top of the kill-ring (car kill-ring), then return
@@ -75,7 +73,7 @@
   (add-to-list 'package-archives
                '("melpa" . "http://melpa.milkbox.net/packages/") t))
 
-;; ledger cli emacs mode http://github.com/jwiegley/ledger
+;; Ledger CLI Emacs mode http://github.com/jwiegley/ledger
 (require 'ledger)
 
 ;; HTML indent to 4 spaces
