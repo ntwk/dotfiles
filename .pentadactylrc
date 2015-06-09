@@ -21,6 +21,9 @@ map -m main -javascript <C-A-3> window.moveTo(window.screen.width - window.outer
 nmap <Leader>y :execute "silent !~/bin/youtube-play.sh '" + buffer.URL + "'"<CR>
 nmap <Leader>x :execute "silent !xmessage '" + buffer.URL + "'"<CR>
 
+" enable toggling of Toolbar AKA Navigation Bar
+map -m main -ex <Leader>t :set guioptions!=T
+
 " enable toggling of the status bar
 map -m main -ex <C-/> :tbt Add-on Bar
 
