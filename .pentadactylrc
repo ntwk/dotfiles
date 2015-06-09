@@ -14,15 +14,15 @@ set showtabline=never
 "  function foobar() { window.setTimeout(function() {window.resizeTo(200,200); window.moveTo(50,50);},0); }
 "EOF
 
-map <C-A-1> -m main -javascript window.resizeTo(800,window.outerHeight);
-map <C-A-2> -m main -javascript window.resizeTo(1024,window.outerHeight);
-map <C-A-3> -m main -javascript window.moveTo(window.screen.width - window.outerWidth - 10, window.screen.height - window.outerHeight - 10);
+map -m main -javascript <C-A-1> window.resizeTo(800,window.outerHeight);
+map -m main -javascript <C-A-2> window.resizeTo(1024,window.outerHeight);
+map -m main -javascript <C-A-3> window.moveTo(window.screen.width - window.outerWidth - 10, window.screen.height - window.outerHeight - 10);
 
 nmap <Leader>y :execute "silent !~/bin/youtube-play.sh '" + buffer.URL + "'"<CR>
 nmap <Leader>x :execute "silent !xmessage '" + buffer.URL + "'"<CR>
 
 " enable toggling of the status bar
-map <C-/> -silent :tbt Add-on Bar<CR>
+map -silent <C-/> :tbt Add-on Bar<CR>
 
 " open urls in mpv
 javascript <<EOF
