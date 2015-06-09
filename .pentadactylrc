@@ -22,7 +22,7 @@ nmap <Leader>y :execute "silent !~/bin/youtube-play.sh '" + buffer.URL + "'"<CR>
 nmap <Leader>x :execute "silent !xmessage '" + buffer.URL + "'"<CR>
 
 " enable toggling of the status bar
-map -silent <C-/> :tbt Add-on Bar<CR>
+map -m main -ex <C-/> :tbt Add-on Bar
 
 " open urls in mpv
 javascript <<EOF
