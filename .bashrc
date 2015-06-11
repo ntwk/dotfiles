@@ -72,6 +72,11 @@ function face {
     fi
 }
 
+# colordiff piped through a pager
+function cdiff() {
+    colordiff $@ | less -RS
+}
+
 # emacs: read-only edition
 function emr() {
     emacs "$1" -nw --eval '(setq buffer-read-only t)'
