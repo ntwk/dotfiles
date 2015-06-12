@@ -18,12 +18,26 @@
 # 4. Take a short break (3–5 minutes)
 # 5. After four pomodori, take a longer break (15–30 minutes)
 
+BG=""
+if which hsetroot >/dev/null 2>/dev/null; then
+    BG=hsetroot
+elif which esetroot >/dev/null 2>/dev/null; then
+    BG=esetroot
+elif which xsetroot >/dev/null 2>/dev/null; then
+    BG=xsetroot
+fi
+
+if [ -z $BG ]; then
+    echo "$(basename $0) requires either hsetroot, esetroot or xsetroot" 1>&2
+    exit 1
+fi
+
 case $1 in
     'reset')
-        hsetroot -solid ${2:-"#303030"}
+        $BG -solid ${2:-"#303030"}
         ;;
     *)
         DURATION=${1:-25m}
-        sleep $DURATION && hsetroot -solid "#500000"
+        sleep $DURATION && $BG -solid "#500000"
         ;;
 esac
