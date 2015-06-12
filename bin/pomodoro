@@ -3,9 +3,12 @@
 # pomodoro - Set the X root window color to red after an amount of time.
 #
 # USAGE: pomodoro [DURATION]
+#        pomodoro reset [COLOR]
 #
-# A simple Pomodoro Technique timer.  If DURATION is omitted, set the
-# timer to the traditional 25 minutes.
+# A simple Pomodoro Technique timer.  Without arguments, set the timer
+# to the traditional 25 minutes.  If the argument is 'reset', set the X
+# root window color to COLOR where COLOR is a rgb hex value of the form
+# '#aabbcc'.  If color is omitted, #303030 is assumed.
 #
 # PRINCIPLE
 #
@@ -15,6 +18,12 @@
 # 4. Take a short break (3–5 minutes)
 # 5. After four pomodori, take a longer break (15–30 minutes)
 
-DURATION=${1:-25m}
-
-sleep $DURATION && hsetroot -solid "#500000"
+case $1 in
+    'reset')
+        hsetroot -solid ${2:-"#303030"}
+        ;;
+    *)
+        DURATION=${1:-25m}
+        sleep $DURATION && hsetroot -solid "#500000"
+        ;;
+esac
