@@ -104,7 +104,7 @@
 ;; END Org mode settings
 
 ;; Load host-specific configuration
-(let ((local-config "~/.emacs_local"))
+(let ((local-config "~/.emacs.d/init_local.el"))
   (if (file-exists-p local-config)
       (load-file local-config)))
 
