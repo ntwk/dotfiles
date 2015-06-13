@@ -20,7 +20,7 @@
 
 SCRIPTNAME=$(basename $0)
 
-TMPDIR=/tmp/pomodoro-$UID
+TMPDIR=/tmp/pomodoro-$(id -u)
 [ ! -d $TMPDIR ] &&
     mkdir -p $TMPDIR &&
     chmod 700 $TMPDIR
