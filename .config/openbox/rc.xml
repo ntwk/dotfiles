@@ -337,15 +337,15 @@
         <command>~/bin/sayit</command>
       </action>
     </keybind>
-    <!-- Keybindings for cmus control -->
+    <!-- Keybindings for volume control -->
     <keybind key="W-p">
       <action name="Execute">
-        <command>cmus-remote --volume +5%</command>
+        <command>amixer set PCM 5%+</command>
       </action>
     </keybind>
     <keybind key="W-i">
       <action name="Execute">
-        <command>cmus-remote --volume -5%</command>
+        <command>amixer set PCM 5%-</command>
       </action>
     </keybind>
     <!-- Keybindings for active windows opacity -->
