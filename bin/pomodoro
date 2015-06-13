@@ -18,6 +18,22 @@
 # 4. Take a short break (3–5 minutes)
 # 5. After four pomodori, take a longer break (15–30 minutes)
 
+SCRIPTNAME=$(basename $0)
+
+TMPDIR=/tmp/pomodoro-$UID
+[ ! -d $TMPDIR ] &&
+    mkdir -p $TMPDIR &&
+    chmod 700 $TMPDIR
+
+LOCKFILE=$TMPDIR/pomodoro.lock
+exec 200>$LOCKFILE
+
+if ! flock -n 200; then
+    echo "Failed to start.  Is another instance of $SCRIPTNAME running?" 1>&2
+    exit 1
+fi
+echo $$ 1>&200
+
 BG=""
 if which hsetroot >/dev/null 2>/dev/null; then
     BG=hsetroot
@@ -28,7 +44,7 @@ elif which xsetroot >/dev/null 2>/dev/null; then
 fi
 
 if [ -z $BG ]; then
-    echo "$(basename $0) requires either hsetroot, esetroot or xsetroot" 1>&2
+    echo "$SCRIPTNAME requires either hsetroot, esetroot or xsetroot" 1>&2
     exit 1
 fi
 
@@ -41,3 +57,5 @@ case $1 in
         env sleep $DURATION && $BG -solid "#500000"
         ;;
 esac
+
+rm $LOCKFILE
