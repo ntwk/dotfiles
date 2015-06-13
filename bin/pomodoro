@@ -38,6 +38,6 @@ case $1 in
         ;;
     *)
         DURATION=${1:-25m}
-        sleep $DURATION && $BG -solid "#500000"
+        env sleep $DURATION && $BG -solid "#500000"
         ;;
 esac
