@@ -49,7 +49,7 @@ if [ -z $BG ]; then
 fi
 
 case $1 in
-    'reset')
+    reset)
         $BG -solid ${2:-"#303030"}
         ;;
     *)
