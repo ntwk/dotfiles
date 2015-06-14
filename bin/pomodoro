@@ -20,20 +20,6 @@
 
 SCRIPTNAME=$(basename $0)
 
-TMPDIR=/tmp/pomodoro-$(id -u)
-[ ! -d $TMPDIR ] &&
-    mkdir -p $TMPDIR &&
-    chmod 700 $TMPDIR
-
-LOCKFILE=$TMPDIR/pomodoro.lock
-exec 9>$LOCKFILE
-
-if ! flock -n 9; then
-    echo "Failed to start.  Is another instance of $SCRIPTNAME running?" 1>&2
-    exit 1
-fi
-echo $$ 1>&9
-
 BG=""
 if which hsetroot >/dev/null 2>/dev/null; then
     BG=hsetroot
@@ -47,6 +33,20 @@ if [ -z $BG ]; then
     echo "$SCRIPTNAME requires either hsetroot, esetroot or xsetroot" 1>&2
     exit 1
 fi
+
+TMPDIR=/tmp/pomodoro-$(id -u)
+[ ! -d $TMPDIR ] &&
+    mkdir -p $TMPDIR &&
+    chmod 700 $TMPDIR
+
+LOCKFILE=$TMPDIR/pomodoro.lock
+exec 9>$LOCKFILE
+
+if ! flock -n 9; then
+    echo "Failed to start.  Is another instance of $SCRIPTNAME running?" 1>&2
+    exit 1
+fi
+echo $$ 1>&9
 
 case $1 in
     reset)
