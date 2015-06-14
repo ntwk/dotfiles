@@ -26,13 +26,13 @@ TMPDIR=/tmp/pomodoro-$(id -u)
     chmod 700 $TMPDIR
 
 LOCKFILE=$TMPDIR/pomodoro.lock
-exec 200>$LOCKFILE
+exec 9>$LOCKFILE
 
-if ! flock -n 200; then
+if ! flock -n 9; then
     echo "Failed to start.  Is another instance of $SCRIPTNAME running?" 1>&2
     exit 1
 fi
-echo $$ 1>&200
+echo $$ 1>&9
 
 BG=""
 if which hsetroot >/dev/null 2>/dev/null; then
