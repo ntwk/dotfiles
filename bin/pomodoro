@@ -46,16 +46,28 @@ if ! flock -n 9; then
     echo "Failed to start.  Is another instance of $SCRIPTNAME running?" 1>&2
     exit 1
 fi
+
+cleanup () {
+    trap - EXIT
+    [ -f $LOCKFILE ] && rm $LOCKFILE
+}
+
+trap cleanup HUP INT PIPE TERM
 echo $$ 1>&9
 
 case $1 in
     reset)
+        trap cleanup EXIT HUP INT PIPE TERM
         $BG -solid ${2:-"#303030"}
         ;;
     *)
         DURATION=${1:-25m}
-        env sleep $DURATION && $BG -solid "#500000"
+        echo "Setting timer for $DURATION..."
+        (
+            trap cleanup EXIT HUP INT PIPE TERM
+            env sleep $DURATION &
+            wait $! &&
+                $BG -solid "#500000"
+        ) &
         ;;
 esac
-
-rm $LOCKFILE
