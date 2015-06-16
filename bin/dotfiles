@@ -30,6 +30,10 @@ _basedir() {
     echo ${basedir}
 }
 
+_git_ls() {
+    git ls-files | grep -v .gitignore | grep -v .gitmodules | grep -v "^README"
+}
+
 _existing() {
     while read; do
         declare dstpath=${destination}/${REPLY}
@@ -37,7 +41,7 @@ _existing() {
         if [ ! "$dstpath" -ef "$srcpath" ]; then
             echo $dstpath
         fi
-    done < <(git ls-files | grep -v .gitignore | grep -v .gitmodules | grep -v "^README")
+    done < <(_git_ls)
 }
 
 _unlink_subdirs() {
@@ -62,7 +66,7 @@ _unlink() {
                 echo "dryrun."
             fi
         fi
-    done < <(git ls-files | grep -v .gitignore | grep -v .gitmodules | grep -v "^README")
+    done < <(_git_ls)
 }
 
 _link_subdirs() {
@@ -100,7 +104,7 @@ _link() {
         elif [ ! -L $dstpath ]; then
             echo "${dstpath} already exists and is not a link."
         fi
-    done < <(git ls-files | grep -v .gitignore | grep -v .gitmodules | grep -v "^README")
+    done < <(_git_ls)
 }
 
 while getopts "hnd:" OPTION; do
