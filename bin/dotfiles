@@ -57,6 +57,7 @@ _unlink() {
     declare pfx=$1
     while read; do
         declare dstpath=$(echo ${destination}/${pfx}/${REPLY} | sed s#//*#/#g)
+        declare testdir=$(dirname $dstpath)
         if [ -e $dstpath ]; then
             echo -n "Unlinking ${dstpath}... "
             if ! $dryrun; then
@@ -65,6 +66,16 @@ _unlink() {
             else
                 echo "dryrun."
             fi
+            while [ -z "$(ls -A $testdir)" ] && [ ! "$testdir" -ef "$destination" ]; do
+                echo -n "Removing directory ${testdir}... "
+                if ! $dryrun; then
+                    rmdir "${testdir}"
+                    echo "done."
+                else
+                    echo "dryrun."
+                fi
+                testdir=$(dirname $testdir)
+            done
         fi
     done < <(_git_ls)
 }
