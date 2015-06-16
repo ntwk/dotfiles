@@ -39,7 +39,7 @@ _existing() {
         declare dstpath=${destination}/${REPLY}
         declare srcpath=$(pwd -L)/${REPLY}
         if [ ! "$dstpath" -ef "$srcpath" ]; then
-            echo $dstpath
+            echo "$dstpath"
         fi
     done < <(_git_ls)
 }
@@ -56,9 +56,9 @@ _unlink_subdirs() {
 _unlink() {
     declare pfx=$1
     while read; do
-        declare dstpath=$(echo ${destination}/${pfx}/${REPLY} | sed s#//*#/#g)
-        declare testdir=$(dirname $dstpath)
-        if [ -e $dstpath ]; then
+        declare dstpath=$(echo "${destination}/${pfx}/${REPLY}" | sed s#//*#/#g)
+        declare testdir=$(dirname "$dstpath")
+        if [ -e "$dstpath" ]; then
             echo -n "Unlinking ${dstpath}... "
             if ! $dryrun; then
                 unlink "${dstpath}"
@@ -66,7 +66,7 @@ _unlink() {
             else
                 echo "dryrun."
             fi
-            while [ -z "$(ls -A $testdir)" ] && [ ! "$testdir" -ef "$destination" ]; do
+            while [ -z "$(ls -A "$testdir")" ] && [ ! "$testdir" -ef "$destination" ]; do
                 echo -n "Removing directory ${testdir}... "
                 if ! $dryrun; then
                     rmdir "${testdir}"
@@ -74,7 +74,7 @@ _unlink() {
                 else
                     echo "dryrun."
                 fi
-                testdir=$(dirname $testdir)
+                testdir=$(dirname "$testdir")
             done
         fi
     done < <(_git_ls)
@@ -92,19 +92,19 @@ _link_subdirs() {
 _link() {
     declare pfx=$1
     while read; do
-        declare dstpath=$(echo ${destination}/${pfx}/${REPLY} | sed s#//*#/#g)
+        declare dstpath=$(echo "${destination}/${pfx}/${REPLY}" | sed s#//*#/#g)
         declare srcpath=$(pwd -L)/${REPLY}
-        declare dstdir=$(dirname ${dstpath})
-        if [ ! -e $dstdir ]; then
+        declare dstdir=$(dirname "${dstpath}")
+        if [ ! -e "$dstdir" ]; then
             echo -n "Creating directory ${dstdir}... "
             if ! $dryrun; then
-                mkdir -p ${dstdir}
+                mkdir -p "${dstdir}"
                 echo "done."
             else
                 echo "dryrun."
             fi
         fi
-        if [ ! -e $dstpath ]; then
+        if [ ! -e "$dstpath" ]; then
             echo -n "Linking ${dstpath} to ${srcpath}... "
             if ! $dryrun; then
                 ln -s "${srcpath}" "${dstpath}"
@@ -112,7 +112,7 @@ _link() {
             else
                 echo "dryrun."
             fi
-        elif [ ! -L $dstpath ]; then
+        elif [ ! -L "$dstpath" ]; then
             echo "${dstpath} already exists and is not a link."
         fi
     done < <(_git_ls)
