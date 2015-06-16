@@ -61,7 +61,6 @@ export MANWIDTH=80
 # Ignore duplicate entries in bash history and commands with leading
 # space.  Omit commands listed in HISTIGNORE from the bash history.
 HISTCONTROL=ignoreboth
-#HISTIGNORE="ls:ls -l:cd:cd *:pwd:"
 
 # Command to change the font in urxvt
 function face {
