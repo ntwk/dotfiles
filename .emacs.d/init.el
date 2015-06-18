@@ -91,6 +91,8 @@
   (let ((fill-column (point-max)))
     (fill-paragraph nil)))
 
+(global-set-key (kbd "C-M-q") 'unfill-paragraph)
+
 ;; START Org mode settings
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
