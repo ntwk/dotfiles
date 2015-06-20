@@ -10,21 +10,35 @@ SESSION_NAME="0"
 
 if [ -n "$1" ]; then
     PROG_NAME=$1; shift; PROG_ARGS=$@
-    WINDOW_LIST=$(tmux list-windows -t "$SESSION_NAME" -F '#{window_id}:#{window_name}' 2>/dev/null)
+    WINDOW_LIST=$(tmux list-windows \
+                       -t "$SESSION_NAME" \
+                       -F '#{window_id}:#{window_name}' 2>/dev/null)
     EXIT_CODE=$?
-    MATCHED_WINDOW=$(echo "$WINDOW_LIST" | grep -m1 "^\(@[^:]*:\)\?$PROG_NAME\$" | cut -d':' -f 1)
+    MATCHED_WINDOW=$(echo "$WINDOW_LIST" |
+                            grep -m1 "^\(@[^:]*:\)\?$PROG_NAME\$" |
+                            cut -d':' -f 1)
 fi
 
 if [ -z "$TERM_EXIST" ]; then # TARGET TERMINAL DOES NOT EXIST
     unset TMUX # in case we are being run from within a tmux session
     if [ -z "$PROG_NAME" ]; then
-        urxvt -name $TERM_NAME -e tmux new-session -A -D -s "$SESSION_NAME" &
+        urxvt -name $TERM_NAME \
+              -e tmux new-session -A -D -s "$SESSION_NAME" &
     elif [ -n "$MATCHED_WINDOW" ]; then
-        urxvt -name $TERM_NAME -e tmux attach-session -d -t "$SESSION_NAME" \; select-window -t "$SESSION_NAME:$MATCHED_WINDOW" &
+        urxvt -name $TERM_NAME \
+              -e tmux attach-session \
+              -d -t "$SESSION_NAME" \; \
+              select-window \
+              -t "$SESSION_NAME:$MATCHED_WINDOW" &
     elif [ $EXIT_CODE -eq 0 ]; then # SESSION EXISTS
-        urxvt -name $TERM_NAME -e tmux attach-session -d -t "$SESSION_NAME" \; new-window "$PROG_NAME $PROG_ARGS" &
+        urxvt -name $TERM_NAME \
+              -e tmux attach-session \
+              -d -t "$SESSION_NAME" \; \
+              new-window "$PROG_NAME $PROG_ARGS" &
     else
-        urxvt -name $TERM_NAME -e tmux new-session -A -D -s "$SESSION_NAME" "$PROG_NAME $PROG_ARGS" &
+        urxvt -name $TERM_NAME \
+              -e tmux new-session \
+              -A -D -s "$SESSION_NAME" "$PROG_NAME $PROG_ARGS" &
     fi
 else # TARGET TERMINAL EXISTS
     if [ -n "$MATCHED_WINDOW" ]; then
