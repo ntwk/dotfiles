@@ -2,8 +2,9 @@
 #
 # urxvt-focus - focus the urxvt-console window
 #
-# urxvt-focus is intended to be bound to a keyboard shortcut for fast switching
-# to the main terminal window.  urxvt-focus has been superseded by tmux-launch
-# which provides similar functionality when run without arguments.
+# urxvt-focus focuses the main terminal window and is intended to be
+# bound to a keyboard shortcut.  It has been superseded by tmux-launch
+# which can do the same thing while also offering additional
+# functionality.
 
 wmctrl -x -a urxvt-console
