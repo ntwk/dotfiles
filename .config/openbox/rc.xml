@@ -296,7 +296,7 @@
         <desktop>yes</desktop>
       </action>
     </keybind>
-    <!-- Keybindings for root-menu -->
+    <!-- Keybindings for menus -->
     <keybind key="W-m">
       <action name="ShowMenu">
         <menu>root-menu</menu>
@@ -508,6 +508,11 @@
       <mousebind button="W-Right" action="Press">
         <action name="ShowMenu">
           <menu>client-list-combined-menu</menu>
+        </action>
+      </mousebind>
+      <mousebind button="W-S-Right" action="Press">
+        <action name="ShowMenu">
+          <menu>root-menu</menu>
         </action>
       </mousebind>
       <mousebind button="A-Left" action="Press">
