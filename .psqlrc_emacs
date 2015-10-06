@@ -1,0 +1,4 @@
+\include ~/.psqlrc
+
+\set PROMPT1 ''
+\set PROMPT2 ''

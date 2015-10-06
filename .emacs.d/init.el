@@ -124,3 +124,7 @@
    (if (eq (cdr pair) 'perl-mode)
        (setcdr pair 'cperl-mode)))
  (append auto-mode-alist interpreter-mode-alist))
+
+;; Use emacs-specific .psqlrc file to disable psql prompts in the SQLi
+;; buffer.  This gives prettier output.
+(setenv "PSQLRC" "~/.psqlrc_emacs")
