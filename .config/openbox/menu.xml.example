@@ -129,6 +129,11 @@ http://icculus.org/pipermail/openbox/2010-October/006814.html -->
       </startupnotify>
     </action>
   </item>
+  <item label="lock screen">
+    <action name="Execute">
+      <command>i3lock -u -i ~/.themes/i3lock/ss.png -c 000000</command>
+    </action>
+  </item>
   <separator />
   <item label="reconfigure openbox">
     <action name="Reconfigure" />
