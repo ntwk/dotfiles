@@ -1,8 +1,8 @@
 ! This file is intended to be preprocessed using m4 instead of cpp like so:
 ! xrdb -cpp m4 .Xresources
 !
-! Strings delimited by double underscores are m4 macros defined within this
-! file, one of its included files, or ~/.xinitrc.
+! Strings delimited by double underscores are m4 macros defined within either
+! this file, one of its included files, or ~/.xinitrc.
 
 ! define(__FNRM__,-misc-fixed-medium-r-semicondensed--13-*-*-*-c-60-iso8859-1)
 ! define(__FBLD__,-misc-fixed-bold-r-semicondensed--13-*-*-*-c-60-iso8859-1)
