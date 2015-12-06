@@ -826,6 +826,11 @@
           <menu>client-list-combined-menu</menu>
         </action>
       </mousebind>
+      <mousebind button="W-S-Right" action="Press">
+        <action name="ShowMenu">
+          <menu>root-menu</menu>
+        </action>
+      </mousebind>
       <mousebind button="Up" action="Click">
         <action name="DesktopLeft">
           <dialog>no</dialog>
