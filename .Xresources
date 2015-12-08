@@ -181,7 +181,7 @@ urxvt-jschx*color15:    #cfdfef
 emacs.font:                     __FNRM__
 emacs.geometry:                 80x50
 emacs.menuBar:                  off
-emacs.toolBar:                  0
+emacs.toolBar:                  off
 emacs.verticalScrollBars:       off
 emacs.internalBorder:           2
 
