@@ -114,9 +114,9 @@
 
 ;; Thunar file manager integration
 (defun thunar ()
-  "Start an instance of thunar in the present directory."
+  "Start an instance of thunar in the current directory."
   (interactive)
-  (start-process "thunar-process" nil "thunar"))
+  (call-process "exo-open" nil nil nil "--launch" "FileManager"))
 
 (global-set-key "\C-ce" 'thunar)
 
