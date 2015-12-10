@@ -16,6 +16,8 @@
 (add-hook 'c-mode-common-hook (lambda () (hs-minor-mode t)))
 
 (add-hook 'hs-minor-mode-hook (lambda ()
+                                (define-key hs-minor-mode-map "\C-ct"
+                                  'hs-toggle-hiding)
                                 (define-key hs-minor-mode-map "\C-ch"
                                   'hs-hide-block)
                                 (define-key hs-minor-mode-map "\C-cs"
