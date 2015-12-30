@@ -32,6 +32,9 @@ alias ec='emacsclient -t'
 alias sr='screen -raAd'
 alias sc='screen'
 
+# remote-viewer
+alias rv='remote-viewer --hotkeys=toggle-fullscreen=shift+f11'
+
 # tmux
 alias tml='tmux list-sessions'
 alias tma='tmux attach-session'
