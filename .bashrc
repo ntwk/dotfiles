@@ -50,7 +50,7 @@ alias tolower='perl-rename '\''s/(.*)/\L$1/'\'
 alias toupper='perl-rename '\''s/(.*)/\U$1/'\'
 
 # Open file manager in current directory
-alias ta='exo-open --launch FileManager'
+alias ta='exo-open --launch FileManager 2>/dev/null'
 
 # Colorize man pages. See ~/bin/colorman for details
 alias man=colorman
