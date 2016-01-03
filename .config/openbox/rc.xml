@@ -951,6 +951,9 @@
     -->
   </menu>
   <applications>
+    <application class="dosbox">
+      <decor>no</decor>
+    </application>
     <application class="URxvt">
       <decor>no</decor>
     </application>
