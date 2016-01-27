@@ -329,7 +329,7 @@
     </keybind>
     <keybind key="W-r">
       <action name="Execute">
-        <command>dmenu_run -nb '#304050'</command>
+        <command>dmenu_run -fn 'Fixed-10:style=SemiCondensed' -nb '#304050'</command>
       </action>
     </keybind>
     <keybind key="W-b">
