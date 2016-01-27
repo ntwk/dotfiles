@@ -89,6 +89,7 @@
 
 ;; Function to remove paragraph fill on current paragraph
 (defun unfill-paragraph ()
+  "Unfill paragraph at or after point."
   (interactive)
   (let ((fill-column (point-max)))
     (fill-paragraph nil)))
