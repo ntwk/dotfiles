@@ -58,14 +58,14 @@ alias ta='exo-open --launch FileManager 2>/dev/null'
 # Colorize man pages. See ~/bin/colorman for details
 alias man=colorman
 
-# Man page column is 80 columns by default
+# Set line length of man pages to 80 characters
 export MANWIDTH=80
 
 # Ignore duplicate entries in bash history and commands with leading
 # space.  Omit commands listed in HISTIGNORE from the bash history.
 HISTCONTROL=ignoreboth
 
-# Command to change the font in urxvt
+# Command to change the font in rxvt-unicode
 function face {
     if [[ -n ${TMUX+x} ]]; then
         printf '\ePtmux;\e\e]713;%s\007\e\e]712;%s\007\e\e]711;%s\007\e\e]50;%s\007\e\\' "xft:$1" "xft:$1" "xft:$1" "xft:$1"
@@ -84,5 +84,5 @@ function emr() {
     emacs "$1" -nw --eval '(setq buffer-read-only t)'
 }
 
-# Local config
+# Local configuration
 [[ -s "$HOME/.bashrc_local" ]] && source "$HOME/.bashrc_local"
