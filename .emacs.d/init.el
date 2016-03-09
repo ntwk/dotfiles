@@ -12,6 +12,17 @@
 (menu-bar-mode -1)
 (tooltip-mode -1)
 
+;; Configure the visual styling of GUI Emacs.  See also the Emacs X
+;; resources located in either .Xresources or .Xdefaults
+(when window-system
+  (fringe-mode 0)
+  (set-face-attribute 'mode-line nil
+                      :foreground "blue" :background "turquoise" :box nil)
+  (set-face-attribute 'mode-line-inactive nil
+                      :foreground "grey" :background "dimgrey" :box nil)
+  (set-face-attribute 'mode-line-highlight nil
+                      :foreground "blue" :background "yellow" :box nil))
+
 ;; hideshow (hs-minor-mode) configuration
 (add-hook 'c-mode-common-hook (lambda () (hs-minor-mode t)))
 
