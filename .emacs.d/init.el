@@ -23,6 +23,9 @@
   (set-face-attribute 'mode-line-highlight nil
                       :foreground "blue" :background "yellow" :box nil))
 
+;; Wrap long lines when in Text mode
+(add-hook 'text-mode-hook (lambda () (visual-line-mode t)))
+
 ;; hideshow (hs-minor-mode) configuration
 (add-hook 'c-mode-common-hook (lambda () (hs-minor-mode t)))
 
