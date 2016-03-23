@@ -1,0 +1,41 @@
+! Base16 Atelier Seaside
+! Scheme: Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/seaside/)
+
+#define base00 #131513
+#define base01 #242924
+#define base02 #5e6e5e
+#define base03 #687d68
+#define base04 #809980
+#define base05 #8ca68c
+#define base06 #cfe8cf
+#define base07 #f0fff0
+#define base08 #e6193c
+#define base09 #87711d
+#define base0A #c3c322
+#define base0B #29a329
+#define base0C #1999b3
+#define base0D #3d62f5
+#define base0E #ad2bee
+#define base0F #e619c3
+
+urxvt-base16-atelierseaside-dark*foreground:   base05
+urxvt-base16-atelierseaside-dark*background:   base00
+
+
+urxvt-base16-atelierseaside-dark*color0:       base00
+urxvt-base16-atelierseaside-dark*color1:       base08
+urxvt-base16-atelierseaside-dark*color2:       base0B
+urxvt-base16-atelierseaside-dark*color3:       base0A
+urxvt-base16-atelierseaside-dark*color4:       base0D
+urxvt-base16-atelierseaside-dark*color5:       base0E
+urxvt-base16-atelierseaside-dark*color6:       base0C
+urxvt-base16-atelierseaside-dark*color7:       base05
+
+urxvt-base16-atelierseaside-dark*color8:       base03
+urxvt-base16-atelierseaside-dark*color9:       base09
+urxvt-base16-atelierseaside-dark*color10:      base01
+urxvt-base16-atelierseaside-dark*color11:      base02
+urxvt-base16-atelierseaside-dark*color12:      base04
+urxvt-base16-atelierseaside-dark*color13:      base06
+urxvt-base16-atelierseaside-dark*color14:      base0F
+urxvt-base16-atelierseaside-dark*color15:      base07

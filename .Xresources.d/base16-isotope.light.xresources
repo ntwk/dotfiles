@@ -1,0 +1,50 @@
+! Base16 Isotope
+! Scheme: Jan T. Sott
+
+#define base00 #000000
+#define base01 #404040
+#define base02 #606060
+#define base03 #808080
+#define base04 #c0c0c0
+#define base05 #d0d0d0
+#define base06 #e0e0e0
+#define base07 #ffffff
+#define base08 #ff0000
+#define base09 #ff9900
+#define base0A #ff0099
+#define base0B #33ff00
+#define base0C #00ffff
+#define base0D #0066ff
+#define base0E #cc00ff
+#define base0F #3300ff
+
+urxvt-base16-isotope-light*foreground:   base02
+urxvt-base16-isotope-light*background:   base07
+
+
+urxvt-base16-isotope-light*color0:       base00
+urxvt-base16-isotope-light*color1:       base08
+urxvt-base16-isotope-light*color2:       base0B
+urxvt-base16-isotope-light*color3:       base0A
+urxvt-base16-isotope-light*color4:       base0D
+urxvt-base16-isotope-light*color5:       base0E
+urxvt-base16-isotope-light*color6:       base0C
+urxvt-base16-isotope-light*color7:       base05
+
+urxvt-base16-isotope-light*color8:       base03
+urxvt-base16-isotope-light*color9:       base09
+urxvt-base16-isotope-light*color10:      base01
+urxvt-base16-isotope-light*color11:      base02
+urxvt-base16-isotope-light*color12:      base04
+urxvt-base16-isotope-light*color13:      base06
+urxvt-base16-isotope-light*color14:      base0F
+urxvt-base16-isotope-light*color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+urxvt-base16-isotope-light*color16:      base09
+urxvt-base16-isotope-light*color17:      base0F
+urxvt-base16-isotope-light*color18:      base01
+urxvt-base16-isotope-light*color19:      base02
+urxvt-base16-isotope-light*color20:      base04
+urxvt-base16-isotope-light*color21:      base06

@@ -1,0 +1,41 @@
+! Base16 Twilight
+! Scheme: David Hart (http://hart-dev.com)
+
+#define base00 #1e1e1e
+#define base01 #323537
+#define base02 #464b50
+#define base03 #5f5a60
+#define base04 #838184
+#define base05 #a7a7a7
+#define base06 #c3c3c3
+#define base07 #ffffff
+#define base08 #cf6a4c
+#define base09 #cda869
+#define base0A #f9ee98
+#define base0B #8f9d6a
+#define base0C #afc4db
+#define base0D #7587a6
+#define base0E #9b859d
+#define base0F #9b703f
+
+urxvt-base16-twilight-dark*foreground:   base05
+urxvt-base16-twilight-dark*background:   base00
+
+
+urxvt-base16-twilight-dark*color0:       base00
+urxvt-base16-twilight-dark*color1:       base08
+urxvt-base16-twilight-dark*color2:       base0B
+urxvt-base16-twilight-dark*color3:       base0A
+urxvt-base16-twilight-dark*color4:       base0D
+urxvt-base16-twilight-dark*color5:       base0E
+urxvt-base16-twilight-dark*color6:       base0C
+urxvt-base16-twilight-dark*color7:       base05
+
+urxvt-base16-twilight-dark*color8:       base03
+urxvt-base16-twilight-dark*color9:       base09
+urxvt-base16-twilight-dark*color10:      base01
+urxvt-base16-twilight-dark*color11:      base02
+urxvt-base16-twilight-dark*color12:      base04
+urxvt-base16-twilight-dark*color13:      base06
+urxvt-base16-twilight-dark*color14:      base0F
+urxvt-base16-twilight-dark*color15:      base07

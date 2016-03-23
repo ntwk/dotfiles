@@ -1,0 +1,41 @@
+! Base16 harmonic16
+! Scheme: Jannik Siebert (https://github.com/janniks)
+
+#define base00 #0b1c2c
+#define base01 #223b54
+#define base02 #405c79
+#define base03 #627e99
+#define base04 #aabcce
+#define base05 #cbd6e2
+#define base06 #e5ebf1
+#define base07 #f7f9fb
+#define base08 #bf8b56
+#define base09 #bfbf56
+#define base0A #8bbf56
+#define base0B #56bf8b
+#define base0C #568bbf
+#define base0D #8b56bf
+#define base0E #bf568b
+#define base0F #bf5656
+
+urxvt-base16-harmonic16-dark*foreground:   base05
+urxvt-base16-harmonic16-dark*background:   base00
+
+
+urxvt-base16-harmonic16-dark*color0:       base00
+urxvt-base16-harmonic16-dark*color1:       base08
+urxvt-base16-harmonic16-dark*color2:       base0B
+urxvt-base16-harmonic16-dark*color3:       base0A
+urxvt-base16-harmonic16-dark*color4:       base0D
+urxvt-base16-harmonic16-dark*color5:       base0E
+urxvt-base16-harmonic16-dark*color6:       base0C
+urxvt-base16-harmonic16-dark*color7:       base05
+
+urxvt-base16-harmonic16-dark*color8:       base03
+urxvt-base16-harmonic16-dark*color9:       base09
+urxvt-base16-harmonic16-dark*color10:      base01
+urxvt-base16-harmonic16-dark*color11:      base02
+urxvt-base16-harmonic16-dark*color12:      base04
+urxvt-base16-harmonic16-dark*color13:      base06
+urxvt-base16-harmonic16-dark*color14:      base0F
+urxvt-base16-harmonic16-dark*color15:      base07

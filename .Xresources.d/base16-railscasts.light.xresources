@@ -1,0 +1,50 @@
+! Base16 Railscasts
+! Scheme: Ryan Bates (http://railscasts.com)
+
+#define base00 #2b2b2b
+#define base01 #272935
+#define base02 #3a4055
+#define base03 #5a647e
+#define base04 #d4cfc9
+#define base05 #e6e1dc
+#define base06 #f4f1ed
+#define base07 #f9f7f3
+#define base08 #da4939
+#define base09 #cc7833
+#define base0A #ffc66d
+#define base0B #a5c261
+#define base0C #519f50
+#define base0D #6d9cbe
+#define base0E #b6b3eb
+#define base0F #bc9458
+
+urxvt-base16-railscasts-light*foreground:   base02
+urxvt-base16-railscasts-light*background:   base07
+
+
+urxvt-base16-railscasts-light*color0:       base00
+urxvt-base16-railscasts-light*color1:       base08
+urxvt-base16-railscasts-light*color2:       base0B
+urxvt-base16-railscasts-light*color3:       base0A
+urxvt-base16-railscasts-light*color4:       base0D
+urxvt-base16-railscasts-light*color5:       base0E
+urxvt-base16-railscasts-light*color6:       base0C
+urxvt-base16-railscasts-light*color7:       base05
+
+urxvt-base16-railscasts-light*color8:       base03
+urxvt-base16-railscasts-light*color9:       base09
+urxvt-base16-railscasts-light*color10:      base01
+urxvt-base16-railscasts-light*color11:      base02
+urxvt-base16-railscasts-light*color12:      base04
+urxvt-base16-railscasts-light*color13:      base06
+urxvt-base16-railscasts-light*color14:      base0F
+urxvt-base16-railscasts-light*color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+urxvt-base16-railscasts-light*color16:      base09
+urxvt-base16-railscasts-light*color17:      base0F
+urxvt-base16-railscasts-light*color18:      base01
+urxvt-base16-railscasts-light*color19:      base02
+urxvt-base16-railscasts-light*color20:      base04
+urxvt-base16-railscasts-light*color21:      base06

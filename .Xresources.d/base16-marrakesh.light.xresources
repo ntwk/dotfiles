@@ -1,0 +1,50 @@
+! Base16 Marrakesh
+! Scheme: Alexandre Gavioli (http://github.com/Alexx2/)
+
+#define base00 #201602
+#define base01 #302e00
+#define base02 #5f5b17
+#define base03 #6c6823
+#define base04 #86813b
+#define base05 #948e48
+#define base06 #ccc37a
+#define base07 #faf0a5
+#define base08 #c35359
+#define base09 #b36144
+#define base0A #a88339
+#define base0B #18974e
+#define base0C #75a738
+#define base0D #477ca1
+#define base0E #8868b3
+#define base0F #b3588e
+
+urxvt-base16-marrakesh-light*foreground:   base02
+urxvt-base16-marrakesh-light*background:   base07
+
+
+urxvt-base16-marrakesh-light*color0:       base00
+urxvt-base16-marrakesh-light*color1:       base08
+urxvt-base16-marrakesh-light*color2:       base0B
+urxvt-base16-marrakesh-light*color3:       base0A
+urxvt-base16-marrakesh-light*color4:       base0D
+urxvt-base16-marrakesh-light*color5:       base0E
+urxvt-base16-marrakesh-light*color6:       base0C
+urxvt-base16-marrakesh-light*color7:       base05
+
+urxvt-base16-marrakesh-light*color8:       base03
+urxvt-base16-marrakesh-light*color9:       base09
+urxvt-base16-marrakesh-light*color10:      base01
+urxvt-base16-marrakesh-light*color11:      base02
+urxvt-base16-marrakesh-light*color12:      base04
+urxvt-base16-marrakesh-light*color13:      base06
+urxvt-base16-marrakesh-light*color14:      base0F
+urxvt-base16-marrakesh-light*color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+urxvt-base16-marrakesh-light*color16:      base09
+urxvt-base16-marrakesh-light*color17:      base0F
+urxvt-base16-marrakesh-light*color18:      base01
+urxvt-base16-marrakesh-light*color19:      base02
+urxvt-base16-marrakesh-light*color20:      base04
+urxvt-base16-marrakesh-light*color21:      base06

@@ -1,0 +1,41 @@
+! Base16 Atelier Lakeside
+! Scheme: Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/lakeside/)
+
+#define base00 #161b1d
+#define base01 #1f292e
+#define base02 #516d7b
+#define base03 #5a7b8c
+#define base04 #7195a8
+#define base05 #7ea2b4
+#define base06 #c1e4f6
+#define base07 #ebf8ff
+#define base08 #d22d72
+#define base09 #935c25
+#define base0A #8a8a0f
+#define base0B #568c3b
+#define base0C #2d8f6f
+#define base0D #257fad
+#define base0E #5d5db1
+#define base0F #b72dd2
+
+urxvt-base16-atelierlakeside-dark*foreground:   base05
+urxvt-base16-atelierlakeside-dark*background:   base00
+
+
+urxvt-base16-atelierlakeside-dark*color0:       base00
+urxvt-base16-atelierlakeside-dark*color1:       base08
+urxvt-base16-atelierlakeside-dark*color2:       base0B
+urxvt-base16-atelierlakeside-dark*color3:       base0A
+urxvt-base16-atelierlakeside-dark*color4:       base0D
+urxvt-base16-atelierlakeside-dark*color5:       base0E
+urxvt-base16-atelierlakeside-dark*color6:       base0C
+urxvt-base16-atelierlakeside-dark*color7:       base05
+
+urxvt-base16-atelierlakeside-dark*color8:       base03
+urxvt-base16-atelierlakeside-dark*color9:       base09
+urxvt-base16-atelierlakeside-dark*color10:      base01
+urxvt-base16-atelierlakeside-dark*color11:      base02
+urxvt-base16-atelierlakeside-dark*color12:      base04
+urxvt-base16-atelierlakeside-dark*color13:      base06
+urxvt-base16-atelierlakeside-dark*color14:      base0F
+urxvt-base16-atelierlakeside-dark*color15:      base07

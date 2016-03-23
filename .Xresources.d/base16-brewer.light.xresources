@@ -1,0 +1,50 @@
+! Base16 Brewer
+! Scheme: Timothée Poisot (http://github.com/tpoisot)
+
+#define base00 #0c0d0e
+#define base01 #2e2f30
+#define base02 #515253
+#define base03 #737475
+#define base04 #959697
+#define base05 #b7b8b9
+#define base06 #dadbdc
+#define base07 #fcfdfe
+#define base08 #e31a1c
+#define base09 #e6550d
+#define base0A #dca060
+#define base0B #31a354
+#define base0C #80b1d3
+#define base0D #3182bd
+#define base0E #756bb1
+#define base0F #b15928
+
+urxvt-base16-brewer-light*foreground:   base02
+urxvt-base16-brewer-light*background:   base07
+
+
+urxvt-base16-brewer-light*color0:       base00
+urxvt-base16-brewer-light*color1:       base08
+urxvt-base16-brewer-light*color2:       base0B
+urxvt-base16-brewer-light*color3:       base0A
+urxvt-base16-brewer-light*color4:       base0D
+urxvt-base16-brewer-light*color5:       base0E
+urxvt-base16-brewer-light*color6:       base0C
+urxvt-base16-brewer-light*color7:       base05
+
+urxvt-base16-brewer-light*color8:       base03
+urxvt-base16-brewer-light*color9:       base09
+urxvt-base16-brewer-light*color10:      base01
+urxvt-base16-brewer-light*color11:      base02
+urxvt-base16-brewer-light*color12:      base04
+urxvt-base16-brewer-light*color13:      base06
+urxvt-base16-brewer-light*color14:      base0F
+urxvt-base16-brewer-light*color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+urxvt-base16-brewer-light*color16:      base09
+urxvt-base16-brewer-light*color17:      base0F
+urxvt-base16-brewer-light*color18:      base01
+urxvt-base16-brewer-light*color19:      base02
+urxvt-base16-brewer-light*color20:      base04
+urxvt-base16-brewer-light*color21:      base06

@@ -1,0 +1,41 @@
+! Base16 Bespin
+! Scheme: Jan T. Sott
+
+#define base00 #28211c
+#define base01 #36312e
+#define base02 #5e5d5c
+#define base03 #666666
+#define base04 #797977
+#define base05 #8a8986
+#define base06 #9d9b97
+#define base07 #baae9e
+#define base08 #cf6a4c
+#define base09 #cf7d34
+#define base0A #f9ee98
+#define base0B #54be0d
+#define base0C #afc4db
+#define base0D #5ea6ea
+#define base0E #9b859d
+#define base0F #937121
+
+urxvt-base16-bespin-dark*foreground:   base05
+urxvt-base16-bespin-dark*background:   base00
+
+
+urxvt-base16-bespin-dark*color0:       base00
+urxvt-base16-bespin-dark*color1:       base08
+urxvt-base16-bespin-dark*color2:       base0B
+urxvt-base16-bespin-dark*color3:       base0A
+urxvt-base16-bespin-dark*color4:       base0D
+urxvt-base16-bespin-dark*color5:       base0E
+urxvt-base16-bespin-dark*color6:       base0C
+urxvt-base16-bespin-dark*color7:       base05
+
+urxvt-base16-bespin-dark*color8:       base03
+urxvt-base16-bespin-dark*color9:       base09
+urxvt-base16-bespin-dark*color10:      base01
+urxvt-base16-bespin-dark*color11:      base02
+urxvt-base16-bespin-dark*color12:      base04
+urxvt-base16-bespin-dark*color13:      base06
+urxvt-base16-bespin-dark*color14:      base0F
+urxvt-base16-bespin-dark*color15:      base07

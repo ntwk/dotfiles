@@ -1,0 +1,41 @@
+! Base16 Eighties
+! Scheme: Chris Kempson (http://chriskempson.com)
+
+#define base00 #2d2d2d
+#define base01 #393939
+#define base02 #515151
+#define base03 #747369
+#define base04 #a09f93
+#define base05 #d3d0c8
+#define base06 #e8e6df
+#define base07 #f2f0ec
+#define base08 #f2777a
+#define base09 #f99157
+#define base0A #ffcc66
+#define base0B #99cc99
+#define base0C #66cccc
+#define base0D #6699cc
+#define base0E #cc99cc
+#define base0F #d27b53
+
+urxvt-base16-eighties-dark*foreground:   base05
+urxvt-base16-eighties-dark*background:   base00
+
+
+urxvt-base16-eighties-dark*color0:       base00
+urxvt-base16-eighties-dark*color1:       base08
+urxvt-base16-eighties-dark*color2:       base0B
+urxvt-base16-eighties-dark*color3:       base0A
+urxvt-base16-eighties-dark*color4:       base0D
+urxvt-base16-eighties-dark*color5:       base0E
+urxvt-base16-eighties-dark*color6:       base0C
+urxvt-base16-eighties-dark*color7:       base05
+
+urxvt-base16-eighties-dark*color8:       base03
+urxvt-base16-eighties-dark*color9:       base09
+urxvt-base16-eighties-dark*color10:      base01
+urxvt-base16-eighties-dark*color11:      base02
+urxvt-base16-eighties-dark*color12:      base04
+urxvt-base16-eighties-dark*color13:      base06
+urxvt-base16-eighties-dark*color14:      base0F
+urxvt-base16-eighties-dark*color15:      base07

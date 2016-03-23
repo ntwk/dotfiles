@@ -1,0 +1,41 @@
+! Base16 Atelier Dune
+! Scheme: Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/dune)
+
+#define base00 #20201d
+#define base01 #292824
+#define base02 #6e6b5e
+#define base03 #7d7a68
+#define base04 #999580
+#define base05 #a6a28c
+#define base06 #e8e4cf
+#define base07 #fefbec
+#define base08 #d73737
+#define base09 #b65611
+#define base0A #cfb017
+#define base0B #60ac39
+#define base0C #1fad83
+#define base0D #6684e1
+#define base0E #b854d4
+#define base0F #d43552
+
+urxvt-base16-atelierdune-dark*foreground:   base05
+urxvt-base16-atelierdune-dark*background:   base00
+
+
+urxvt-base16-atelierdune-dark*color0:       base00
+urxvt-base16-atelierdune-dark*color1:       base08
+urxvt-base16-atelierdune-dark*color2:       base0B
+urxvt-base16-atelierdune-dark*color3:       base0A
+urxvt-base16-atelierdune-dark*color4:       base0D
+urxvt-base16-atelierdune-dark*color5:       base0E
+urxvt-base16-atelierdune-dark*color6:       base0C
+urxvt-base16-atelierdune-dark*color7:       base05
+
+urxvt-base16-atelierdune-dark*color8:       base03
+urxvt-base16-atelierdune-dark*color9:       base09
+urxvt-base16-atelierdune-dark*color10:      base01
+urxvt-base16-atelierdune-dark*color11:      base02
+urxvt-base16-atelierdune-dark*color12:      base04
+urxvt-base16-atelierdune-dark*color13:      base06
+urxvt-base16-atelierdune-dark*color14:      base0F
+urxvt-base16-atelierdune-dark*color15:      base07

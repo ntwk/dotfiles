@@ -1,0 +1,50 @@
+! Base16 Embers
+! Scheme: Jannik Siebert (https://github.com/janniks)
+
+#define base00 #16130F
+#define base01 #2C2620
+#define base02 #433B32
+#define base03 #5A5047
+#define base04 #8A8075
+#define base05 #A39A90
+#define base06 #BEB6AE
+#define base07 #DBD6D1
+#define base08 #826D57
+#define base09 #828257
+#define base0A #6D8257
+#define base0B #57826D
+#define base0C #576D82
+#define base0D #6D5782
+#define base0E #82576D
+#define base0F #825757
+
+urxvt-base16-embers-light*foreground:   base02
+urxvt-base16-embers-light*background:   base07
+
+
+urxvt-base16-embers-light*color0:       base00
+urxvt-base16-embers-light*color1:       base08
+urxvt-base16-embers-light*color2:       base0B
+urxvt-base16-embers-light*color3:       base0A
+urxvt-base16-embers-light*color4:       base0D
+urxvt-base16-embers-light*color5:       base0E
+urxvt-base16-embers-light*color6:       base0C
+urxvt-base16-embers-light*color7:       base05
+
+urxvt-base16-embers-light*color8:       base03
+urxvt-base16-embers-light*color9:       base09
+urxvt-base16-embers-light*color10:      base01
+urxvt-base16-embers-light*color11:      base02
+urxvt-base16-embers-light*color12:      base04
+urxvt-base16-embers-light*color13:      base06
+urxvt-base16-embers-light*color14:      base0F
+urxvt-base16-embers-light*color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+urxvt-base16-embers-light*color16:      base09
+urxvt-base16-embers-light*color17:      base0F
+urxvt-base16-embers-light*color18:      base01
+urxvt-base16-embers-light*color19:      base02
+urxvt-base16-embers-light*color20:      base04
+urxvt-base16-embers-light*color21:      base06

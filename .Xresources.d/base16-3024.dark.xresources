@@ -1,0 +1,41 @@
+! Base16 3024
+! Scheme: Jan T. Sott (http://github.com/idleberg)
+
+#define base00 #090300
+#define base01 #3a3432
+#define base02 #4a4543
+#define base03 #5c5855
+#define base04 #807d7c
+#define base05 #a5a2a2
+#define base06 #d6d5d4
+#define base07 #f7f7f7
+#define base08 #db2d20
+#define base09 #e8bbd0
+#define base0A #fded02
+#define base0B #01a252
+#define base0C #b5e4f4
+#define base0D #01a0e4
+#define base0E #a16a94
+#define base0F #cdab53
+
+urxvt-base16-3024-dark*foreground:   base05
+urxvt-base16-3024-dark*background:   base00
+
+
+urxvt-base16-3024-dark*color0:       base00
+urxvt-base16-3024-dark*color1:       base08
+urxvt-base16-3024-dark*color2:       base0B
+urxvt-base16-3024-dark*color3:       base0A
+urxvt-base16-3024-dark*color4:       base0D
+urxvt-base16-3024-dark*color5:       base0E
+urxvt-base16-3024-dark*color6:       base0C
+urxvt-base16-3024-dark*color7:       base05
+
+urxvt-base16-3024-dark*color8:       base03
+urxvt-base16-3024-dark*color9:       base09
+urxvt-base16-3024-dark*color10:      base01
+urxvt-base16-3024-dark*color11:      base02
+urxvt-base16-3024-dark*color12:      base04
+urxvt-base16-3024-dark*color13:      base06
+urxvt-base16-3024-dark*color14:      base0F
+urxvt-base16-3024-dark*color15:      base07

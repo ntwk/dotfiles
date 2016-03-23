@@ -1,0 +1,41 @@
+! Base16 Colors
+! Scheme: mrmrs (http://clrs.cc)
+
+#define base00 #111111
+#define base01 #333333
+#define base02 #555555
+#define base03 #777777
+#define base04 #999999
+#define base05 #bbbbbb
+#define base06 #dddddd
+#define base07 #ffffff
+#define base08 #ff4136
+#define base09 #ff851b
+#define base0A #ffdc00
+#define base0B #2ecc40
+#define base0C #7fdbff
+#define base0D #0074d9
+#define base0E #b10dc9
+#define base0F #85144b
+
+urxvt-base16-colors-dark*foreground:   base05
+urxvt-base16-colors-dark*background:   base00
+
+
+urxvt-base16-colors-dark*color0:       base00
+urxvt-base16-colors-dark*color1:       base08
+urxvt-base16-colors-dark*color2:       base0B
+urxvt-base16-colors-dark*color3:       base0A
+urxvt-base16-colors-dark*color4:       base0D
+urxvt-base16-colors-dark*color5:       base0E
+urxvt-base16-colors-dark*color6:       base0C
+urxvt-base16-colors-dark*color7:       base05
+
+urxvt-base16-colors-dark*color8:       base03
+urxvt-base16-colors-dark*color9:       base09
+urxvt-base16-colors-dark*color10:      base01
+urxvt-base16-colors-dark*color11:      base02
+urxvt-base16-colors-dark*color12:      base04
+urxvt-base16-colors-dark*color13:      base06
+urxvt-base16-colors-dark*color14:      base0F
+urxvt-base16-colors-dark*color15:      base07

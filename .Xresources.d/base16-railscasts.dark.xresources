@@ -1,0 +1,41 @@
+! Base16 Railscasts
+! Scheme: Ryan Bates (http://railscasts.com)
+
+#define base00 #2b2b2b
+#define base01 #272935
+#define base02 #3a4055
+#define base03 #5a647e
+#define base04 #d4cfc9
+#define base05 #e6e1dc
+#define base06 #f4f1ed
+#define base07 #f9f7f3
+#define base08 #da4939
+#define base09 #cc7833
+#define base0A #ffc66d
+#define base0B #a5c261
+#define base0C #519f50
+#define base0D #6d9cbe
+#define base0E #b6b3eb
+#define base0F #bc9458
+
+urxvt-base16-railscasts-dark*foreground:   base05
+urxvt-base16-railscasts-dark*background:   base00
+
+
+urxvt-base16-railscasts-dark*color0:       base00
+urxvt-base16-railscasts-dark*color1:       base08
+urxvt-base16-railscasts-dark*color2:       base0B
+urxvt-base16-railscasts-dark*color3:       base0A
+urxvt-base16-railscasts-dark*color4:       base0D
+urxvt-base16-railscasts-dark*color5:       base0E
+urxvt-base16-railscasts-dark*color6:       base0C
+urxvt-base16-railscasts-dark*color7:       base05
+
+urxvt-base16-railscasts-dark*color8:       base03
+urxvt-base16-railscasts-dark*color9:       base09
+urxvt-base16-railscasts-dark*color10:      base01
+urxvt-base16-railscasts-dark*color11:      base02
+urxvt-base16-railscasts-dark*color12:      base04
+urxvt-base16-railscasts-dark*color13:      base06
+urxvt-base16-railscasts-dark*color14:      base0F
+urxvt-base16-railscasts-dark*color15:      base07

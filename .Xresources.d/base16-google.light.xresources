@@ -1,0 +1,50 @@
+! Base16 Google
+! Scheme: Seth Wright (http://sethawright.com)
+
+#define base00 #1d1f21
+#define base01 #282a2e
+#define base02 #373b41
+#define base03 #969896
+#define base04 #b4b7b4
+#define base05 #c5c8c6
+#define base06 #e0e0e0
+#define base07 #ffffff
+#define base08 #CC342B
+#define base09 #F96A38
+#define base0A #FBA922
+#define base0B #198844
+#define base0C #3971ED
+#define base0D #3971ED
+#define base0E #A36AC7
+#define base0F #3971ED
+
+urxvt-base16-google-light*foreground:   base02
+urxvt-base16-google-light*background:   base07
+
+
+urxvt-base16-google-light*color0:       base00
+urxvt-base16-google-light*color1:       base08
+urxvt-base16-google-light*color2:       base0B
+urxvt-base16-google-light*color3:       base0A
+urxvt-base16-google-light*color4:       base0D
+urxvt-base16-google-light*color5:       base0E
+urxvt-base16-google-light*color6:       base0C
+urxvt-base16-google-light*color7:       base05
+
+urxvt-base16-google-light*color8:       base03
+urxvt-base16-google-light*color9:       base09
+urxvt-base16-google-light*color10:      base01
+urxvt-base16-google-light*color11:      base02
+urxvt-base16-google-light*color12:      base04
+urxvt-base16-google-light*color13:      base06
+urxvt-base16-google-light*color14:      base0F
+urxvt-base16-google-light*color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+urxvt-base16-google-light*color16:      base09
+urxvt-base16-google-light*color17:      base0F
+urxvt-base16-google-light*color18:      base01
+urxvt-base16-google-light*color19:      base02
+urxvt-base16-google-light*color20:      base04
+urxvt-base16-google-light*color21:      base06

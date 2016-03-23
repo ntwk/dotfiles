@@ -1,0 +1,41 @@
+! Base16 Solarized
+! Scheme: Ethan Schoonover (http://ethanschoonover.com/solarized)
+
+#define base00 #002b36
+#define base01 #073642
+#define base02 #586e75
+#define base03 #657b83
+#define base04 #839496
+#define base05 #93a1a1
+#define base06 #eee8d5
+#define base07 #fdf6e3
+#define base08 #dc322f
+#define base09 #cb4b16
+#define base0A #b58900
+#define base0B #859900
+#define base0C #2aa198
+#define base0D #268bd2
+#define base0E #6c71c4
+#define base0F #d33682
+
+urxvt-base16-solarized-dark*foreground:   base05
+urxvt-base16-solarized-dark*background:   base00
+
+
+urxvt-base16-solarized-dark*color0:       base00
+urxvt-base16-solarized-dark*color1:       base08
+urxvt-base16-solarized-dark*color2:       base0B
+urxvt-base16-solarized-dark*color3:       base0A
+urxvt-base16-solarized-dark*color4:       base0D
+urxvt-base16-solarized-dark*color5:       base0E
+urxvt-base16-solarized-dark*color6:       base0C
+urxvt-base16-solarized-dark*color7:       base05
+
+urxvt-base16-solarized-dark*color8:       base03
+urxvt-base16-solarized-dark*color9:       base09
+urxvt-base16-solarized-dark*color10:      base01
+urxvt-base16-solarized-dark*color11:      base02
+urxvt-base16-solarized-dark*color12:      base04
+urxvt-base16-solarized-dark*color13:      base06
+urxvt-base16-solarized-dark*color14:      base0F
+urxvt-base16-solarized-dark*color15:      base07

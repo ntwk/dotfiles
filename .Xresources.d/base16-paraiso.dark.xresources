@@ -1,0 +1,41 @@
+! Base16 Paraiso
+! Scheme: Jan T. Sott
+
+#define base00 #2f1e2e
+#define base01 #41323f
+#define base02 #4f424c
+#define base03 #776e71
+#define base04 #8d8687
+#define base05 #a39e9b
+#define base06 #b9b6b0
+#define base07 #e7e9db
+#define base08 #ef6155
+#define base09 #f99b15
+#define base0A #fec418
+#define base0B #48b685
+#define base0C #5bc4bf
+#define base0D #06b6ef
+#define base0E #815ba4
+#define base0F #e96ba8
+
+urxvt-base16-paraiso-dark*foreground:   base05
+urxvt-base16-paraiso-dark*background:   base00
+
+
+urxvt-base16-paraiso-dark*color0:       base00
+urxvt-base16-paraiso-dark*color1:       base08
+urxvt-base16-paraiso-dark*color2:       base0B
+urxvt-base16-paraiso-dark*color3:       base0A
+urxvt-base16-paraiso-dark*color4:       base0D
+urxvt-base16-paraiso-dark*color5:       base0E
+urxvt-base16-paraiso-dark*color6:       base0C
+urxvt-base16-paraiso-dark*color7:       base05
+
+urxvt-base16-paraiso-dark*color8:       base03
+urxvt-base16-paraiso-dark*color9:       base09
+urxvt-base16-paraiso-dark*color10:      base01
+urxvt-base16-paraiso-dark*color11:      base02
+urxvt-base16-paraiso-dark*color12:      base04
+urxvt-base16-paraiso-dark*color13:      base06
+urxvt-base16-paraiso-dark*color14:      base0F
+urxvt-base16-paraiso-dark*color15:      base07

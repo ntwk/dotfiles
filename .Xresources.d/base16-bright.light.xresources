@@ -1,0 +1,50 @@
+! Base16 Bright
+! Scheme: Chris Kempson (http://chriskempson.com)
+
+#define base00 #000000
+#define base01 #303030
+#define base02 #505050
+#define base03 #b0b0b0
+#define base04 #d0d0d0
+#define base05 #e0e0e0
+#define base06 #f5f5f5
+#define base07 #ffffff
+#define base08 #fb0120
+#define base09 #fc6d24
+#define base0A #fda331
+#define base0B #a1c659
+#define base0C #76c7b7
+#define base0D #6fb3d2
+#define base0E #d381c3
+#define base0F #be643c
+
+urxvt-base16-bright-light*foreground:   base02
+urxvt-base16-bright-light*background:   base07
+
+
+urxvt-base16-bright-light*color0:       base00
+urxvt-base16-bright-light*color1:       base08
+urxvt-base16-bright-light*color2:       base0B
+urxvt-base16-bright-light*color3:       base0A
+urxvt-base16-bright-light*color4:       base0D
+urxvt-base16-bright-light*color5:       base0E
+urxvt-base16-bright-light*color6:       base0C
+urxvt-base16-bright-light*color7:       base05
+
+urxvt-base16-bright-light*color8:       base03
+urxvt-base16-bright-light*color9:       base09
+urxvt-base16-bright-light*color10:      base01
+urxvt-base16-bright-light*color11:      base02
+urxvt-base16-bright-light*color12:      base04
+urxvt-base16-bright-light*color13:      base06
+urxvt-base16-bright-light*color14:      base0F
+urxvt-base16-bright-light*color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+urxvt-base16-bright-light*color16:      base09
+urxvt-base16-bright-light*color17:      base0F
+urxvt-base16-bright-light*color18:      base01
+urxvt-base16-bright-light*color19:      base02
+urxvt-base16-bright-light*color20:      base04
+urxvt-base16-bright-light*color21:      base06

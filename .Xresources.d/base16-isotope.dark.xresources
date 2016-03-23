@@ -1,0 +1,41 @@
+! Base16 Isotope
+! Scheme: Jan T. Sott
+
+#define base00 #000000
+#define base01 #404040
+#define base02 #606060
+#define base03 #808080
+#define base04 #c0c0c0
+#define base05 #d0d0d0
+#define base06 #e0e0e0
+#define base07 #ffffff
+#define base08 #ff0000
+#define base09 #ff9900
+#define base0A #ff0099
+#define base0B #33ff00
+#define base0C #00ffff
+#define base0D #0066ff
+#define base0E #cc00ff
+#define base0F #3300ff
+
+urxvt-base16-isotope-dark*foreground:   base05
+urxvt-base16-isotope-dark*background:   base00
+
+
+urxvt-base16-isotope-dark*color0:       base00
+urxvt-base16-isotope-dark*color1:       base08
+urxvt-base16-isotope-dark*color2:       base0B
+urxvt-base16-isotope-dark*color3:       base0A
+urxvt-base16-isotope-dark*color4:       base0D
+urxvt-base16-isotope-dark*color5:       base0E
+urxvt-base16-isotope-dark*color6:       base0C
+urxvt-base16-isotope-dark*color7:       base05
+
+urxvt-base16-isotope-dark*color8:       base03
+urxvt-base16-isotope-dark*color9:       base09
+urxvt-base16-isotope-dark*color10:      base01
+urxvt-base16-isotope-dark*color11:      base02
+urxvt-base16-isotope-dark*color12:      base04
+urxvt-base16-isotope-dark*color13:      base06
+urxvt-base16-isotope-dark*color14:      base0F
+urxvt-base16-isotope-dark*color15:      base07

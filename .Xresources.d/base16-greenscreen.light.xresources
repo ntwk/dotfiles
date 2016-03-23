@@ -1,0 +1,50 @@
+! Base16 Green Screen
+! Scheme: Chris Kempson (http://chriskempson.com)
+
+#define base00 #001100
+#define base01 #003300
+#define base02 #005500
+#define base03 #007700
+#define base04 #009900
+#define base05 #00bb00
+#define base06 #00dd00
+#define base07 #00ff00
+#define base08 #007700
+#define base09 #009900
+#define base0A #007700
+#define base0B #00bb00
+#define base0C #005500
+#define base0D #009900
+#define base0E #00bb00
+#define base0F #005500
+
+urxvt-base16-greenscreen-light*foreground:   base02
+urxvt-base16-greenscreen-light*background:   base07
+
+
+urxvt-base16-greenscreen-light*color0:       base00
+urxvt-base16-greenscreen-light*color1:       base08
+urxvt-base16-greenscreen-light*color2:       base0B
+urxvt-base16-greenscreen-light*color3:       base0A
+urxvt-base16-greenscreen-light*color4:       base0D
+urxvt-base16-greenscreen-light*color5:       base0E
+urxvt-base16-greenscreen-light*color6:       base0C
+urxvt-base16-greenscreen-light*color7:       base05
+
+urxvt-base16-greenscreen-light*color8:       base03
+urxvt-base16-greenscreen-light*color9:       base09
+urxvt-base16-greenscreen-light*color10:      base01
+urxvt-base16-greenscreen-light*color11:      base02
+urxvt-base16-greenscreen-light*color12:      base04
+urxvt-base16-greenscreen-light*color13:      base06
+urxvt-base16-greenscreen-light*color14:      base0F
+urxvt-base16-greenscreen-light*color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+urxvt-base16-greenscreen-light*color16:      base09
+urxvt-base16-greenscreen-light*color17:      base0F
+urxvt-base16-greenscreen-light*color18:      base01
+urxvt-base16-greenscreen-light*color19:      base02
+urxvt-base16-greenscreen-light*color20:      base04
+urxvt-base16-greenscreen-light*color21:      base06

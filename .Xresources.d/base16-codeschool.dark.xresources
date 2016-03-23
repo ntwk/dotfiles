@@ -1,0 +1,41 @@
+! Base16 Codeschool
+! Scheme: brettof86
+
+#define base00 #232c31
+#define base01 #1c3657
+#define base02 #2a343a
+#define base03 #3f4944
+#define base04 #84898c
+#define base05 #9ea7a6
+#define base06 #a7cfa3
+#define base07 #b5d8f6
+#define base08 #2a5491
+#define base09 #43820d
+#define base0A #a03b1e
+#define base0B #237986
+#define base0C #b02f30
+#define base0D #484d79
+#define base0E #c59820
+#define base0F #c98344
+
+urxvt-base16-codeschool-dark*foreground:   base05
+urxvt-base16-codeschool-dark*background:   base00
+
+
+urxvt-base16-codeschool-dark*color0:       base00
+urxvt-base16-codeschool-dark*color1:       base08
+urxvt-base16-codeschool-dark*color2:       base0B
+urxvt-base16-codeschool-dark*color3:       base0A
+urxvt-base16-codeschool-dark*color4:       base0D
+urxvt-base16-codeschool-dark*color5:       base0E
+urxvt-base16-codeschool-dark*color6:       base0C
+urxvt-base16-codeschool-dark*color7:       base05
+
+urxvt-base16-codeschool-dark*color8:       base03
+urxvt-base16-codeschool-dark*color9:       base09
+urxvt-base16-codeschool-dark*color10:      base01
+urxvt-base16-codeschool-dark*color11:      base02
+urxvt-base16-codeschool-dark*color12:      base04
+urxvt-base16-codeschool-dark*color13:      base06
+urxvt-base16-codeschool-dark*color14:      base0F
+urxvt-base16-codeschool-dark*color15:      base07

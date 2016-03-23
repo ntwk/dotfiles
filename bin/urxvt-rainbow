@@ -1,0 +1,18 @@
+#!/bin/sh
+#
+# urxvt-rainbow - rxvt-unicode with a random color scheme
+#
+# urxvt-rainbow color schemes are defined as X resources and should be
+# placed in $HOME/.Xresources.d/.  The current themes were taken from
+# the base16 project at https://github.com/chriskempson/base16.
+
+# Only select among the dark themes
+FILES=$(ls -1 ~/.Xresources.d/*dark*)
+# Choose a random theme among those listed in FILES
+THEME=$(echo "$FILES" | head -$(( $RANDOM % $(echo "$FILES" | wc -l) + 1 )) | tail -1)
+
+CLASS=$(basename "$THEME" | sed 's/\(^.*\)\.xresources$/urxvt-\1/' | tr . -)
+
+xrdb -merge "$THEME"
+echo $CLASS
+exec urxvt -name $CLASS

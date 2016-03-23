@@ -1,0 +1,50 @@
+! Base16 London Tube
+! Scheme: Jan T. Sott
+
+#define base00 #231f20
+#define base01 #1c3f95
+#define base02 #5a5758
+#define base03 #737171
+#define base04 #959ca1
+#define base05 #d9d8d8
+#define base06 #e7e7e8
+#define base07 #ffffff
+#define base08 #ee2e24
+#define base09 #f386a1
+#define base0A #ffd204
+#define base0B #00853e
+#define base0C #85cebc
+#define base0D #009ddc
+#define base0E #98005d
+#define base0F #b06110
+
+urxvt-base16-londontube-light*foreground:   base02
+urxvt-base16-londontube-light*background:   base07
+
+
+urxvt-base16-londontube-light*color0:       base00
+urxvt-base16-londontube-light*color1:       base08
+urxvt-base16-londontube-light*color2:       base0B
+urxvt-base16-londontube-light*color3:       base0A
+urxvt-base16-londontube-light*color4:       base0D
+urxvt-base16-londontube-light*color5:       base0E
+urxvt-base16-londontube-light*color6:       base0C
+urxvt-base16-londontube-light*color7:       base05
+
+urxvt-base16-londontube-light*color8:       base03
+urxvt-base16-londontube-light*color9:       base09
+urxvt-base16-londontube-light*color10:      base01
+urxvt-base16-londontube-light*color11:      base02
+urxvt-base16-londontube-light*color12:      base04
+urxvt-base16-londontube-light*color13:      base06
+urxvt-base16-londontube-light*color14:      base0F
+urxvt-base16-londontube-light*color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+urxvt-base16-londontube-light*color16:      base09
+urxvt-base16-londontube-light*color17:      base0F
+urxvt-base16-londontube-light*color18:      base01
+urxvt-base16-londontube-light*color19:      base02
+urxvt-base16-londontube-light*color20:      base04
+urxvt-base16-londontube-light*color21:      base06
