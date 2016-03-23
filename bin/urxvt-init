@@ -2,8 +2,10 @@
 #
 # urxvt-init - main-terminal-aware rxvt-unicode invocation
 #
-# Open a regular rxvt-unicode terminal or either the main terminal or the
-# secondary terminal neither exists.
+# Launch the main terminal window if it isn't already running.
+# Otherwise, launch the secondary terminal window if it isn't already
+# running.  If both of those special terminal windows are already
+# running, launch a regular rxvt-unicode terminal window.
 
 WINDOWS=$(wmctrl -lx | cut -d' ' -f 4)
 
