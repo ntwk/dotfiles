@@ -96,11 +96,6 @@ http://icculus.org/pipermail/openbox/2010-October/006814.html -->
       <command>urxvt</command>
     </action>
   </item>
-  <item label="urxvt-console">
-    <action name="Execute">
-      <command>urxvt -name urxvt-console</command>
-    </action>
-  </item>
   <item label="urxvt-dark">
     <action name="Execute">
       <command>urxvt -name urxvt-dark</command>
