@@ -1,4 +1,5 @@
 \setenv PAGER 'less -iRSFX'
+\setenv EDITOR 'emacs -nw'
 
 \pset linestyle unicode
 \pset border 2
