@@ -348,6 +348,62 @@
         <command>amixer set PCM 5%-</command>
       </action>
     </keybind>
+    <!-- Keybindings for Irssi-style focus switching -->
+    <keybind key="W-1">
+      <action name="execute">
+        <execute>xfocus 0</execute>
+      </action>
+    </keybind>
+    <keybind key="W-2">
+      <action name="execute">
+        <execute>xfocus 1</execute>
+      </action>
+    </keybind>
+    <keybind key="W-2">
+      <action name="execute">
+        <execute>xfocus 1</execute>
+      </action>
+    </keybind>
+    <keybind key="W-3">
+      <action name="execute">
+        <execute>xfocus 2</execute>
+      </action>
+    </keybind>
+    <keybind key="W-4">
+      <action name="execute">
+        <execute>xfocus 3</execute>
+      </action>
+    </keybind>
+    <keybind key="W-5">
+      <action name="execute">
+        <execute>xfocus 4</execute>
+      </action>
+    </keybind>
+    <keybind key="W-6">
+      <action name="execute">
+        <execute>xfocus 5</execute>
+      </action>
+    </keybind>
+    <keybind key="W-7">
+      <action name="execute">
+        <execute>xfocus 6</execute>
+      </action>
+    </keybind>
+    <keybind key="W-8">
+      <action name="execute">
+        <execute>xfocus 7</execute>
+      </action>
+    </keybind>
+    <keybind key="W-9">
+      <action name="execute">
+        <execute>xfocus 8</execute>
+      </action>
+    </keybind>
+    <keybind key="W-0">
+      <action name="execute">
+        <execute>xfocus 9</execute>
+      </action>
+    </keybind>
     <!-- Keybindings for active windows opacity -->
     <keybind key="W-minus">
       <action name="Execute">
