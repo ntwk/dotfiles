@@ -42,6 +42,9 @@ alias tmc='clear && tmux clear'
 alias tmk='tmux kill-session'
 alias tm='tmux new-session'
 
+# grep in color
+alias grep='grep --color=auto'
+
 # ls shortcuts, paging, etc.
 alias ls='ls --color=auto'
 alias ll='ls -l'
