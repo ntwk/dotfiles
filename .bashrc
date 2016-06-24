@@ -87,5 +87,10 @@ function emr() {
     emacs "$1" -nw --eval '(setq buffer-read-only t)'
 }
 
+# Arch Linux User Repository (AUR) AUR4 package cloning
+function aurclone() {
+    git clone https://aur.archlinux.org/$1.git $2
+}
+
 # Local configuration
 [[ -s "$HOME/.bashrc_local" ]] && source "$HOME/.bashrc_local"
