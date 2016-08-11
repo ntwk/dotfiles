@@ -1,6 +1,6 @@
 !! ob-move-left 2015-05-13
 
-!!General
+!! General
 
 borderWidth: 1
 padding.width: 2
@@ -10,14 +10,14 @@ window.client.padding.height: 0
 border.color: #4e4e4e
 menu.overlap: 0
 
-!!Fonts
+!! Fonts
 
 window.active.label.text.font: shadow=y:shadowoffset=1:shadowtint=3
 window.inactive.label.text.font: shadow=y:shadowoffset=1:shadowtint=0
 menu.items.font:
 menu.title.text.font: shadow=y:shadowoffset=1:shadowtint=30
 
-!!Menu
+!! Menu
 
 menu.border.color: #4e4e4e
 menu.title.bg: flat solid
@@ -44,7 +44,7 @@ menu.bullet.image.color: #000000
 menu.bullet.selected.image.color: #ffffff
 window.label.text.justify: left
 
-!!Active
+!! Active
 
 window.active.client.color: #eeeeec
 
@@ -60,9 +60,13 @@ window.active.handle.bg.border.color: #e7e7e7
 window.active.grip.bg: parentrelative
 window.active.grip.bg.border.color: #e7e7e7
 
-! To make title icons slighty larger and thus more pretty,
-! specifically mupdf, I've added a border.  The label
-! background should actualy be parentrelative.
+! To make the icon appearing in the titlebar less blurry, (the mupdf
+! icon in particular suffers from the issue,) it needs to be made
+! slightly larger.  A border of the same color as the background is
+! added in order to achieve this.  If not for the added border, the
+! label background could actually be defined as parentrelative.
+! Parentrelative means that the element inherits its colors from the
+! textures behind it as is, in essence, completely transparent.
 window.active.label.bg: flat border solid
 window.active.label.bg.color: #3565a4
 window.active.label.bg.colorTo: #407cca
@@ -76,7 +80,7 @@ window.active.button.hover.image.color: #ffffff
 window.active.button.pressed.bg.color: #a7cef2
 window.active.button.disabled.image.color: #6d8fbc
 
-!!Inactive
+!! Inactive
 
 window.inactive.client.color: #eeeeec
 
