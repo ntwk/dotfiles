@@ -68,9 +68,9 @@ window.active.grip.bg.border.color: #e7e7e7
 ! Parentrelative means that the element inherits its colors from the
 ! textures behind it as is, in essence, completely transparent.
 window.active.label.bg: flat border solid
-window.active.label.bg.color: #3565a4
+window.active.label.bg.color: #3465a4
 window.active.label.bg.colorTo: #407cca
-window.active.label.bg.border.color: #3565a4
+window.active.label.bg.border.color: #3465a4
 window.active.label.text.color: #ffffff
 
 window.active.button.*.bg: parentrelative
