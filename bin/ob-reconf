@@ -1,0 +1,13 @@
+#!/bin/sh
+#
+# ob-reconf - reconfigure Openbox using a preset configuration file
+
+if [ $# -eq 0 ]; then
+    echo "usage: $0 [config.xml]"
+    exit 1
+fi
+
+CONFIG_DIR="${XDG_CONFIG_HOME:-"$HOME/.config"}/openbox"
+
+ln -fs rc.avail/"$1" "$CONFIG_DIR"/rc.xml
+openbox --reconfigure

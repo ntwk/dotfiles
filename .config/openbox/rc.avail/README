@@ -1,0 +1,6 @@
+rc.avail/README
+
+Each file in this directory represents a valid Openbox rc.xml
+configuration.  The desired configuration file should be symlinked to
+~/.config/openbox/rc.xml and Openbox should reload the confiugration
+via 'openbox --reconfigure' or the "Reconfigure" Openbox action.

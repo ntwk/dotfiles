@@ -1,0 +1,36 @@
+#!/bin/bash
+#
+# ob-reconf-pipemenu - generate an Openbox pipemenu for configuration files
+
+CONFIG_DIR="${XDG_CONFIG_HOME:-"$HOME/.config"}/openbox"
+CONFIGS=($CONFIG_DIR/rc.avail/*.xml)
+
+echo "<openbox_pipe_menu>"
+
+if [[ ${#CONFIGS[@]} -ne 0 ]]; then
+    for filename in "${CONFIGS[@]}"; do
+        basename="$(basename "$filename")"
+        stem="${basename%.*}"
+        # Openbox interprets _ as a shortcut specifier; escape the underscores.
+        label="${stem//_/__}"
+        # If the configuration is active, mark it as such with an icon.
+        if [[ $(readlink -e "$CONFIG_DIR"/rc.xml) == $(readlink -e "$filename") ]]
+        then
+            echo "  <item label=\"${label}\" icon=\".icons/check.svg\">"
+        else
+            echo "  <item label=\"${label}\">"
+        fi
+        echo "    <action name=\"Execute\">"
+        echo "      <command>ob-reconf \"${basename}\"</command>"
+        echo "    </action>"
+        echo "  </item>"
+    done
+    echo "  <separator/>"
+fi
+
+echo "  <item label=\"reload\" icon=\".icons/urxvt/circle_open_blur_less.svg\">"
+echo "    <action name=\"Reconfigure\" />"
+echo "  </item>"
+
+
+echo "</openbox_pipe_menu>"
