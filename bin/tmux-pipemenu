@@ -11,7 +11,8 @@ if [ -n "$WINDOWS" ]; then
     while read i; do
         WINDOW_NAME=${i#*:} # BASHISM
         # WINDOW_NAME=$(echo "$i" | cut -d':' -f 2-) # POSIX FORM OF ABOVE
-        echo "  <item label=\"${WINDOW_NAME}\">"
+        WINDOW_LABEL=${WINDOW_NAME//_/__} # Escape underscores for Openbox
+        echo "  <item label=\"${WINDOW_LABEL}\">"
         echo "    <action name=\"Execute\">"
         echo "      <command>tmux-launch \"${i}\"</command>"
         echo "    </action>"
