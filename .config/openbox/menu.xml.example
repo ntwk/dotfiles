@@ -12,6 +12,8 @@ http://icculus.org/pipermail/openbox/2010-October/006814.html -->
 
 <menu id="multiplexer-menu" label="multiplexer" execute="tmux-pipemenu"/>
 
+<menu id="ob-reconf-menu" label="configuration" execute="ob-recon-pipemenu"/>
+
 <menu id="apps-accessories-menu" label="accessories">
   <item label="emacs -nw">
     <action name="Execute">
@@ -182,6 +184,7 @@ http://icculus.org/pipermail/openbox/2010-October/006814.html -->
   <menu id="apps-term-menu"/>
   <separator />
   <menu id="system-menu"/>
+  <menu id="ob-reconf-menu"/>
   <separator />
   <item label="log out">
     <action name="Exit">
