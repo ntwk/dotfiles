@@ -28,7 +28,7 @@ if [[ ${#CONFIGS[@]} -ne 0 ]]; then
     echo "  <separator/>"
 fi
 
-echo "  <item label=\"reload\" icon=\".icons/urxvt/circle_open_blur_less.svg\">"
+echo "  <item label=\"reload configuration\" icon=\".icons/urxvt/circle_open_blur_less.svg\">"
 echo "    <action name=\"Reconfigure\" />"
 echo "  </item>"
 
