@@ -67,7 +67,7 @@ window.active.label.text.color: #ffffff
 window.*.button.*.bg: parentrelative
 window.active.button.*.image.color: #efefef
 window.active.button.*.hover.image.color: #ffffff
-window.active.button.*.pressed.image.color: #a7cef2
+window.active.button.*.pressed.image.color: #ffffff
 window.active.button.disabled.image.color: #6d8fbc
 
 !! Inactive
