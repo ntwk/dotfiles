@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 # Host-specific overriding of the prompt should go in .bashrc_local
-PS1='\[\e[0;31m\][\[\e[0;33m\]\u\[\e[0;31m\]@\h \W]\$\[\e[0m\] '
+PS1='\[\e[0;31m\][\[\e[0;33m\]\u\[\e[0;31m\]@\h \W\[\e[0;32m\]$(__git_ps1 " %s")\[\e[0;31m\]]\$\[\e[0m\] '
 
 alias lpr='lpr -o fit-to-page'
 
@@ -91,6 +91,9 @@ function emr() {
 function aurclone() {
     git clone https://aur.archlinux.org/$1.git $2
 }
+
+# Git prompt
+source ~/.git-prompt.sh
 
 # Local configuration
 [[ -s "$HOME/.bashrc_local" ]] && source "$HOME/.bashrc_local"
