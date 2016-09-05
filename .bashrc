@@ -20,6 +20,9 @@ alias d='dirs'
 alias p='pushd'
 alias o='popd'
 
+# Change directory to root of current Git repository
+alias cg='cd $(git rev-parse --show-toplevel)'
+
 # Make bash aliases work with sudo
 # http://askubuntu.com/questions/22037/aliases-not-available-when-using-sudo
 alias sudo='sudo '
