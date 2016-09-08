@@ -9,5 +9,7 @@
         branch = auto
 [pager] 
         status = true
+[alias]
+	root = !git rev-parse --show-toplevel
 [include]
         path = ~/.gitlocal
