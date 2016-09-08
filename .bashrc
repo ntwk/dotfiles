@@ -61,6 +61,11 @@ alias toupper='perl-rename '\''s/(.*)/\U$1/'\'
 # Open file manager in current directory
 alias ta='exo-open --launch FileManager 2>/dev/null'
 
+# Open a new tmux window in the present working directory in session 0
+# See ~/.local/share/xfce4/helpers/custom-TerminalEmulator.desktop and
+# ~/.config/xfce4/helpers.rc for the related configuration.
+alias tw='exo-open --launch TerminalEmulator ./'
+
 # Colorize man pages. See ~/bin/colorman for details
 alias man=colorman
 
