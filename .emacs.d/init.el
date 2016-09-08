@@ -135,6 +135,14 @@
 
 (global-set-key "\C-ce" 'thunar)
 
+;; Create a tmux window in session 0 in the current directory
+(defun tmux-new-window ()
+  "Create a tmux window in session 0 in the current directory."
+  (interactive)
+  (call-process "exo-open" nil nil nil "--launch" "TerminalEmulator" "./"))
+
+(global-set-key "\C-cw" 'tmux-new-window)
+
 ;; Use CPerl Mode instead of the default Perl Mode
 (mapc
  (lambda (pair)
