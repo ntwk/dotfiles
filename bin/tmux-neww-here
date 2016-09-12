@@ -1,11 +1,39 @@
 #!/bin/sh
 #
-# tmux-neww-here - Open a tmux window in the main tmux session
+# tmux-neww-here - Open a tmux window in session 0
 #
 # USAGE: tmux-neww-here [DIRECTORY]
 #
-# tmux-neww-here (formerly known as tmux-thunar) is meant to be invoked via a
-# Thunar custom action.  Open the user's default shell in the directory
-# DIRECTORY if specified or the user's home directory if DIRECTORY is omitted.
+# tmux-neww-here will open a new tmux window starting the present working or
+# instead DIRECTORY it is specified.
+#
+# tmux-neww-here is similar to the tmux 'new-window' command except that when
+# invoked in an X environment, session "0" as defined in tmux-launch is always
+# target session and it is brought to the foreground and given focus.
+#
+# When outside of an X environment (i.e. DISPLAY is unset) tmux-neww-here will
+# instead open a new window in the currently attached session if it exists or
+# fail otherwise.  This can be useful when remotely attached to a tmux session
+# via SSH.
+#
+# This command was previously known as 'tmux-thunar' and was originally meant
+# to be invoked via a Thunar custom action but it has proven to be useful in
+# other contexts or simply called directly.
 
-tmux-launch /bin/sh -c "'cd \"$1\"; exec $SHELL'"
+DIRECTORY=${1:-$PWD}
+
+if [ -z ${DISPLAY+x} ]; then # See [1]
+    # DISPLAY is unset"
+    if [ -z ${TMUX+x} ]; then # See [1]
+        # TMUX is unset
+        echo "error: not in a tmux session and DISPLAY is unset" >&2
+        exit 1
+    else
+        tmux new-window -c "$DIRECTORY"
+    fi
+else
+    tmux-launch /bin/sh -c "'cd \"$DIRECTORY\"; exec $SHELL'"
+fi
+
+# [1] An explanation of the [ -z ${var+x} ] idiom to test for unset variables
+# can be found at http://stackoverflow.com/questions/3601515/how-to-check-if-a-variable-is-set-in-bash
