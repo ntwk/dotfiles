@@ -139,7 +139,7 @@
 (defun tmux-new-window ()
   "Create a tmux window in session 0 in the current directory."
   (interactive)
-  (call-process "exo-open" nil nil nil "--launch" "TerminalEmulator" "./"))
+  (call-process "tmux-neww-here" nil nil nil))
 
 (global-set-key "\C-cw" 'tmux-new-window)
 
