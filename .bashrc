@@ -77,22 +77,22 @@ export MANWIDTH=80
 HISTCONTROL=ignoreboth
 
 # Arch Linux User Repository (AUR) AUR4 package cloning
-function aurclone() {
+aurclone() {
     git clone https://aur.archlinux.org/$1.git $2
 }
 
 # colordiff piped through a pager
-function cdiff() {
+cdiff() {
     colordiff $@ | less -RS
 }
 
 # Emacs: read-only edition
-function emr() {
+emr() {
     emacs "$1" -nw --eval '(setq buffer-read-only t)'
 }
 
 # Command to change the font in rxvt-unicode
-function face {
+face() {
     if [[ -n ${TMUX+x} ]]; then
         printf '\ePtmux;\e\e]713;%s\007\e\e]712;%s\007\e\e]711;%s\007\e\e]50;%s\007\e\\' "xft:$1" "xft:$1" "xft:$1" "xft:$1"
     else
