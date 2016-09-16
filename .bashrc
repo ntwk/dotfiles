@@ -76,13 +76,9 @@ export MANWIDTH=80
 # space.  Omit commands listed in HISTIGNORE from the bash history.
 HISTCONTROL=ignoreboth
 
-# Command to change the font in rxvt-unicode
-function face {
-    if [[ -n ${TMUX+x} ]]; then
-        printf '\ePtmux;\e\e]713;%s\007\e\e]712;%s\007\e\e]711;%s\007\e\e]50;%s\007\e\\' "xft:$1" "xft:$1" "xft:$1" "xft:$1"
-    else
-        printf '\33]713;%s\007\33]712;%s\007\33]711;%s\007\33]50;%s\007' "xft:$1" "xft:$1" "xft:$1" "xft:$1"
-    fi
+# Arch Linux User Repository (AUR) AUR4 package cloning
+function aurclone() {
+    git clone https://aur.archlinux.org/$1.git $2
 }
 
 # colordiff piped through a pager
@@ -95,9 +91,13 @@ function emr() {
     emacs "$1" -nw --eval '(setq buffer-read-only t)'
 }
 
-# Arch Linux User Repository (AUR) AUR4 package cloning
-function aurclone() {
-    git clone https://aur.archlinux.org/$1.git $2
+# Command to change the font in rxvt-unicode
+function face {
+    if [[ -n ${TMUX+x} ]]; then
+        printf '\ePtmux;\e\e]713;%s\007\e\e]712;%s\007\e\e]711;%s\007\e\e]50;%s\007\e\\' "xft:$1" "xft:$1" "xft:$1" "xft:$1"
+    else
+        printf '\33]713;%s\007\33]712;%s\007\33]711;%s\007\33]50;%s\007' "xft:$1" "xft:$1" "xft:$1" "xft:$1"
+    fi
 }
 
 # Git prompt
