@@ -20,9 +20,6 @@ alias d='dirs'
 alias p='pushd'
 alias o='popd'
 
-# Change directory to root of current Git repository
-alias cg='cd ./$(git rev-parse --show-cdup)'
-
 # Make bash aliases work with sudo
 # http://askubuntu.com/questions/22037/aliases-not-available-when-using-sudo
 alias sudo='sudo '
@@ -84,6 +81,19 @@ aurclone() {
 # colordiff piped through a pager
 cdiff() {
     colordiff $@ | less -RS
+}
+
+# Change directory to root of current Git repository
+cg() {
+    declare cdup; # cdup must be declared before it is initliazed in
+                  # order to capture the exit status of git rev-parse.
+    cdup="$(git rev-parse --show-cdup)"
+    declare status=$?
+    if [[ -n $cdup ]]; then
+        cd "$cdup"
+    else
+        return $status
+    fi
 }
 
 # Emacs: read-only edition
