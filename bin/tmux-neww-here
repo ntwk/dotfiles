@@ -4,12 +4,12 @@
 #
 # USAGE: tmux-neww-here [DIRECTORY]
 #
-# tmux-neww-here will open a new tmux window starting the present working or
-# instead DIRECTORY it is specified.
+# tmux-neww-here will open a new tmux window starting in the present working
+# or DIRECTORY if specified.
 #
-# tmux-neww-here is similar to the tmux 'new-window' command except that when
-# invoked in an X environment, session "0" as defined in tmux-launch is always
-# target session and it is brought to the foreground and given focus.
+# tmux-neww-here is similar to the tmux 'new-window' command except that it
+# always targets session '0' as defined in tmux-launch.  Additionally, the
+# target session is brought to the foreground and given focus.
 #
 # When outside of an X environment (i.e. DISPLAY is unset) tmux-neww-here will
 # instead open a new window in the currently attached session if it exists or
