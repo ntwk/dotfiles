@@ -1,4 +1,4 @@
-rc.avail/README
+rc.xml.avail/README
 
 Each file in this directory represents a valid Openbox rc.xml
 configuration.  The desired configuration file should be symlinked to

@@ -3,7 +3,7 @@
 # ob-reconf-pipemenu - generate an Openbox pipemenu for configuration files
 
 CONFIG_DIR="${XDG_CONFIG_HOME:-"$HOME/.config"}/openbox"
-CONFIGS=($CONFIG_DIR/rc.avail/*.xml)
+CONFIGS=($CONFIG_DIR/rc.xml.avail/*.xml)
 
 echo "<openbox_pipe_menu>"
 
