@@ -1,6 +1,7 @@
 rc.xml.avail/README
 
-Each file in this directory represents a valid Openbox rc.xml
-configuration.  The desired configuration file should be symlinked to
-~/.config/openbox/rc.xml and Openbox should reload the confiugration
-via 'openbox --reconfigure' or the "Reconfigure" Openbox action.
+Each file in this directory is a valid Openbox rc.xml configuration file.
+The desired configuration can be selected by symlinking it to
+~/.config/openbox/rc.xml.  If Openbox is already running, its configuration
+must then be refreshed by running 'openbox --reconfigure' or by invoking
+the "Reconfigure" Openbox action.
