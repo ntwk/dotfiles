@@ -15,8 +15,8 @@ menu.overlap: 0
 
 !! Fonts
 
-window.active.label.text.font: shadow=y:shadowoffset=1:shadowtint=30
-window.inactive.label.text.font: shadow=y:shadowoffset=1:shadowtint=0
+window.active.label.text.font: shadow=n:shadowoffset=0:shadowtint=30
+window.inactive.label.text.font: shadow=n:shadowoffset=0:shadowtint=0
 menu.items.font:
 menu.title.text.font: shadow=y:shadowoffset=1:shadowtint=30
 
