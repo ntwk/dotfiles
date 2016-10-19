@@ -39,7 +39,7 @@ URxvt*keysym.M-C-minus: perl:opacity:down
 URxvt*keysym.M-C-equal: perl:opacity:up
 
 URxvt*keysym.F9:        command:\033]713;__FITL__\007\033]712;__FITL__\007\033]711;__FBLD__\007\033]50;__FNRM__\007
-URxvt*keysym.F10:       command:\033]713;xft:Fixedsys\007\033]712;xft:Fixedsys\007\033]711;xft:Fixedsys\007\033]50;xft:Fixedsys\007
+URxvt*keysym.F10:       command:\033]713;xft:Nixedsys\007\033]712;xft:Nixedsys\007\033]711;xft:Nixedsys\007\033]50;xft:Nixedsys\007
 URxvt*keysym.F11:       perl:fullscreen:switch
 
 URxvt*fading:           20
