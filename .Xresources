@@ -24,7 +24,7 @@ URxvt*pointerBlank:     true
 URxvt*iconFile:         __HOME__/.icons/urxvt/144651-apple.svg
 URxvt*print-pipe:       cat > $HOME/urxvt.$(date +%Y%m%d_%H%M%S)
 
-URxvt*perl-ext-common:  default,fullscreen,url-select,keyboard-select,opacity
+URxvt*perl-ext-common:  default,-searchable-scrollback,fullscreen,url-select,keyboard-select,opacity
 
 URxvt*url-select.launcher:  firefox
 URxvt*url-select.underline: false
