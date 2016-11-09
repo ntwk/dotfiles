@@ -179,10 +179,7 @@ urxvt-jschx*color15:    #cfdfef
 ! emacs ----------------------------------------------------------------------
 
 emacs.font:                     __FNRM__
-! If fringes are disabled the actual window width winds up not matching
-! the specified width.  Adjust emacs.geometry as needed such that the
-! actual geometry is 80x50
-emacs.geometry:                 77x50
+emacs.geometry:                 80x50
 emacs.menuBar:                  off
 emacs.toolBar:                  off
 emacs.verticalScrollBars:       off
