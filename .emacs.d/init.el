@@ -120,6 +120,7 @@
   '((sequence "TODO(t)" "WAIT(w)" "|" "DONE(d)" "VOID(v)")))
 (setq org-enforce-todo-dependencies t)
 (setq org-log-into-drawer t)
+(setq org-src-fontify-natively t)
 ;; END Org mode settings
 
 ;; Load host-specific configuration
