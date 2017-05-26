@@ -543,6 +543,57 @@ bindings would mask the key and mouse bindings used by some applications
           <command>tmux-launch</command>
         </action>
       </keybind>
+      <!-- Keybindings for Irssi-style focus switching -->
+      <keybind key="1">
+        <action name="execute">
+          <execute>xfocus 0</execute>
+        </action>
+      </keybind>
+      <keybind key="2">
+        <action name="execute">
+          <execute>xfocus 1</execute>
+        </action>
+      </keybind>
+      <keybind key="3">
+        <action name="execute">
+          <execute>xfocus 2</execute>
+        </action>
+      </keybind>
+      <keybind key="4">
+        <action name="execute">
+          <execute>xfocus 3</execute>
+        </action>
+      </keybind>
+      <keybind key="5">
+        <action name="execute">
+          <execute>xfocus 4</execute>
+        </action>
+      </keybind>
+      <keybind key="6">
+        <action name="execute">
+          <execute>xfocus 5</execute>
+        </action>
+      </keybind>
+      <keybind key="7">
+        <action name="execute">
+          <execute>xfocus 6</execute>
+        </action>
+      </keybind>
+      <keybind key="8">
+        <action name="execute">
+          <execute>xfocus 7</execute>
+        </action>
+      </keybind>
+      <keybind key="9">
+        <action name="execute">
+          <execute>xfocus 8</execute>
+        </action>
+      </keybind>
+      <keybind key="0">
+        <action name="execute">
+          <execute>xfocus 9</execute>
+        </action>
+      </keybind>
     </keybind>
   </keyboard>
   <mouse>
