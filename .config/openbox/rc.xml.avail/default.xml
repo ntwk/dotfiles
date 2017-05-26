@@ -512,12 +512,6 @@
       </keybind>
     </keybind>
     <keybind key="W-o">
-      <keybind key="2">
-        <action name="MoveResizeTo">
-          <x>511</x>
-          <y>15</y>
-        </action>
-      </keybind>
       <keybind key="c">
         <action name="Execute">
           <startupnotify>
