@@ -362,11 +362,6 @@
         <execute>xfocus 1</execute>
       </action>
     </keybind>
-    <keybind key="W-2">
-      <action name="execute">
-        <execute>xfocus 1</execute>
-      </action>
-    </keybind>
     <keybind key="W-3">
       <action name="execute">
         <execute>xfocus 2</execute>
