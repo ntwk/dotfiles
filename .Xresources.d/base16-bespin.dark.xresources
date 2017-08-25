@@ -21,6 +21,7 @@
 urxvt-base16-bespin-dark*foreground:   base05
 urxvt-base16-bespin-dark*background:   base00
 
+urxvt-base16-bespin-dark*fadeColor:    base00
 
 urxvt-base16-bespin-dark*color0:       base00
 urxvt-base16-bespin-dark*color1:       base08

@@ -21,6 +21,7 @@
 urxvt-base16-monokai-dark*foreground:   base05
 urxvt-base16-monokai-dark*background:   base00
 
+urxvt-base16-monokai-dark*fadeColor:    base00
 
 urxvt-base16-monokai-dark*color0:       base00
 urxvt-base16-monokai-dark*color1:       base08

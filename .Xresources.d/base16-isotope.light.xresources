@@ -21,6 +21,7 @@
 urxvt-base16-isotope-light*foreground:   base02
 urxvt-base16-isotope-light*background:   base07
 
+urxvt-base16-isotope-light*fadeColor:    base07
 
 urxvt-base16-isotope-light*color0:       base00
 urxvt-base16-isotope-light*color1:       base08

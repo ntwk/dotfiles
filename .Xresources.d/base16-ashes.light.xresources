@@ -21,6 +21,7 @@
 urxvt-base16-ashes-light*foreground:   base02
 urxvt-base16-ashes-light*background:   base07
 
+urxvt-base16-ashes-light*fadeColor:    base07
 
 urxvt-base16-ashes-light*color0:       base00
 urxvt-base16-ashes-light*color1:       base08

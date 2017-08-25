@@ -21,6 +21,7 @@
 urxvt-base16-atelierlakeside-light*foreground:   base02
 urxvt-base16-atelierlakeside-light*background:   base07
 
+urxvt-base16-atelierlakeside-light*fadeColor:    base07
 
 urxvt-base16-atelierlakeside-light*color0:       base00
 urxvt-base16-atelierlakeside-light*color1:       base08

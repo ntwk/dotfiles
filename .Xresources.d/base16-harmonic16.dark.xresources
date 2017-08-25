@@ -21,6 +21,7 @@
 urxvt-base16-harmonic16-dark*foreground:   base05
 urxvt-base16-harmonic16-dark*background:   base00
 
+urxvt-base16-harmonic16-dark*fadeColor:    base00
 
 urxvt-base16-harmonic16-dark*color0:       base00
 urxvt-base16-harmonic16-dark*color1:       base08

@@ -21,6 +21,7 @@
 urxvt-base16-greenscreen-light*foreground:   base02
 urxvt-base16-greenscreen-light*background:   base07
 
+urxvt-base16-greenscreen-light*fadeColor:    base07
 
 urxvt-base16-greenscreen-light*color0:       base00
 urxvt-base16-greenscreen-light*color1:       base08

@@ -21,6 +21,7 @@
 urxvt-base16-eighties-dark*foreground:   base05
 urxvt-base16-eighties-dark*background:   base00
 
+urxvt-base16-eighties-dark*fadeColor:    base00
 
 urxvt-base16-eighties-dark*color0:       base00
 urxvt-base16-eighties-dark*color1:       base08

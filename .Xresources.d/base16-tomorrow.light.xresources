@@ -21,6 +21,7 @@
 urxvt-base16-tomorrow-light*foreground:   base02
 urxvt-base16-tomorrow-light*background:   base07
 
+urxvt-base16-tomorrow-light*fadeColor:    base07
 
 urxvt-base16-tomorrow-light*color0:       base00
 urxvt-base16-tomorrow-light*color1:       base08

@@ -21,6 +21,7 @@
 urxvt-base16-twilight-light*foreground:   base02
 urxvt-base16-twilight-light*background:   base07
 
+urxvt-base16-twilight-light*fadeColor:    base07
 
 urxvt-base16-twilight-light*color0:       base00
 urxvt-base16-twilight-light*color1:       base08

@@ -21,6 +21,7 @@
 urxvt-base16-atelierforest-light*foreground:   base02
 urxvt-base16-atelierforest-light*background:   base07
 
+urxvt-base16-atelierforest-light*fadeColor:    base07
 
 urxvt-base16-atelierforest-light*color0:       base00
 urxvt-base16-atelierforest-light*color1:       base08

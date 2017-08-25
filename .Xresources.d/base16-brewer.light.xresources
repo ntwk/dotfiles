@@ -21,6 +21,7 @@
 urxvt-base16-brewer-light*foreground:   base02
 urxvt-base16-brewer-light*background:   base07
 
+urxvt-base16-brewer-light*fadeColor:    base07
 
 urxvt-base16-brewer-light*color0:       base00
 urxvt-base16-brewer-light*color1:       base08

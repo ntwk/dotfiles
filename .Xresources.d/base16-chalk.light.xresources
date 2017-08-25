@@ -21,6 +21,7 @@
 urxvt-base16-chalk-light*foreground:   base02
 urxvt-base16-chalk-light*background:   base07
 
+urxvt-base16-chalk-light*fadeColor:    base07
 
 urxvt-base16-chalk-light*color0:       base00
 urxvt-base16-chalk-light*color1:       base08

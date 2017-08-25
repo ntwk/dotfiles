@@ -21,6 +21,7 @@
 urxvt-base16-shapeshifter-light*foreground:   base02
 urxvt-base16-shapeshifter-light*background:   base07
 
+urxvt-base16-shapeshifter-light*fadeColor:    base07
 
 urxvt-base16-shapeshifter-light*color0:       base00
 urxvt-base16-shapeshifter-light*color1:       base08

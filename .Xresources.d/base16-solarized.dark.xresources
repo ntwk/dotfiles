@@ -21,6 +21,7 @@
 urxvt-base16-solarized-dark*foreground:   base05
 urxvt-base16-solarized-dark*background:   base00
 
+urxvt-base16-solarized-dark*fadeColor:    base00
 
 urxvt-base16-solarized-dark*color0:       base00
 urxvt-base16-solarized-dark*color1:       base08

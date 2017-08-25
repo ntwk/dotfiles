@@ -21,6 +21,7 @@
 urxvt-base16-paraiso-dark*foreground:   base05
 urxvt-base16-paraiso-dark*background:   base00
 
+urxvt-base16-paraiso-dark*fadeColor:    base00
 
 urxvt-base16-paraiso-dark*color0:       base00
 urxvt-base16-paraiso-dark*color1:       base08

@@ -21,6 +21,7 @@
 urxvt-base16-embers-light*foreground:   base02
 urxvt-base16-embers-light*background:   base07
 
+urxvt-base16-embers-light*fadeColor:    base07
 
 urxvt-base16-embers-light*color0:       base00
 urxvt-base16-embers-light*color1:       base08

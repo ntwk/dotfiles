@@ -21,6 +21,7 @@
 urxvt-base16-brewer-dark*foreground:   base05
 urxvt-base16-brewer-dark*background:   base00
 
+urxvt-base16-brewer-dark*fadeColor:    base00
 
 urxvt-base16-brewer-dark*color0:       base00
 urxvt-base16-brewer-dark*color1:       base08

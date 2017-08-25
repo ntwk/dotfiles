@@ -21,6 +21,7 @@
 urxvt-base16-londontube-dark*foreground:   base05
 urxvt-base16-londontube-dark*background:   base00
 
+urxvt-base16-londontube-dark*fadeColor:    base00
 
 urxvt-base16-londontube-dark*color0:       base00
 urxvt-base16-londontube-dark*color1:       base08

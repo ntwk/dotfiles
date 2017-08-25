@@ -21,6 +21,7 @@
 urxvt-base16-atelierdune-dark*foreground:   base05
 urxvt-base16-atelierdune-dark*background:   base00
 
+urxvt-base16-atelierdune-dark*fadeColor:    base00
 
 urxvt-base16-atelierdune-dark*color0:       base00
 urxvt-base16-atelierdune-dark*color1:       base08

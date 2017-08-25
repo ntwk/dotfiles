@@ -21,6 +21,7 @@
 urxvt-base16-atelierseaside-dark*foreground:   base05
 urxvt-base16-atelierseaside-dark*background:   base00
 
+urxvt-base16-atelierseaside-dark*fadeColor:    base00
 
 urxvt-base16-atelierseaside-dark*color0:       base00
 urxvt-base16-atelierseaside-dark*color1:       base08

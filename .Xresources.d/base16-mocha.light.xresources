@@ -21,6 +21,7 @@
 urxvt-base16-mocha-light*foreground:   base02
 urxvt-base16-mocha-light*background:   base07
 
+urxvt-base16-mocha-light*fadeColor:    base07
 
 urxvt-base16-mocha-light*color0:       base00
 urxvt-base16-mocha-light*color1:       base08

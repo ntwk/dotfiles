@@ -21,6 +21,7 @@
 urxvt-base16-grayscale-dark*foreground:   base05
 urxvt-base16-grayscale-dark*background:   base00
 
+urxvt-base16-grayscale-dark*fadeColor:    base00
 
 urxvt-base16-grayscale-dark*color0:       base00
 urxvt-base16-grayscale-dark*color1:       base08

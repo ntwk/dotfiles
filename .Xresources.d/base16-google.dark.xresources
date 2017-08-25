@@ -21,6 +21,7 @@
 urxvt-base16-google-dark*foreground:   base05
 urxvt-base16-google-dark*background:   base00
 
+urxvt-base16-google-dark*fadeColor:    base00
 
 urxvt-base16-google-dark*color0:       base00
 urxvt-base16-google-dark*color1:       base08

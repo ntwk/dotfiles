@@ -21,6 +21,7 @@
 urxvt-base16-apathy-dark*foreground:   base05
 urxvt-base16-apathy-dark*background:   base00
 
+urxvt-base16-apathy-dark*fadeColor:    base00
 
 urxvt-base16-apathy-dark*color0:       base00
 urxvt-base16-apathy-dark*color1:       base08
