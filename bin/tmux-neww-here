@@ -4,7 +4,7 @@
 #
 # USAGE: tmux-neww-here [DIRECTORY]
 #
-# tmux-neww-here will open a new tmux window starting in the present working
+# tmux-neww-here will open a new tmux window in the present working directory
 # or DIRECTORY if specified.
 #
 # tmux-neww-here is similar to the tmux 'new-window' command except that it
