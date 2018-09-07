@@ -110,6 +110,14 @@ face() {
     fi
 }
 
+# Print a PS1 prompt assignment using random colors.  To set the
+# current prompt, execute 'eval $(genprompt)'.
+genprompt() {
+    declare foreground=$(($RANDOM % 256))
+    declare background=$(($RANDOM % 256))
+    echo PS1=\'"\[\e[38;5;${background}m\][\[\e[38;5;${foreground}m\]\u\[\e[38;5;${background}m\]@\h \W\[\e[38;5;32m\]\$(__git_ps1 \" %s\")\[\e[38;5;${background}m\]]\\$\[\e[0m\] "\'
+}
+
 # Git prompt
 source ~/.git-prompt.sh
 
