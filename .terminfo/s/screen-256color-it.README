@@ -1,3 +1,125 @@
+Date: 2018-09-20
+
+With the release of tmux version 2.1, This custom "screen-256color-it"
+terminfo terminal description no longer works as it was originally
+intended.  As of tmux version 2.1, the way to get tmux to display
+italics correctly is to instruct it to it to use the new tmux terminfo
+entry:
+
+    set -g default-terminal "tmux-256color"
+
+However, this requires a recent version of the terminfo database on
+the host.
+
+The release notes of Tmux version 2.1 states the following:
+
+"'default-terminal' is now a session option.  Furthermore, if this is
+set to 'screen-*' then emulate what screen does.  If italics are
+wanted, this can be set to 'tmux' but this is still new and not
+necessarily supported on all platforms with older ncurses installs."
+
+The actual change appeared on 2015-04-29 in tmux commit 7382ba82c5
+which reads:
+
+"If default-terminal is set to "screen" or "screen-*", emulate screen's
+
+"historical (incorrect) behaviour for SGR 3 and send smso
+(standout). Previously, we would send sitm (italics) if the terminal
+outside had it and smso otherwise. This was acceptably until recently
+because xterm's terminfo entry lacked sitm, so most users got smso.
+
+"People who want italics should set default-terminal to the forthcoming
+"tmux" entry (and be prepared to deal with it being missing on older
+hosts).
+
+"As a side-effect this changes default-terminal to be a server rather
+than a session option.
+
+"suggested by and ok naddy"
+
+As noted in the above commit message, on 2015-05-02 a tmux entry was
+added to the terminfo database which is distributed as part of
+ncurses.
+
+In the disccusion at https://github.com/tmux/tmux/issues/175 tmux
+author Nicholas Marriott explains the rationale behind this change:
+
+"When screen gets the SGR 3 escape sequence (\E[3m) inside, it asks
+for standout from the terminal outside by looking at the terminfo
+entry set outside ("xterm", say) and sending smso. This is wrong,
+because SGR 3 is meant to be italics. I don't know why they chose to
+do this, possibly it was before italics was available, or they had
+some other motivation, possibly it was sensible at the time.
+
+"The "screen" terminfo entry has smso=\E[3m, because when an
+application inside screen wants standout, it will look in the "screen"
+terminfo for smso and send what it finds (SGR 3), and SGR 3 is
+standout in screen.
+
+"So that's all good for screen which has no support for italics.
+
+"But for tmux we want to support italics. Previously, we would look at
+whether the terminal outside had sitm and send it when we got SGR 3
+from the application inside (this is what we're meant to do, because
+SGR 3 is supposed to be italics). If the terminal didn't have sitm, we
+would send smso.
+
+"This meant that because we use the "screen" terminfo entry inside
+tmux, an application asking for standout would send SGR 3, and if the
+terminfo entry outside had smso tmux would behave like screen and give
+it standout (meaning show any subsequent text using standout), and if
+it had sitm tmux would give it italics.
+
+"This was acceptable, because the "xterm" terminfo entry didn't have
+sitm: most people use "xterm" and most people don't care about
+italics, and it allowed the few who do care to enable it with
+terminal-overrides and a custom terminfo entry.
+
+"But now the "xterm" terminfo entry has changed so it does have sitm,
+so suddenly everyone is getting italics when their applications in
+tmux ask for standout. This is clearly wrong and everyone will
+complain about it.
+
+"So what do we do?
+
+"The right solution is for everyone to stop using the "screen"
+terminfo entry in tmux and use the new "tmux" terminfo entry
+instead. The "tmux" terminfo entry has sitm=\E[3m and smso=\E[7m and
+everything is grand.
+
+"But adding a new terminfo entry isn't that simple. It is easy enough
+to actually add a "tmux" one, but terminfo doesn't propagate very
+fast, and there will be a lot of old hosts without it for a very long
+time.
+
+"(Also you should understand that terminfo is not always complete, is
+sometimes a moving target, is often out of date and is occasionally
+wrong. tmux does the best it can to stick to it, but it is not always
+possible.)
+
+"And now we have "tmux" terminfo entry, applications inside tmux with
+TERM set to "screen" will send SGR 3 expecting standout (because that
+is smso), but with TERM set to "tmux" they will send SGR 3 expecting
+italics (because that is - rightly - sitm).
+
+"So we need to support both. And the best solution is to just check
+what terminfo entry applications are likely to be using, which is in
+default-terminal.
+
+"This means that by default, users get the "screen" terminfo (almost
+certain to be available on their box), and it shows standout when
+requested.
+
+"And people who want italics can just set default-terminal to "tmux",
+and use the "tmux" terminfo entry. If they don't have the "tmux"
+terminfo entry yet, they can upgrade their terminfo, or build their
+own like in the FAQ, or copy the screen one and rename it. These
+people get the short end of the stick, but they are the minority and
+are more likely to be power users who are always tweaking their
+configs anyway."
+
+
+
 Date: 2015-04-24
 
 Notes on why this terminfo file is necessary
