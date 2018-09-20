@@ -1,19 +1,20 @@
-Notes on why this terminfo file is necessary
 Date: 2015-04-24
+
+Notes on why this terminfo file is necessary
 
 Quote from http://sourceforge.net/p/tmux/tmux-code/ci/master/tree/FAQ
 
-* vim displays reverse video instead of italics, while less displays italics
-  (or just regular text) instead of reverse. What's wrong?
+* vim displays reverse video instead of italics, while less displays
+  italics (or just regular text) instead of reverse. What's wrong?
 
-Screen's terminfo description lacks italics mode and has standout mode in its
-place, but using the same escape sequence that urxvt uses for italics. This
-means applications (like vim) looking for italics will not find it and might
-turn to reverse in its place, while applications (like less) asking for
-standout will end up with italics instead of reverse. To make applications
-aware that tmux supports italics and to use a proper escape sequence for
-standout, you'll need to create a new terminfo file with modified sgr, smso,
-rmso, sitm and ritm entries:
+Screen's terminfo description lacks italics mode and has standout mode
+in its place, but using the same escape sequence that urxvt uses for
+italics. This means applications (like vim) looking for italics will
+not find it and might turn to reverse in its place, while applications
+(like less) asking for standout will end up with italics instead of
+reverse. To make applications aware that tmux supports italics and to
+use a proper escape sequence for standout, you'll need to create a new
+terminfo file with modified sgr, smso, rmso, sitm and ritm entries:
 
     $ mkdir $HOME/.terminfo/
     $ screen_terminfo="screen"
@@ -33,11 +34,11 @@ If your terminal supports 256 colors, use:
 
     $ screen_terminfo="screen-256color"
 
-instead of "screen". See the FAQ entry about 256 colors support for more info.
-Also note that tmux will still display reverse video on terminals that do not
-support italics.
+instead of "screen". See the FAQ entry about 256 colors support for
+more info.  Also note that tmux will still display reverse video on
+terminals that do not support italics.
 
-If your urxvt cannot display italics at all, make sure you have an italics
-capable font enabled, for example, add to ~/.Xdefaults:
+If your urxvt cannot display italics at all, make sure you have an
+italics capable font enabled, for example, add to ~/.Xdefaults:
 
     urxvt.italicFont: xft:Bitstream Vera Sans Mono:italic:autohint=true
