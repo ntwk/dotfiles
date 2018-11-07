@@ -1,10 +1,10 @@
 <svg width="250" height="250" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
-  <filter id="blur">
+  <filter id="blur" filterUnits="userSpaceOnUse">
     <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
   </filter>
 
-  <filter id="blurMore">
+  <filter id="blurMore" filterUnits="userSpaceOnUse">
     <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
   </filter>
 
