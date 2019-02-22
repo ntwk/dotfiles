@@ -35,6 +35,9 @@ alias sc='screen'
 # remote-viewer
 alias rv='remote-viewer --hotkeys=toggle-fullscreen=shift+f11'
 
+# TigerVNC vncviewer
+alias vv='vncviewer'
+
 # tmux
 alias tml='tmux list-sessions'
 alias tma='tmux attach-session'
