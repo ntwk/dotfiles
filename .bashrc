@@ -33,7 +33,7 @@ alias sr='screen -raAd'
 alias sc='screen'
 
 # remote-viewer
-alias rv='remote-viewer --hotkeys=toggle-fullscreen=shift+f11'
+alias rv='GTK_THEME=Adwaita:dark remote-viewer --hotkeys=toggle-fullscreen=shift+f11'
 
 # TigerVNC vncviewer
 alias vv='vncviewer'
