@@ -3,8 +3,8 @@
 sub on_user_command {
 	my ($self, $cmd) = @_;
 	if ($cmd eq "opacity:down") {
-		my $dummy = `compton-trans -c -o 80` ;
+		my $dummy = `picom-trans -c -o 80` ;
 	} elsif ($cmd eq "opacity:up") {
-		my $dummy = `compton-trans -c -o 100` ;
+		my $dummy = `picom-trans -c -o 100` ;
 	}
 }

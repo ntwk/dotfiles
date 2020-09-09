@@ -1,2 +1,2 @@
 #oclock -fg "#30AA77" -jewel "#30AA77" -bd "#30AA77" -transparent -geometry 700x700 &
-compton -b
+picom -b

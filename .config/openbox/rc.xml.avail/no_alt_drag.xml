@@ -408,12 +408,12 @@ bindings would mask the key and mouse bindings used by some applications
     <!-- Keybindings for active windows opacity -->
     <keybind key="W-minus">
       <action name="Execute">
-        <command>compton-trans -c -o 80</command>
+        <command>picom-trans -c -o 80</command>
       </action>
     </keybind>
     <keybind key="W-equal">
       <action name="Execute">
-        <command>compton-trans -c -o 100</command>
+        <command>picom-trans -c -o 100</command>
       </action>
     </keybind>
     <!-- Keybindings for key chains -->
