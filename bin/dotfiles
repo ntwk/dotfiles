@@ -57,8 +57,9 @@ _unlink() {
     declare pfx=$1
     while read; do
         declare dstpath=$(echo "${destination}/${pfx}/${REPLY}" | sed s#//*#/#g)
+        declare srcpath=$(pwd -L)/${REPLY}
         declare testdir=$(dirname "$dstpath")
-        if [ -e "$dstpath" ]; then
+        if [ -e "$dstpath" ] && [ "$dstpath" -ef "$srcpath" ]; then
             echo -n "Unlinking ${dstpath}... "
             if ! $dryrun; then
                 unlink "${dstpath}"
