@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# mupdf
+#
+# Run mupdf with a grey full-page color tint enabled.
+
+exec /usr/bin/mupdf -C EDEDED "$@"
