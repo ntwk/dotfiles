@@ -7,6 +7,9 @@
 (setq make-backup-files nil)
 (setq-default indent-tabs-mode nil)
 
+;; Disable blinking cursor when running in a text terminal
+(setq visible-cursor nil)
+
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (menu-bar-mode -1)
