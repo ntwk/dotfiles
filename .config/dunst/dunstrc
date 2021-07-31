@@ -29,7 +29,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "300x5-30+20"
+    geometry = "300x5-20-20"
 
     # Turn on the progess bar
     progress_bar = true
@@ -68,7 +68,7 @@
     # Draw a line of "separator_height" pixel height between two
     # notifications.
     # Set to 0 to disable.
-    separator_height = 2
+    separator_height = 1
 
     # Padding between text and separator.
     padding = 8
@@ -81,10 +81,10 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 3
+    frame_width = 1
 
     # Defines color of the frame around the notification window.
-    frame_color = "#aaaaaa"
+    frame_color = "#4e4e4e"
 
     # Define a color for the separator.
     # possible values are:
@@ -184,7 +184,7 @@
     ### Icons ###
 
     # Align icons left/right/off
-    icon_position = left
+    icon_position = off
 
     # Scale small icons up to this size, set to 0 to disable. Helpful
     # for e.g. small files or high-dpi screens. In case of conflict,
@@ -463,4 +463,11 @@
 #    appname = "some_volume_notifiers"
 #    set_stack_tag = "volume"
 #
+
+[weechat]
+    appname = weechat
+    background = "#002b36"
+    foreground = "#93a1a1"
+    timeout = 20
+
 # vim: ft=cfg
