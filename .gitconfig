@@ -10,6 +10,6 @@
 [pager] 
         status = true
 [alias]
-	root = !git rev-parse --show-toplevel
+        root = !git rev-parse --show-toplevel
 [include]
         path = ~/.gitlocal
