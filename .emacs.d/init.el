@@ -50,31 +50,9 @@
 (setq x-select-enable-clipboard t)
 
 ;; If Emacs is run in a terminal, the clipboard- functions have no
-;; effect so use xsel instead.
-;; http://shreevatsa.wordpress.com/2006/10/22/emacs-copypaste-and-x
-;; http://www.mail-archive.com/help-gnu-emacs@gnu.org/msg03577.html
-(unless window-system
-  ;; Callback for cutting text
-  (defun xsel-cut-function (text &optional push)
-    ;; Insert text to temp-buffer, and pipe content to xsel stdin
-    (with-temp-buffer
-      (insert text)
-      ;; Use the xsel --clipboard switch to operate on the X CLIPBOARD
-      ;; selection rather than the PRIMARY selection.
-      (call-process-region
-       (point-min) (point-max) "xsel" nil 0 nil "--clipboard" "--input")))
-  ;; Callback for pasting text
-  (defun xsel-paste-function ()
-    ;; Find out what is current selection by xsel. If it is different
-    ;; from the top of the kill-ring (car kill-ring), then return
-    ;; it. Else, nil is returned, so whatever is in the top of the
-    ;; kill-ring will be used.
-    (let ((xsel-output (shell-command-to-string "xsel --clipboard --output")))
-      (unless (string= (car kill-ring) xsel-output)
-	xsel-output)))
-  ;; Attach callbacks to hooks
-  (setq interprogram-cut-function 'xsel-cut-function)
-  (setq interprogram-paste-function 'xsel-paste-function))
+;; effect.  Use xclip-mode to use the GUI clipboard even when Emacs is
+;; run in a terminal.
+(xclip-mode 1)
 
 ;; ido-mode
 (setq ido-enable-flex-matching t)
