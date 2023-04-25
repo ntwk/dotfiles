@@ -8,6 +8,23 @@
 # Host-specific overriding of the prompt should go in .bashrc_local
 PS1='\[\e[0;31m\][\[\e[0;33m\]\u\[\e[0;31m\]@\h \W\[\e[0;32m\]$(__git_ps1 " %s")\[\e[0;31m\]]\$\[\e[0m\] '
 
+# Helper function to set the terminal window title in tmux
+__tmux_set_window_title() {
+    if [ "$PWD" != "$HOME" ]; then
+        printf "\033]0;%s\007" "${PWD/#$HOME/\~}"
+    else
+        printf "\033]0;%s\007" ""
+    fi
+}
+
+# If running inside a tmux terminal, use a simplified window title.
+# In tmux, this window title string is accessed using the 'pane_title'
+# format variable in tmux.
+case ${TERM} in
+    tmux*)
+        PROMPT_COMMAND=('__tmux_set_window_title')
+esac
+
 alias lpr='lpr -o fit-to-page'
 
 # More verbose move, copy and delete
