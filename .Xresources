@@ -21,7 +21,7 @@ URxvt*scrollBar:        false
 URxvt*visualBell:       false
 URxvt*pastableTabs:     false
 URxvt*pointerBlank:     true
-URxvt*iconFile:         __HOME__/.icons/urxvt/144651-apple.svg
+URxvt*iconFile:         __HOME__/.icons/urxvt/copen_minor.svg
 URxvt*print-pipe:       cat > $HOME/urxvt.$(date +%Y%m%d_%H%M%S)
 
 URxvt*perl-ext-common:  default,-searchable-scrollback,fullscreen,url-select,keyboard-select,opacity
@@ -75,7 +75,7 @@ URxvt*color15:          #ffffff
 
 ! urxvt-console --------------------------------------------------------------
 
-urxvt-console*iconFile: __HOME__/.icons/urxvt/circle_open_blur_less.svg
+urxvt-console*iconFile: __HOME__/.icons/urxvt/copen_major.svg
 
 ! urxvt-stop -----------------------------------------------------------------
 
