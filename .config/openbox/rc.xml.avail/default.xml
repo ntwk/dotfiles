@@ -330,7 +330,7 @@
     </keybind>
     <keybind key="W-r">
       <action name="Execute">
-        <command>dmenu_run -fn 'Ubuntu Condensed-12:style=Regular' -nb '#304050'</command>
+        <command>dmenu_run -b -fn 'Ubuntu Condensed-12:style=Regular' -nb '#304050'</command>
       </action>
     </keybind>
     <keybind key="W-b">
