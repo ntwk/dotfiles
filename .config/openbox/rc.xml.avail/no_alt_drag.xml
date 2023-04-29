@@ -71,26 +71,26 @@ bindings would mask the key and mouse bindings used by some applications
     <keepBorder>yes</keepBorder>
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
-      <name>Tahoma</name>
-      <size>8</size>
+      <name>Ubuntu Condensed</name>
+      <size>10</size>
       <!-- font size in points -->
-      <weight>Bold</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
-      <name>Tahoma</name>
-      <size>8</size>
+      <name>Ubuntu Condensed</name>
+      <size>10</size>
       <!-- font size in points -->
-      <weight>Bold</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
-      <name>Nina</name>
-      <size>9</size>
+      <name>Ubuntu Condensed</name>
+      <size>10</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -98,8 +98,8 @@ bindings would mask the key and mouse bindings used by some applications
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuItem">
-      <name>Tahoma</name>
-      <size>8</size>
+      <name>Ubuntu Condensed</name>
+      <size>10</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -107,14 +107,14 @@ bindings would mask the key and mouse bindings used by some applications
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>Nina</name>
-      <size>8</size>
+      <name>Ubuntu Condensed</name>
+      <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Nina</name>
-      <size>8</size>
+      <name>Ubuntu Condensed</name>
+      <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
@@ -335,7 +335,7 @@ bindings would mask the key and mouse bindings used by some applications
     </keybind>
     <keybind key="W-r">
       <action name="Execute">
-        <command>dmenu_run -fn 'MiscFixed-10:style=SemiCondensed' -nb '#304050'</command>
+        <command>dmenu_run -fn 'Ubuntu Condensed-12:style=Regular' -nb '#304050'</command>
       </action>
     </keybind>
     <keybind key="W-b">
