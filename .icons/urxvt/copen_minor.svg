@@ -4,7 +4,7 @@
     <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
   </filter>
 
-  <circle cx="125" cy="125" r="80" fill="none" stroke="teal" stroke-width="65" filter="url(#blur)" />
+  <circle cx="125" cy="125" r="80" fill="none" stroke="darkslategray" stroke-width="65" filter="url(#blur)" />
 
-  <circle cx="125" cy="125" r="80" fill="none" stroke="lightseagreen" stroke-width="32" filter="url(#blur)" />
+  <circle cx="125" cy="125" r="80" fill="none" stroke="cadetblue" stroke-width="32" filter="url(#blur)" />
 </svg>
