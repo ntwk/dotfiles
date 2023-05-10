@@ -25,6 +25,21 @@
 ;; https://emacs.stackexchange.com/q/62714
 (setq mode-line-end-spaces nil)
 
+;; Set custom colors to use when running in a TTY
+(unless window-system
+  ;; Basic face for shadowed text.
+  ;; Darken the text of eglot annotations in source code to set them apart
+  ;; from regular text.
+  (set-face-attribute 'shadow nil
+                      :foreground "color-240")
+  ;; Face used to highlight matches permanently
+  (set-face-attribute 'match nil
+                      :background "blue4")
+  ;; Basic face for highlighting the region.
+  ;; The "extend" attribute extends the highlight beyond the end of line.
+  (set-face-attribute 'region nil
+                      :extend t :background "blue4"))
+
 ;; Configure the visual styling of GUI Emacs.  See also the Emacs X
 ;; resources located in either .Xresources or .Xdefaults
 (when window-system
