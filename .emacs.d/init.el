@@ -20,6 +20,11 @@
 ;; Don't automatically split windows vertically even if it has many columns
 (setq split-width-threshold nil)
 
+;; Emacs 28.2 still displays trailing dashes at the end of the mode
+;; line when running in a TTY; remove them.
+;; https://emacs.stackexchange.com/q/62714
+(setq mode-line-end-spaces nil)
+
 ;; Configure the visual styling of GUI Emacs.  See also the Emacs X
 ;; resources located in either .Xresources or .Xdefaults
 (when window-system
