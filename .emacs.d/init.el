@@ -44,11 +44,6 @@
                                 (define-key hs-minor-mode-map "\C-cS"
                                   'hs-show-all)))
 
-;; Use the X CLIPBOARD selection (c-c/c-v) before the PRIMARY
-;; selection (mouse-select/middle-click)
-;; http://hugoheden.wordpress.com/2009/03/08/copypaste-with-emacs-in-terminal/
-(setq x-select-enable-clipboard t)
-
 ;; If Emacs is run in a terminal, the clipboard- functions have no
 ;; effect.  Use xclip-mode to use the GUI clipboard even when Emacs is
 ;; run in a terminal.
