@@ -1,5 +1,12 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
+;; Disable visual elements.  Some of these settings may also be specified
+;; via X resources which in general override init file settings.
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(menu-bar-mode -1)
+(tooltip-mode -1)
+
 ;; Disable splash screen and startup message
 (setq inhibit-startup-message t)
 (setq initial-scratch-message nil)
@@ -12,11 +19,6 @@
 
 ;; Don't automatically split windows vertically even if it has many columns
 (setq split-width-threshold nil)
-
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
-(menu-bar-mode -1)
-(tooltip-mode -1)
 
 ;; Configure the visual styling of GUI Emacs.  See also the Emacs X
 ;; resources located in either .Xresources or .Xdefaults
