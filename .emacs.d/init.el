@@ -10,6 +10,9 @@
 ;; Disable blinking cursor when running in a text terminal
 (setq visible-cursor nil)
 
+;; Don't automatically split windows vertically even if it has many columns
+(setq split-width-threshold nil)
+
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (menu-bar-mode -1)
