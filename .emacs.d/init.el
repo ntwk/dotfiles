@@ -88,7 +88,7 @@
   (require 'package)
   (package-initialize)
   (add-to-list 'package-archives
-               '("melpa" . "http://melpa.milkbox.net/packages/") t))
+               '("melpa" . "https://stable.melpa.org/packages/") t))
 
 ;; Ledger CLI Emacs mode http://github.com/jwiegley/ledger
 (require 'ledger)
