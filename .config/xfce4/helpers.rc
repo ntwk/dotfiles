@@ -1,2 +1,19 @@
-TerminalEmulator=custom-TerminalEmulator
+#
+# User-defined helpers for Xfce's Preferred Applications.  These entries
+# override entries in /etc/xdg/xfce4/helpers.rc.
+#
+# This file exists to allow Thunar's "Open Terminal Here" and "Open tmux
+# Window Here" custom actions.
+#
+# Since xfce4-settings 4.15.1 preferred applications have been moved from
+# exo to xfce4-settings.  The xfce4-settings package must be installed for
+# the custom actions to work.
+#
+# https://docs.xfce.org/xfce/exo/preferred-applications
+# https://docs.xfce.org/xfce/xfce4-settings/preferred-apps
+#
+# A corresponding custom-TerminalEmulator.desktop "desktop entry" file can
+# be found in $HOME/.local/share/xfce4/helpers/.
+#
 
+TerminalEmulator=custom-TerminalEmulator
