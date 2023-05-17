@@ -121,7 +121,7 @@ while getopts "hnd:" OPTION; do
     case $OPTION in
         h)
             _usage
-            exit 1
+            exit 0
             ;;
         n)
             dryrun=true
