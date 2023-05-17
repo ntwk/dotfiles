@@ -9,13 +9,15 @@ Usage: $0 [OPTIONS] CMD
 Command for managing dotfiles.
 
 OPTIONS:
-  -h	Show this message.
-  -d	Set the destination directory.
-  -n    Dry run.
+  -h    Show this message.
+  -d    Set the destination directory.
+  -n    Dry run. Don't actually do anything, just show what would be done.
 
 CMD:
-  link		Links all files that don't exist in the destination [default].
-  existing	List existing files that are not already symlinked.
+  link          Link all files that don't exist in the destination [default].
+  unlink        Unlink all files.
+  existing      List existing files that are not already linked.
+  basedir       Print the base directory of the dotfiles repository.
 EOF
 }
 
