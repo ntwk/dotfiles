@@ -140,19 +140,23 @@ basedir=$(pwd -L)
 cmd=$1
 
 case $cmd in
-    basedir|cd)
+    basedir)
         _basedir
         ;;
     existing|e)
         _existing
         ;;
-    unlink|u)
+    unlink)
         _unlink
         _unlink_subdirs
         ;;
-    link|l|*)
+    link)
         _link
         _link_subdirs
         cd ${basedir}
+        ;;
+    *)
+        _usage
+        exit 1
         ;;
 esac
