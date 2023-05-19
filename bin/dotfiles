@@ -108,8 +108,8 @@ _link() {
             else
                 echo "dryrun."
             fi
-        elif [ ! -L "$dstpath" ]; then
-            echo "${dstpath} already exists and is not a link."
+        elif [ ! "$dstpath" -ef "$srcpath" ]; then
+            echo "${dstpath} already exists and is not a link to $srcpath."
         fi
     done < <(_git_ls)
 }
