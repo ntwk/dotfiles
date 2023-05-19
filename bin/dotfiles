@@ -33,7 +33,7 @@ _existing() {
     while read; do
         declare dstpath=${destination}/${REPLY}
         declare srcpath=$(pwd -L)/${REPLY}
-        if [ -f "$dstpath" ] && [ ! "$dstpath" -ef "$srcpath" ]; then
+        if [ -e "$dstpath" ] && [ ! "$dstpath" -ef "$srcpath" ]; then
             echo "$dstpath"
         fi
     done < <(_git_ls)
