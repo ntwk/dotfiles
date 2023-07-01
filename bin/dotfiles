@@ -25,10 +25,12 @@ _basedir() {
     echo ${basedir}
 }
 
+# Helper function. List files being managed by git (except README).
 _git_ls() {
     git ls-files | grep -v .gitignore | grep -v .gitmodules | grep -v "^README"
 }
 
+# List files that already exist in the destination.
 _existing() {
     while read; do
         declare dstpath=${destination}/${REPLY}
@@ -39,6 +41,8 @@ _existing() {
     done < <(_git_ls)
 }
 
+# Unlink any separate git repositories under $basedir if they exist. See
+# _link_subdirs.
 _unlink_subdirs() {
     while read; do
         declare subdir=$(dirname ${REPLY})
@@ -48,20 +52,30 @@ _unlink_subdirs() {
     done < <(find ${basedir} -mindepth 2 -maxdepth 2 -name .git)
 }
 
+# $pfx      Used when _unlink_subdirs calls _unlink
+# $dstpath  Full path of symlink
+# $srcpath  Full path of target
+# $testdir  Directory containing $dstpath. Later tested to see if is empty.
 _unlink() {
     declare pfx=$1
     while read; do
         declare dstpath=$(echo "${destination}/${pfx}/${REPLY}" | sed s#//*#/#g)
         declare srcpath=$(pwd -L)/${REPLY}
         declare testdir=$(dirname "$dstpath")
+        # If there is a file named $dstpath and it is a symlink (or hard link)
+        # to the repository file named $srcpath, then
         if [ -e "$dstpath" ] && [ "$dstpath" -ef "$srcpath" ]; then
             echo -n "Unlinking ${dstpath}... "
+            # Unlink the file unless this is a dry run.
             if ! $dryrun; then
                 unlink "${dstpath}"
                 echo "done."
             else
                 echo "dryrun."
             fi
+            # If unlinking $dstpath leaves an empty directory, remove the
+            # directory. If removing that directory leaves an empty directory,
+            # remove it, and so on.  Unless this is a dry run.
             while [ -z "$(ls -A "$testdir")" ] && [ ! "$testdir" -ef "$destination" ]; do
                 echo -n "Removing directory ${testdir}... "
                 if ! $dryrun; then
@@ -76,6 +90,10 @@ _unlink() {
     done < <(_git_ls)
 }
 
+# Subdirectories can be managed in their own separate git repository. Find any
+# such subdirectories and symlink them in a destination subdirectory of the
+# same name. The argument passed to _link ensures that the _link function will
+# create the symlinks in a subdirectory under $basedir.
 _link_subdirs() {
     while read; do
         declare subdir=$(dirname ${REPLY})
@@ -85,12 +103,18 @@ _link_subdirs() {
     done < <(find ${basedir} -mindepth 2 -maxdepth 2 -name .git)
 }
 
+# $pfx      Used when _link_subdirs calls _link
+# $dstpath  Full path of symlink
+# $srcpath  Full path of target
+# $dstdir   Directory path containing symlink
 _link() {
     declare pfx=$1
     while read; do
         declare dstpath=$(echo "${destination}/${pfx}/${REPLY}" | sed s#//*#/#g)
         declare srcpath=$(pwd -L)/${REPLY}
         declare dstdir=$(dirname "${dstpath}")
+        # If the destination file's containing directory does no exist, create
+        # it unless this is a dry run.
         if [ ! -e "$dstdir" ]; then
             echo -n "Creating directory ${dstdir}... "
             if ! $dryrun; then
@@ -100,6 +124,8 @@ _link() {
                 echo "dryrun."
             fi
         fi
+        # If the destination file does not exist, create it unless this is a
+        # dry run.
         if [ ! -e "$dstpath" ]; then
             echo -n "Linking ${dstpath} to ${srcpath}... "
             if ! $dryrun; then
@@ -108,6 +134,7 @@ _link() {
             else
                 echo "dryrun."
             fi
+        # Report existing files that are not a symlink to the correct target.
         elif [ ! "$dstpath" -ef "$srcpath" ]; then
             echo "${dstpath} already exists and is not a link to $srcpath."
         fi
