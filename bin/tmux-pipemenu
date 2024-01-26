@@ -21,7 +21,7 @@ if [ -n "$WINDOWS" ]; then
     echo "  <separator/>"
 fi
 
-echo "  <item label=\"new window\" icon=\".icons/urxvt/circle_open_blur_less.svg\">"
+echo "  <item label=\"new window\" icon=\".icons/urxvt/copen_major.svg\">"
 echo "    <action name=\"Execute\">"
 echo "      <command>tmux-launch $SHELL</command>"
 echo "    </action>"
